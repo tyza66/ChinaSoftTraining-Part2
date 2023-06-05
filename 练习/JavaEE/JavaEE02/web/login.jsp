@@ -11,9 +11,14 @@
     <title>Title</title>
 </head>
 <body>
+<%
+    if(request.getAttribute("status").equals("ok")){
+%>
+<h3>注册成功</h3>
+<%}%>
 <form action="LoginServlet" method="get">
-  用户名：<input name="cname" type="text"/>
-  密码：<input name="cpwd" type="password">
+  用户名：<input name="cname" type="text"/><br/>
+  密码：<input name="cpwd" type="password"><br/>
   <input type="submit" value="登录">
 </form>
 <a href="./register.jsp">注册</a>

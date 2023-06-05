@@ -31,14 +31,12 @@ public class LoginServlet extends HttpServlet {
         String cpwd = request.getParameter("cpwd");
         CustomerServiceImpl customerService = new CustomerServiceImpl();
         Customer customer = is.selectCusByNameAndPwd(cname, cpwd);
-        if (customer != null)
-        {
+        if (customer != null) {
             request.setAttribute("customer", customer);
-            request.getRequestDispatcher("main.jsp").forward(request, response);
-        }else{
+        } else {
             request.setAttribute("customer", null);
-            request.getRequestDispatcher("main.jsp").forward(request, response);
         }
+        request.getRequestDispatcher("main.jsp").forward(request, response);
     }
 
     @Override

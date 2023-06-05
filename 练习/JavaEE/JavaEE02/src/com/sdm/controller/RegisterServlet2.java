@@ -5,6 +5,9 @@ package com.sdm.controller;
  * Github: https://github.com/tyza66
  **/
 
+import com.sdm.pojo.Customer;
+import com.sdm.service.impl.CustomerServiceImpl;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -22,7 +25,18 @@ public class RegisterServlet2 extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
         HttpSession session = request.getSession();
-
+        CustomerServiceImpl customerService = new CustomerServiceImpl();
+        String cid = request.getParameter("cid");
+        String cname = request.getParameter("cname");
+        String cpwd = request.getParameter("cpwd");
+        String cage = request.getParameter("cage");
+        Boolean end = customerService.insertOne(new Customer(Integer.parseInt(cid), cname, cpwd, cage));
+        if (end) {
+            request.setAttribute("status", "ok");
+        } else {
+            request.setAttribute("status", "fail");
+        }
+        request.getRequestDispatcher("login.jsp").forward(request, response);
     }
 
     @Override

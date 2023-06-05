@@ -11,9 +11,11 @@
     <title>Title</title>
 </head>
 <body>
-<form action="LoginServlet" method="get">
-    用户名：<input name="cname" type="text"/>
-    密码：<input name="cpwd" type="password">
+<form action="RegisterServlet2" method="get">
+    ID:<input name="cid" type="text"><br />
+    用户名：<input name="cname" type="text"/><br />
+    密码：<input name="cpwd" type="text"><br />
+    年龄：<input name="cage"><br />
     <input type="submit" value="注册">
 </form>
 </body>
