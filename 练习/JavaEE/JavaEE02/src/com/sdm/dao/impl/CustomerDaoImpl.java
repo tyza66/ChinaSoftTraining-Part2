@@ -47,13 +47,14 @@ public class CustomerDaoImpl implements ICustomerDao {
     @Override
     public Boolean insertCus(Customer customer) {
         Connection conn = DBUtil.getConnection();
-        String sql = "INSERT INTO \"SCOTT\".\"customer\" ( \"cname\", \"cpwd\", \"cage\") VALUES (?,?,?)";
+        String sql = "INSERT INTO \"SCOTT\".\"customer\" VALUES (?,?,?,?)";
         PreparedStatement ps = null;
         try {
             ps = conn.prepareStatement(sql);
-            ps.setString(1, customer.getCname());
-            ps.setString(2, customer.getCpwd());
-            ps.setString(3, customer.getCage());
+            ps.setInt(1,customer.getId());
+            ps.setString(2, customer.getCname());
+            ps.setString(3, customer.getCpwd());
+            ps.setString(4, customer.getCage());
             int i = ps.executeUpdate();
             if(i>=1){
                 return true;

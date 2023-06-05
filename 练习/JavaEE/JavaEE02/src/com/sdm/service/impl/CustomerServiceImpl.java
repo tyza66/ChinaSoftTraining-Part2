@@ -19,4 +19,9 @@ public class CustomerServiceImpl implements ICustomService {
     public Customer selectCusByNameAndPwd(String cname, String cpwd) {
         return customerDao.selectCusByNameAndPwd(cname,cpwd);
     }
+
+    @Override
+    public Boolean insertOne(Customer customer) {
+        return customerDao.insertCus(customer);
+    }
 }
