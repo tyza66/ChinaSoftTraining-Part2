@@ -21,4 +21,7 @@ public interface ICustomService {
     Boolean updateOne(Customer customer);
 
     Boolean deleteOne(int id);
+
+    List<Customer> selectCusByTwo(String username, String age);
+
 }

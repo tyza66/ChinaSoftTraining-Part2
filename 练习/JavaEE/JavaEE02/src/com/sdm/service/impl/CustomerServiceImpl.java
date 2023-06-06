@@ -1,11 +1,14 @@
 package com.sdm.service.impl;
 
 import com.sdm.dao.ICustomerDao;
+import com.sdm.dao.impl.BaseDao;
 import com.sdm.dao.impl.CustomerDaoImpl;
 import com.sdm.pojo.Customer;
 import com.sdm.service.ICustomService;
+import com.sdm.util.DBUtil;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Author: tyza66
@@ -16,6 +19,7 @@ import java.util.List;
 public class CustomerServiceImpl implements ICustomService {
 
     ICustomerDao customerDao= new CustomerDaoImpl();
+    BaseDao bd = new BaseDao();
 
     @Override
     public Customer selectCusByNameAndPwd(String cname, String cpwd) {
@@ -41,4 +45,12 @@ public class CustomerServiceImpl implements ICustomService {
     public Boolean deleteOne(int id) {
         return customerDao.deleteCus(id);
     }
+
+    @Override
+    public List<Customer> selectCusByTwo(String username, String age) {
+        List<Customer> query = bd.query("select * from \"customer\" where \"cname\"= ? and \"cage\"= ?", Objects.requireNonNull(DBUtil.getConnection()), username, age);
+        return query;
+    }
+
+
 }

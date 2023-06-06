@@ -24,5 +24,6 @@
 <a href="./register.jsp">注册</a>
 <a href="./update.jsp">修改密码</a>
 <a href="./delete.jsp">删除账户</a>
+<a href="./search.jsp">多条件搜索</a>
 </body>
 </html>
