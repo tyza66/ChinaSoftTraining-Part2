@@ -8,6 +8,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Author: tyza66
@@ -65,5 +67,28 @@ public class CustomerDaoImpl implements ICustomerDao {
             DBUtil.close(ps,conn);
         }
         return false;
+    }
+
+    @Override
+    public List<Customer> getAll() {
+        //获取链接 准备sql 设置参数 执行
+        Connection connection = DBUtil.getConnection();
+        String sql = "select * from \"customer\"";
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        List<Customer> list = new ArrayList<>();
+        try {
+            ps = connection.prepareStatement(sql);
+            rs = ps.executeQuery();
+            while (rs.next()){
+                Customer customer = new Customer();
+                list.add(new Customer(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4)));
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } finally {
+            DBUtil.close(rs, ps, connection);
+        }
+        return list;
     }
 }

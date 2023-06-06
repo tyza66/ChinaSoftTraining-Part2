@@ -1,6 +1,9 @@
 package com.sdm.service;
 
 import com.sdm.pojo.Customer;
+
+import java.util.List;
+
 /**
  * Author: tyza66
  * Date: 2023/6/5 11:19
@@ -12,4 +15,6 @@ public interface ICustomService {
     Customer selectCusByNameAndPwd(String cname, String cpwd);
 
     Boolean insertOne(Customer customer);
+
+    List<Customer> getAll();
 }

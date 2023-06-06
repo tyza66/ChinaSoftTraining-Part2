@@ -5,6 +5,8 @@ import com.sdm.dao.impl.CustomerDaoImpl;
 import com.sdm.pojo.Customer;
 import com.sdm.service.ICustomService;
 
+import java.util.List;
+
 /**
  * Author: tyza66
  * Date: 2023/6/5 11:19
@@ -23,5 +25,10 @@ public class CustomerServiceImpl implements ICustomService {
     @Override
     public Boolean insertOne(Customer customer) {
         return customerDao.insertCus(customer);
+    }
+
+    @Override
+    public List<Customer> getAll() {
+        return customerDao.getAll();
     }
 }

@@ -12,7 +12,7 @@
 </head>
 <body>
 <%
-    if(request.getAttribute("status").equals("ok")){
+    if(request.getAttribute("status")!=null&&request.getAttribute("status").equals("ok")){
 %>
 <h3>注册成功</h3>
 <%}%>

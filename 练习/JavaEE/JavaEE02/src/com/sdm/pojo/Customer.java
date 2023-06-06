@@ -53,4 +53,14 @@ public class Customer {
     public void setCage(String cage) {
         this.cage = cage;
     }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "id=" + id +
+                ", cname='" + cname + '\'' +
+                ", cpwd='" + cpwd + '\'' +
+                ", cage='" + cage + '\'' +
+                '}';
+    }
 }
