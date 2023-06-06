@@ -91,4 +91,47 @@ public class CustomerDaoImpl implements ICustomerDao {
         }
         return list;
     }
+
+    @Override
+    public Boolean updateCus(Customer customer) {
+        Connection conn = DBUtil.getConnection();
+        String sql = "UPDATE \"SCOTT\".\"customer\" SET \"cname\" = ?, \"cpwd\" = ?, \"cage\" = ? WHERE \"id\" = ?";
+        PreparedStatement ps = null;
+        try {
+            ps = conn.prepareStatement(sql);
+            ps.setInt(4,customer.getId());
+            ps.setString(1, customer.getCname());
+            ps.setString(2, customer.getCpwd());
+            ps.setString(3, customer.getCage());
+            int i = ps.executeUpdate();
+            if(i>=1){
+                return true;
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }finally {
+            DBUtil.close(ps,conn);
+        }
+        return false;
+    }
+
+    @Override
+    public Boolean deleteCus(int id) {
+        Connection conn = DBUtil.getConnection();
+        String sql = "DELETE FROM \"SCOTT\".\"customer\" WHERE \"id\" = ?";
+        PreparedStatement ps = null;
+        try {
+            ps = conn.prepareStatement(sql);
+            ps.setInt(1,id);
+            int i = ps.executeUpdate();
+            if(i>=1){
+                return true;
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }finally {
+            DBUtil.close(ps,conn);
+        }
+        return false;
+    }
 }

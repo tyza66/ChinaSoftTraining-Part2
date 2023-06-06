@@ -17,4 +17,8 @@ public interface ICustomService {
     Boolean insertOne(Customer customer);
 
     List<Customer> getAll();
+
+    Boolean updateOne(Customer customer);
+
+    Boolean deleteOne(int id);
 }

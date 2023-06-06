@@ -31,4 +31,14 @@ public class CustomerServiceImpl implements ICustomService {
     public List<Customer> getAll() {
         return customerDao.getAll();
     }
+
+    @Override
+    public Boolean updateOne(Customer customer) {
+        return customerDao.updateCus(customer);
+    }
+
+    @Override
+    public Boolean deleteOne(int id) {
+        return customerDao.deleteCus(id);
+    }
 }

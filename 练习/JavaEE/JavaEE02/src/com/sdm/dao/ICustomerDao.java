@@ -18,4 +18,8 @@ public interface ICustomerDao {
     Boolean insertCus(Customer customer);
 
     List<Customer> getAll();
+
+    Boolean updateCus(Customer customer);
+
+    Boolean deleteCus(int id);
 }
