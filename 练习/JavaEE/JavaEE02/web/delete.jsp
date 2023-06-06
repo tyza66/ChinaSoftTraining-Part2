@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <form >
+    <form action="DeleteServlet">
         艾迪：<input type="text" name="id"><br/>
         <input type="submit">
     </form>
