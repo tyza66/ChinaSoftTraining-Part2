@@ -134,4 +134,43 @@ public class CustomerDaoImpl implements ICustomerDao {
         }
         return false;
     }
+
+    @Override
+    public int getVisitorCount() {
+        Connection connection = DBUtil.getConnection();
+        String sql = "select * from \"visitcount\"";
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        try {
+            ps = connection.prepareStatement(sql);
+            rs = ps.executeQuery();
+            if (rs.next()){
+                int times = rs.getInt(1);
+                return times;
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } finally {
+            DBUtil.close(rs, ps, connection);
+        }
+        return 0;
+    }
+
+    @Override
+    public int setVisitorCount(int count) {
+        Connection conn = DBUtil.getConnection();
+        String sql = "UPDATE \"SCOTT\".\"visitcount\" SET \"times\" = ? WHERE ROWID = 'AAASPCAAEAAAAIbAAA'";
+        PreparedStatement ps = null;
+        try {
+            ps = conn.prepareStatement(sql);
+            ps.setInt(1,count);
+            int i = ps.executeUpdate();
+            return i;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }finally {
+            DBUtil.close(ps,conn);
+        }
+    }
+
 }

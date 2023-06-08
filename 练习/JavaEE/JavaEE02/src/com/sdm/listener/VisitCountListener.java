@@ -1,5 +1,7 @@
 package com.sdm.listener;
 
+import com.sdm.dao.impl.CustomerDaoImpl;
+
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
@@ -18,7 +20,7 @@ import javax.servlet.http.HttpSessionListener;
 public class VisitCountListener implements ServletContextListener, HttpSessionListener, HttpSessionAttributeListener {
     //一个web应用有一个唯一的上下文对象 放我们启动服务器的时候上下文对象被创建 关闭服务器的时候上下文对象被销毁
     //作用于范围：pageContext页面范围 request请求 session会话 application上下文对象
-    //在过滤器中可以使用this.getServletContext()获取上下文对象
+    //在过滤器中可以使用request.getServletContext()获取上下文对象
     //在监听器中可以使用sce.getServletContext()获取上下文对象
     //监听器的作用：监听对象的创建和销毁
     //监听器的使用场景：统计网站的访问量
@@ -40,6 +42,9 @@ public class VisitCountListener implements ServletContextListener, HttpSessionLi
         /* This method is called when the servlet context is initialized(when the Web application is deployed). */
         System.out.println("上下文对象初始化了");
         //这个时候要从数据库里面读取来上次访问量多少次
+        CustomerDaoImpl cd = new CustomerDaoImpl();
+        int visitorCount = cd.getVisitorCount();
+        sce.getServletContext().setAttribute("times",visitorCount);
     }
 
     @Override
@@ -47,6 +52,8 @@ public class VisitCountListener implements ServletContextListener, HttpSessionLi
         /* This method is called when the servlet Context is undeployed or Application Server shuts down. */
         System.out.println("上下文对象销毁了");
         //这里面把访问量存到数据库里面 进行持久化
+        CustomerDaoImpl cd = new CustomerDaoImpl();
+        cd.setVisitorCount((int)sce.getServletContext().getAttribute("times"));
     }
 
     @Override

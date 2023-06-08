@@ -16,12 +16,12 @@ public class ChineseFilter implements Filter {
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
         Filter.super.init(filterConfig);
-        System.out.println("对象初始化了");
+        System.out.println("C过滤器对象初始化了");
     }
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-        System.out.println("过滤器处理内容");
+        System.out.println("C过滤器处理内容");
         servletRequest.setCharacterEncoding("UTF-8");
         filterChain.doFilter(servletRequest,servletResponse);
     }
@@ -29,6 +29,6 @@ public class ChineseFilter implements Filter {
     @Override
     public void destroy() {
         Filter.super.destroy();
-        System.out.println("对象销毁了");
+        System.out.println("C过滤器对象销毁了");
     }
 }

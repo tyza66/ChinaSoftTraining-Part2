@@ -17,12 +17,12 @@ public class LoginInvalidateFilter implements Filter {
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
         Filter.super.init(filterConfig);
-        System.out.println("对象初始化了");
+        System.out.println("L过滤器对象初始化了");
     }
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-        System.out.println("过滤器处理内容");
+        System.out.println("L过滤器处理内容");
         //用户没有登录的时候判断请求的url 根据请求的url进行判断 如果这些资源是需要登录才能访问的 那就跳转到登陆界面
         servletRequest.setCharacterEncoding("UTF-8");
         HttpServletRequest request = (HttpServletRequest)servletRequest;
@@ -34,7 +34,7 @@ public class LoginInvalidateFilter implements Filter {
     @Override
     public void destroy() {
         Filter.super.destroy();
-        System.out.println("对象销毁了");
+        System.out.println("L过滤器对象销毁了");
     }
 }
 

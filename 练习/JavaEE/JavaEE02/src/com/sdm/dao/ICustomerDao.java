@@ -1,7 +1,6 @@
 package com.sdm.dao;
 
 import com.sdm.pojo.Customer;
-import com.sun.org.apache.xpath.internal.operations.Bool;
 
 import java.util.List;
 
@@ -22,4 +21,8 @@ public interface ICustomerDao {
     Boolean updateCus(Customer customer);
 
     Boolean deleteCus(int id);
+
+    int getVisitorCount();
+
+    int setVisitorCount(int count);
 }
