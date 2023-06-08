@@ -15,4 +15,16 @@
         <!--设置session的有效时间 单位是分钟-->
         <session-timeout>1</session-timeout>
     </session-config>
+
+    <filter>
+        <filter-name>ChineseFilter</filter-name>
+        <filter-class>com.sdm.filter.ChineseFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>ChineseFilter</filter-name>
+        <url-pattern>*</url-pattern>
+        <!--规定哪种请求需要被过滤 第一个是请求 第二个是转发-->
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+    </filter-mapping>
 </web-app>
