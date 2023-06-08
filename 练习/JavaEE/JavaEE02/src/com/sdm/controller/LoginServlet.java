@@ -36,10 +36,16 @@ public class LoginServlet extends HttpServlet {
         }
         List<Customer> all = is.getAll();
         request.setAttribute("all", all);
-
+        //使用cookie
         Cookie cookie = new Cookie("giao", "giao");
         cookie.setMaxAge(30*60);
         response.addCookie(cookie);
+        //使用session
+        session.setMaxInactiveInterval(60);//设置过期时间 单位是秒
+        session.setAttribute("customer", customer);
+
+        session.invalidate();//销毁session 让session立即失效
+
         request.getRequestDispatcher("main.jsp").forward(request, response);
     }
 
