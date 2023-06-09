@@ -18,24 +18,28 @@ public class CustomerDaoImpl extends  BaseDao implements ICustomerDao {
 //        1 获取连接
         Connection connection = DBUtil.getConnection();
 //        2 准备sql 创建PreparedStatement对象 预编译处理
-        String sql = "select * from customer where cname = ? and cpwd = ?";
+        String sql = "select * from \"customer\" where \"cname\" = ? and \"cpwd\" = ?";
         PreparedStatement pst = null;
         ResultSet rst = null;
         Customer c = null;
+        System.out.println(1);
         try {
              pst = connection.prepareStatement(sql);
+            System.out.println(2);
  //        3 设置参数
             pst.setString(1,cname);
             pst.setString(2,cpwd);
 //        4 执行sql语句
             rst = pst.executeQuery();
+            System.out.println(3);
 //        5 获取结果并返回
             if (rst.next()) {
+                System.out.println(4);
                 c = new Customer();
-                c.setCid(rst.getInt("cid"));
-                c.setCname(rst.getString("cname"));
-                c.setCpwd(rst.getString("cpwd"));
-                c.setCage(rst.getInt("cage"));
+                c.setCid(rst.getInt(1));
+                c.setCname(rst.getString(2));
+                c.setCpwd(rst.getString(3));
+                c.setCage(rst.getInt(4));
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();

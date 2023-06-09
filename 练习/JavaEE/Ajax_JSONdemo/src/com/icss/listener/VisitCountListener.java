@@ -50,8 +50,8 @@ public class VisitCountListener implements ServletContextListener {
                 }
             }
         }*/
-        int count = new CustomerServiceImpl().getCount();
-        sce.getServletContext().setAttribute("count",count);
+        /*int count = new CustomerServiceImpl().getCount();
+        sce.getServletContext().setAttribute("count",count);*/
     }
 
     public void contextDestroyed(ServletContextEvent sce) {
@@ -88,8 +88,8 @@ public class VisitCountListener implements ServletContextListener {
             }
         }*/
 
-       boolean flag = new CustomerServiceImpl().updateCount(Integer.parseInt(servletContext.getAttribute("count").toString()));
-        System.out.println("flag = " + flag);
+      /* boolean flag = new CustomerServiceImpl().updateCount(Integer.parseInt(servletContext.getAttribute("count").toString()));
+        System.out.println("flag = " + flag);*/
     }
 
 }
