@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+        charset="utf-8"/>
+  <script src="static/js/jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+  <script src="static/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+  <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css"/>
+</head>
+<body>
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <th>用户编号</th>
+    <th>姓名</th>
+    <th>密码</th>
+    <th>年龄</th>
+  </tr>
+  </thead>
+  <tbody id="content">
+  <!--  <tr>
+        <td>01</td>
+        <td>02</td>
+        <td>03</td>
+        <td>04</td>
+    </tr>
+    <tr>
+        <td>01</td>
+        <td>02</td>
+        <td>03</td>
+        <td>04</td>
+    </tr>
+    <tr>
+        <td>01</td>
+        <td>02</td>
+        <td>03</td>
+        <td>04</td>
+    </tr>-->
+  </tbody>
+</table>
+<script>
+
+  $(function(){
+    //    查看所有的用户
+    selectAllCus();
+  })
+
+
+  function selectAllCus(){
+    $.ajax({
+      type:"get",
+      url:"SelectAllCusServlet",
+      dataType:"json",
+      success:function(res){
+        $.each(res,function(index,tmp){
+          console.log(tmp);
+          $("#content").append("<tr><td></td>"+tmp.cid+"</tr>");
+
+        })
+
+        /*<td>${tmp.cname}</td>
+              <td>${tmp.cpwd}</td>
+              <td>${tmp.cage}</td>*/
+
+      },error:function(){
+        alert("请求失败");
+      }
+    })
+  }
+
+</script>
+
+
+</body>
+</html>

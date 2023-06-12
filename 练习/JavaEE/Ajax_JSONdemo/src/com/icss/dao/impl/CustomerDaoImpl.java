@@ -105,7 +105,7 @@ public class CustomerDaoImpl extends  BaseDao implements ICustomerDao {
     @Override
     public List<Customer> selectAllCustomer() {
         Connection connection = DBUtil.getConnection();
-        String sql = "select * from customer";
+        String sql = "select * from \"customer\"";
         ResultSet rst = null;
         List<Customer> list = new ArrayList<>();
         try {
@@ -113,10 +113,10 @@ public class CustomerDaoImpl extends  BaseDao implements ICustomerDao {
 
            while(rst.next()){
                Customer c = new Customer();
-               c.setCid(rst.getInt("cid"));
-               c.setCname(rst.getString("cname"));
-               c.setCpwd(rst.getString("cpwd"));
-               c.setCage(rst.getInt("cage"));
+               c.setCid(rst.getInt(1));
+               c.setCname(rst.getString(2));
+               c.setCpwd(rst.getString(3));
+               c.setCage(rst.getInt(4));
 
                list.add(c);
            }
