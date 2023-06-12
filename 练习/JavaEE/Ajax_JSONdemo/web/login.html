@@ -59,7 +59,9 @@
                 },
                 dataType: "json",
                 success: function (res) {
-                    console.log(res)
+                    if(res==true){
+                        window.location.href = "./main.html"
+                    }
                 },
                 error: function (jqXHR) {
                     alert("发生错误：" + jqXHR.status);
