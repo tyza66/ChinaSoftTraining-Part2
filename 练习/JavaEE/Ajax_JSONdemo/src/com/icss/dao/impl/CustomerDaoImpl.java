@@ -138,13 +138,13 @@ public class CustomerDaoImpl extends  BaseDao implements ICustomerDao {
 
     @Override
     public boolean deleteCusById(int cid) {
-        return exeUpdate(DBUtil.getConnection(),"delete from customer where cid = ?",cid);
+        return exeUpdate(DBUtil.getConnection(),"delete from \"customer\" where \"id\" = ?",cid);
     }
 
     @Override
     public Customer selectCusById(int cid) {
         Connection con =  DBUtil.getConnection();
-        ResultSet rst = exeQuery(con,"select * from customer where cid = ?",cid);
+        ResultSet rst = exeQuery(con,"select * from \"customer\" where \"id\" = ?",cid);
         Customer c = null;
         try {
             if (rst.next()) {
@@ -168,7 +168,7 @@ public class CustomerDaoImpl extends  BaseDao implements ICustomerDao {
 
     @Override
     public boolean updateCusById(Customer customer) {
-        return exeUpdate(DBUtil.getConnection(),"update customer set cname = ?,cpwd = ?,cage = ? where cid = ?",
+        return exeUpdate(DBUtil.getConnection(),"update \"customer\" set \"cname\" = ?,\"cpwd\" = ?,\"cage\" = ? where \"id\" = ?",
                 customer.getCname(),customer.getCpwd(),customer.getCage(),customer.getCid());
     }
 

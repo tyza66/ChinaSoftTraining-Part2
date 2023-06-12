@@ -1,5 +1,6 @@
 package com.icss.controller;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.icss.pojo.Customer;
 import com.icss.service.impl.CustomerServiceImpl;
 
@@ -19,6 +20,7 @@ public class UpdateCusByIdServlet extends HttpServlet {
         String cname = request.getParameter("cname");
         String cpwd = request.getParameter("cpwd");
         int cage = Integer.parseInt(request.getParameter("cage"));
+        System.out.println(cage);
 
         boolean flag = new CustomerServiceImpl().updateCusById(new Customer(cid,cname,cpwd,cage));
 
@@ -27,11 +29,13 @@ public class UpdateCusByIdServlet extends HttpServlet {
         } else {
             request.setAttribute("msg","修改失败");
         }
-
-        request.getRequestDispatcher("SelectAllCusServlet").forward(request,response);
+        //将数据以josn的形式返回给请求响应
+        ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.writeValue(response.getWriter(),flag);
+        /*request.getRequestDispatcher("SelectAllCusServlet").forward(request,response);*/
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        doPost(request,response);
     }
 }

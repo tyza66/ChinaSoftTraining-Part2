@@ -1,75 +1,176 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
-        charset="utf-8"/>
-  <script src="static/js/jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
-  <script src="static/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
-  <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+          charset="utf-8"/>
+    <script src="static/js/jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+    <script src="static/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css"/>
 </head>
 <body>
 <table class="table table-hover">
-  <thead>
-  <tr>
-    <th>用户编号</th>
-    <th>姓名</th>
-    <th>密码</th>
-    <th>年龄</th>
-  </tr>
-  </thead>
-  <tbody id="content">
-  <!--  <tr>
-        <td>01</td>
-        <td>02</td>
-        <td>03</td>
-        <td>04</td>
-    </tr>
+    <thead>
     <tr>
-        <td>01</td>
-        <td>02</td>
-        <td>03</td>
-        <td>04</td>
+        <th>用户编号</th>
+        <th>姓名</th>
+        <th>密码</th>
+        <th>年龄</th>
+        <th>删除</th>
+        <th>修改</th>
     </tr>
-    <tr>
-        <td>01</td>
-        <td>02</td>
-        <td>03</td>
-        <td>04</td>
-    </tr>-->
-  </tbody>
+    </thead>
+    <tbody id="content">
+    <!--  <tr>
+          <td>01</td>
+          <td>02</td>
+          <td>03</td>
+          <td>04</td>
+      </tr>
+      <tr>
+          <td>01</td>
+          <td>02</td>
+          <td>03</td>
+          <td>04</td>
+      </tr>
+      <tr>
+          <td>01</td>
+          <td>02</td>
+          <td>03</td>
+          <td>04</td>
+      </tr>-->
+    </tbody>
 </table>
 <script>
 
-  $(function(){
-    //    查看所有的用户
-    selectAllCus();
-  })
-
-
-  function selectAllCus(){
-    $.ajax({
-      type:"get",
-      url:"SelectAllCusServlet",
-      dataType:"json",
-      success:function(res){
-        $.each(res,function(index,tmp){
-          console.log(tmp);
-          $("#content").append("<tr><td></td>"+tmp.cid+"</tr>");
-
+    function deleteOne(cid) {
+        $.ajax({
+            type: "get",
+            url: "DeleteCusByIdServlet?cid=" + cid,
+            dataType: "json",
+            success: function (res) {
+                console.log(res)
+                $("#content").empty();
+                selectAllCus();
+            }, error: function () {
+                alert("请求失败");
+            }
         })
+    }
 
-        /*<td>${tmp.cname}</td>
-              <td>${tmp.cpwd}</td>
-              <td>${tmp.cage}</td>*/
+    function updateOne(cid,cname,cpwd,cage){
+        $("#myModal").modal("show");
+        $("#cid").val(cid);
+        $("#cname").val(cname);
+        $("#cpwd").val(cpwd);
+        $("#cage").val(cage);
+    }
 
-      },error:function(){
-        alert("请求失败");
-      }
+    function updateBtn(){
+        var cid=$("#cid").val();
+        var cname=$("#cname").val();
+        var cpwd=$("#cpwd").val();
+        var cage=$("#cage").val();
+        $.ajax({
+            type: "get",
+            url: "UpdateCusByIdServlet?cid="+cid+"&cname="+cname+"&cpwd="+cpwd+"&cage="+cage,
+            dataType: "json",
+            success: function (res) {
+                console.log(res)
+                $("#content").empty();
+                selectAllCus();
+            }, error: function () {
+                alert("请求失败");
+            }
+        })
+        $("#myModal").modal("hide");
+    }
+
+    $(function () {
+        //    查看所有的用户
+        selectAllCus();
     })
-  }
+
+
+    function selectAllCus() {
+        $.ajax({
+            type: "get",
+            url: "SelectAllCusServlet",
+            dataType: "json",
+            success: function (res) {
+                $.each(res, function (index, tmp) {
+                    console.log(tmp);
+                    $("#content").append(`<tr><td>${tmp.cid}</td>
+                                <td>${tmp.cname}</td>
+                                <td>${tmp.cpwd}</td>
+                                <td>${tmp.cage}</td>
+                                <td><a href="javascript:deleteOne(${tmp.cid})">删除</a></td>
+                                <td><a href="javascript:updateOne(${tmp.cid},'${tmp.cname}','${tmp.cpwd}',${tmp.cage})">修改</a></td>
+                                </tr>
+            `);
+
+                })
+
+                /*<td>${tmp.cname}</td>
+                      <td>${tmp.cpwd}</td>
+                      <td>${tmp.cage}</td>*/
+
+            }, error: function () {
+                alert("请求失败");
+            }
+        })
+    }
 
 </script>
+<!--修改模态框-->
+<!-- Button trigger modal -->
+<!--<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+    Launch demo modal
+</button>-->
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal bd">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">编号</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="cid" placeholder="用户编号">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">用户名</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="cname" placeholder="用户名">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">密码</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="cpwd" placeholder="密码">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">年龄</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="cage" placeholder="年龄">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="updateBtn()">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--修改模态框-->
 
 
 </body>

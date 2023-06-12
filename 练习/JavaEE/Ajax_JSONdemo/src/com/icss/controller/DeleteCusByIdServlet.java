@@ -1,5 +1,6 @@
 package com.icss.controller;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.icss.service.impl.CustomerServiceImpl;
 
 import javax.servlet.ServletException;
@@ -26,8 +27,11 @@ public class DeleteCusByIdServlet extends HttpServlet {
         }else {
             request.setAttribute("msg","删除失败");
         }
+        //将数据以josn的形式返回给请求响应
+        ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.writeValue(response.getWriter(),flag);
 
-        request.getRequestDispatcher("SelectAllCusServlet").forward(request,response);
+        /*request.getRequestDispatcher("SelectAllCusServlet").forward(request,response);*/
 
     }
 }
