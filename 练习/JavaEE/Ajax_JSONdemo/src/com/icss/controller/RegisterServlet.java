@@ -1,5 +1,6 @@
 package com.icss.controller;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.icss.pojo.Customer;
 import com.icss.service.impl.CustomerServiceImpl;
 
@@ -9,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.HashMap;
 
 @WebServlet(name = "RegisterServlet",urlPatterns = "/RegisterServlet")
 public class RegisterServlet extends HttpServlet {
@@ -25,12 +27,16 @@ public class RegisterServlet extends HttpServlet {
 
 //        注册功能  要求用户名不能重复 如果重复则注册失败 不重复增加用户信息
         boolean flag = new CustomerServiceImpl().registerCustomer(new Customer(cname,cpwd,cage));
-        if (flag) {
+        ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.writeValue(response.getWriter(),flag);
+        /*if (flag) {
             request.getRequestDispatcher("login.jsp").forward(request,response);
         } else {
             request.setAttribute("msg","注册失败");
             request.getRequestDispatcher("register.jsp").forward(request,response);
-        }
+            ObjectMapper objectMapper = new ObjectMapper();
+            objectMapper.writeValue(response.getWriter(),201);
+        }*/
 
 
     }

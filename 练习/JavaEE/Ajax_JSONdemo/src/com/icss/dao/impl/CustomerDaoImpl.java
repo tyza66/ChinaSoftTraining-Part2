@@ -56,7 +56,7 @@ public class CustomerDaoImpl extends  BaseDao implements ICustomerDao {
 //        获取数据库连接
         Connection connection = DBUtil.getConnection();
 //        2 sql
-        String sql = "select * from customer where cname = ?";
+        String sql = "select * from \"customer\" where \"cname\" = ?";
 //        3 创建预编译对象 预编译处理
         PreparedStatement pst = null;
         Customer c = null;
@@ -70,10 +70,10 @@ public class CustomerDaoImpl extends  BaseDao implements ICustomerDao {
 
             if (rst.next()) {
                 c = new Customer();
-                c.setCid(rst.getInt("cid"));
-                c.setCname(rst.getString("cname"));
-                c.setCpwd(rst.getString("cpwd"));
-                c.setCage(rst.getInt("cage"));
+                c.setCid(rst.getInt(1));
+                c.setCname(rst.getString(2));
+                c.setCpwd(rst.getString(3));
+                c.setCage(rst.getInt(4));
             }
 
         } catch (SQLException throwables) {
@@ -85,7 +85,7 @@ public class CustomerDaoImpl extends  BaseDao implements ICustomerDao {
     @Override
     public boolean insertCus(Customer cus) {
         Connection connection = DBUtil.getConnection();
-        String sql = "insert into customer values(cus_seq.nextval,?,?,?)";
+        String sql = "insert into \"customer\" values(\"cus_seq\".nextval,?,?,?)";
         PreparedStatement pst = null;
         int i = 0;
         try {
