@@ -5,6 +5,9 @@ package com.icss.controller;
  * Github: https://github.com/tyza66
  **/
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.icss.service.impl.CustomerServiceImpl;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -22,6 +25,11 @@ public class DeleteCusByIdsServlet extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
         HttpSession session = request.getSession();
+
+        String[] ids = request.getParameterValues("ids");
+        boolean flag = new CustomerServiceImpl().DeleteCusByIds(ids);
+        ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.writeValue(response.getWriter(),flag);
     }
 
     @Override
