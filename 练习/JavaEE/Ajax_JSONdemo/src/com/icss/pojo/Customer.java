@@ -11,19 +11,19 @@ public class Customer {
 //    用户密码
     private String cpwd;
 //    用户年龄
-    private int cage;
+    private String cage;
 
     public Customer() {
     }
 
-    public Customer(int cid, String cname, String cpwd, int cage) {
+    public Customer(int cid, String cname, String cpwd, String cage) {
         this.cid = cid;
         this.cname = cname;
         this.cpwd = cpwd;
         this.cage = cage;
     }
 
-    public Customer(String cname, String cpwd, int cage) {
+    public Customer(String cname, String cpwd, String cage) {
         this.cname = cname;
         this.cpwd = cpwd;
         this.cage = cage;
@@ -53,11 +53,11 @@ public class Customer {
         this.cpwd = cpwd;
     }
 
-    public int getCage() {
+    public String getCage() {
         return cage;
     }
 
-    public void setCage(int cage) {
+    public void setCage(String cage) {
         this.cage = cage;
     }
 

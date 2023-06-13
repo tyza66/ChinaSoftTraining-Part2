@@ -39,7 +39,7 @@ public class CustomerDaoImpl extends BaseDao implements ICustomerDao {
                 c.setCid(rst.getInt(1));
                 c.setCname(rst.getString(2));
                 c.setCpwd(rst.getString(3));
-                c.setCage(rst.getInt(4));
+                c.setCage(rst.getString(4));
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -73,7 +73,7 @@ public class CustomerDaoImpl extends BaseDao implements ICustomerDao {
                 c.setCid(rst.getInt(1));
                 c.setCname(rst.getString(2));
                 c.setCpwd(rst.getString(3));
-                c.setCage(rst.getInt(4));
+                c.setCage(rst.getString(4));
             }
 
         } catch (SQLException throwables) {
@@ -92,7 +92,7 @@ public class CustomerDaoImpl extends BaseDao implements ICustomerDao {
             pst = connection.prepareStatement(sql);
             pst.setString(1, cus.getCname());
             pst.setString(2, cus.getCpwd());
-            pst.setInt(3, cus.getCage());
+            pst.setString(3, cus.getCage());
 
             i = pst.executeUpdate();
         } catch (SQLException throwables) {
@@ -116,7 +116,7 @@ public class CustomerDaoImpl extends BaseDao implements ICustomerDao {
                 c.setCid(rst.getInt(1));
                 c.setCname(rst.getString(2));
                 c.setCpwd(rst.getString(3));
-                c.setCage(rst.getInt(4));
+                c.setCage(rst.getString(4));
 
                 list.add(c);
             }
@@ -171,10 +171,10 @@ public class CustomerDaoImpl extends BaseDao implements ICustomerDao {
 
             while(rst.next()){
                 Customer c = new Customer();
-                c.setCid(rst.getInt(1));
-                c.setCname(rst.getString(2));
-                c.setCpwd(rst.getString(3));
-                c.setCage(rst.getInt(4));
+                c.setCid(rst.getInt(2));
+                c.setCname(rst.getString(3));
+                c.setCpwd(rst.getString(4));
+                c.setCage(rst.getString(5));
                 list.add(c);
             }
         } catch (SQLException throwables) {
@@ -197,10 +197,10 @@ public class CustomerDaoImpl extends BaseDao implements ICustomerDao {
         try {
             if (rst.next()) {
                 c = new Customer();
-                c.setCid(rst.getInt("cid"));
-                c.setCname(rst.getString("cname"));
-                c.setCpwd(rst.getString("cpwd"));
-                c.setCage(rst.getInt("cage"));
+                c.setCid(rst.getInt(1));
+                c.setCname(rst.getString(2));
+                c.setCpwd(rst.getString(3));
+                c.setCage(rst.getString(4));
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();

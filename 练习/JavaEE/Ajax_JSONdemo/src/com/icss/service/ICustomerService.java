@@ -30,6 +30,6 @@ public interface ICustomerService {
     int getCustomerCount();
 
     //查询显示的数据
-List<Customer> getCustomerList(int start, int end);
+List<Customer> getCustomerListByPage(int start, int end);
 
 }

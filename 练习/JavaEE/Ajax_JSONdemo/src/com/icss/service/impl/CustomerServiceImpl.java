@@ -88,11 +88,11 @@ public class CustomerServiceImpl implements ICustomerService {
 
     @Override
     public int getCustomerCount() {
-        return 0;
+        return customerDao.getCueCount();
     }
 
     @Override
-    public List<Customer> getCustomerList(int start, int end) {
-        return null;
+    public List<Customer> getCustomerListByPage(int start, int end) {
+        return customerDao.selectCuesByPage(start, end);
     }
 }

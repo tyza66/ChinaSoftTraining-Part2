@@ -22,7 +22,7 @@ public class UpdateCusByIdServlet extends HttpServlet {
         int cage = Integer.parseInt(request.getParameter("cage"));
         System.out.println(cage);
 
-        boolean flag = new CustomerServiceImpl().updateCusById(new Customer(cid,cname,cpwd,cage));
+        boolean flag = new CustomerServiceImpl().updateCusById(new Customer(cid,cname,cpwd,String.valueOf(cage)));
 
         if (flag) {
             request.setAttribute("msg","修改成功");

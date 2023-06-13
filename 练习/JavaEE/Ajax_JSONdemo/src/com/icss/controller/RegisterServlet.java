@@ -26,7 +26,7 @@ public class RegisterServlet extends HttpServlet {
         int cage = Integer.parseInt(request.getParameter("cage"));
 
 //        注册功能  要求用户名不能重复 如果重复则注册失败 不重复增加用户信息
-        boolean flag = new CustomerServiceImpl().registerCustomer(new Customer(cname,cpwd,cage));
+        boolean flag = new CustomerServiceImpl().registerCustomer(new Customer(cname,cpwd,String.valueOf(cage)));
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.writeValue(response.getWriter(),flag);
         /*if (flag) {

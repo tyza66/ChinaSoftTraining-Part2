@@ -7,7 +7,7 @@
     <script src="static/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
     <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css"/>
 </head>
-<body>
+<body id="page">
 <button class="btn btn-primary" id="del-btn">删除选中的项目</button>
 <table class="table table-hover">
     <thead>
@@ -140,54 +140,49 @@
 
     $(function () {
         //    查看所有的用户
-        selectAllCus();
+        selectAllCus(1);
     })
 
 
-    function selectAllCus() {
+    function selectAllCus(currpage){
+        //清空的操作
+        $("#content").html("");
         $.ajax({
-            type: "get",
-            url: "SelectAllCusServlet",
-            dataType: "json",
-            success: function (res) {
-                $.each(res, function (index, tmp) {
-                    console.log(tmp);
-                    $("#content").append(`<tr><th><input type="checkbox" name="one" class="one" value="${tmp.cid}"></th>
-                                <td>${tmp.cid}</td>
-                                <td>${tmp.cname}</td>
-                                <td>${tmp.cpwd}</td>
-                                <td>${tmp.cage}</td>
-                                <td><a href="javascript:deleteOne(${tmp.cid})">删除</a></td>
-                                <td><a href="javascript:updateOne(${tmp.cid},'${tmp.cname}','${tmp.cpwd}',${tmp.cage})">修改</a></td>
-                                </tr>
-            `);
-
+            type:"get",
+            url:"SelectAllCusServlet",
+            data:{"currpage":currpage},
+            dataType:"json",
+            success:function(res){
+                $.each(res.list,function(index,tmp){
+                    $("#content").append(`<tr>
+                        <td><input type="checkbox" name="ids" value="${tmp.cid}"></td>
+                        <td>${tmp.cid}</td>
+                        <td>${tmp.cname}</td>
+                         <td>${tmp.cpwd}</td>
+                         <td>${tmp.cage}</td>
+                         <td><a href="javascript:deleteCusById(${tmp.cid})">删除</td>
+                         <td><a href="javascript:showCus(${tmp.cid},'${tmp.cname}',${tmp.cpwd},${tmp.cage})" >修改</a></td>
+                       </tr>`);
                 })
-                $(".one").each(function (index, tmp) {
-                    $(tmp).click(function () {
-                            var flag = true;
-                            $(".one").each(function (index, tmp) {
-                                if (!$(tmp).prop("checked")) {
-                                    flag = false;
-                                }
-                            })
-                            if (flag) {
-                                $(".all").prop("checked", true);
-                            } else {
-                                $(".all").prop("checked", false);
-                            }
-                        }
-                    )
-                })
-                /*<td>${tmp.cname}</td>
-                      <td>${tmp.cpwd}</td>
-                      <td>${tmp.cage}</td>*/
 
-            }, error: function () {
+                //    添加页码
+                let y = `<nav> <ul class="pagination"><li><a href="javascript:selectAllCus(${currpage - 1 <= 0 ? 1 : currpage - 1})" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a> </li>`;
+                for (let i = 1; i <= res.pager.pageNum; i++) {
+                    y += ` <li><a href="javascript:selectAllCus(${i})">${i}</a></li>`;
+                }
+                y += `<li>  <a href="javascript:selectAllCus(${currpage + 1 >= res.pager.pageNum ? res.pager.pageNum : currpage + 1 })" aria-label="Next"><span aria-hidden="true">&raquo;</span></a> </li></ul></nav>`;
+
+                $("#page").append(y);
+
+
+            },error:function(){
                 alert("请求失败");
             }
         })
+
+
     }
+
 
 </script>
 <!--修改模态框-->
