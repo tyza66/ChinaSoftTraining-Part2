@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+          charset="utf-8"/>
+    <title></title>
+    <script src="static/js/jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+    <script src="static/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css"/>
+</head>
+<body>
+<!--注册页面的书写 发送ajax请求 -->
+<div class="container">
+    <div class="row" style="margin-top: 60px">
+        <div class="col-md-5 col-md-offset-3">
+            <h1>注册页面</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10">
+            <form class="form-horizontal" >
+                <div class="form-group">
+                    <label for="inputCname" class="col-sm-2 control-label">用户名</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="inputCname" placeholder="请输入用户名" >
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword" class="col-sm-2 control-label">密码</label>
+                    <div class="col-sm-8">
+                        <input type="password" class="form-control" id="inputPassword" placeholder="请输入密码">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputCage" class="col-sm-2 control-label">年龄</label>
+                    <div class="col-sm-8">
+                        <input type="password" class="form-control" id="inputCage" placeholder="请输入年龄">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="button" class="btn btn-primary" id="regBtn">注册</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    $(function(){
+        $("#regBtn").click(function(){
+            $.ajax({
+                type:"post",
+                url:"RegisterServlet",
+                data:{"cname":$("#inputCname").val(),"cpwd":$("#inputPassword").val(),"cage":$("#inputCage").val()},
+                dataType:"text",
+                success:function(res){
+                    // console.log("res",typeof res);
+                    if (res == "true") {
+                        location.href = "login.html";
+                    } else {
+                        //在页面提示 或者 利用插件 弹出框 提示错误
+                        alert("注册失败");
+                    }
+                },error:function(){
+                    alert("请求失败");
+                }
+            })
+        })
+    })
+</script>
+</body>
+</html>
