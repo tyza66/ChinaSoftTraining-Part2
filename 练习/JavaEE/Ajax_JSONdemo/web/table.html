@@ -11,7 +11,7 @@
 <table class="table table-hover">
     <thead>
     <tr>
-        <th><input type="checkbox" name="all"></th>
+        <th><input type="checkbox" name="all" class="all"></th>
         <th>用户编号</th>
         <th>姓名</th>
         <th>密码</th>
@@ -58,7 +58,7 @@
         })
     }
 
-    function updateOne(cid,cname,cpwd,cage){
+    function updateOne(cid, cname, cpwd, cage) {
         $("#myModal").modal("show");
         $("#cid").val(cid);
         $("#cname").val(cname);
@@ -66,14 +66,14 @@
         $("#cage").val(cage);
     }
 
-    function updateBtn(){
-        var cid=$("#cid").val();
-        var cname=$("#cname").val();
-        var cpwd=$("#cpwd").val();
-        var cage=$("#cage").val();
+    function updateBtn() {
+        var cid = $("#cid").val();
+        var cname = $("#cname").val();
+        var cpwd = $("#cpwd").val();
+        var cage = $("#cage").val();
         $.ajax({
             type: "get",
-            url: "UpdateCusByIdServlet?cid="+cid+"&cname="+cname+"&cpwd="+cpwd+"&cage="+cage,
+            url: "UpdateCusByIdServlet?cid=" + cid + "&cname=" + cname + "&cpwd=" + cpwd + "&cage=" + cage,
             dataType: "json",
             success: function (res) {
                 console.log(res)
@@ -85,6 +85,31 @@
         })
         $("#myModal").modal("hide");
     }
+
+    $(".all").click(function () {
+        if ($(this).prop("checked")) {
+            $(".one").prop("checked", true);
+        } else {
+            $(".one").prop("checked", false);
+        }
+    })
+
+    $(".one").each(function (index, tmp) {
+        $(tmp).click(function () {
+                var flag = true;
+                $(".one").each(function (index, tmp) {
+                    if (!$(tmp).prop("checked")) {
+                        flag = false;
+                    }
+                })
+                if (flag) {
+                    $(".all").prop("checked", true);
+                } else {
+                    $(".all").prop("checked", false);
+                }
+            }
+        )
+    })
 
     $(function () {
         //    查看所有的用户
@@ -100,7 +125,7 @@
             success: function (res) {
                 $.each(res, function (index, tmp) {
                     console.log(tmp);
-                    $("#content").append(`<tr><th><input type="checkbox" name="all"></th>
+                    $("#content").append(`<tr><th><input type="checkbox" name="all" class="one"></th>
                                 <td>${tmp.cid}</td>
                                 <td>${tmp.cname}</td>
                                 <td>${tmp.cpwd}</td>
@@ -111,7 +136,22 @@
             `);
 
                 })
-
+                $(".one").each(function (index, tmp) {
+                    $(tmp).click(function () {
+                            var flag = true;
+                            $(".one").each(function (index, tmp) {
+                                if (!$(tmp).prop("checked")) {
+                                    flag = false;
+                                }
+                            })
+                            if (flag) {
+                                $(".all").prop("checked", true);
+                            } else {
+                                $(".all").prop("checked", false);
+                            }
+                        }
+                    )
+                })
                 /*<td>${tmp.cname}</td>
                       <td>${tmp.cpwd}</td>
                       <td>${tmp.cage}</td>*/
@@ -134,7 +174,8 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
                 <h4 class="modal-title" id="myModalLabel">Modal title</h4>
             </div>
             <div class="modal-body">
