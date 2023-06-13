@@ -112,23 +112,26 @@
         )
     })
 
-    $("#del-btn").click(function (){
+    $("#del-btn").click(function () {
         let arr = [];
-        $.each($(".one"),function (index,tmp){
-            if($(tmp).prop("checked")){
+        $.each($(".one"), function (index, tmp) {
+            if ($(tmp).prop("checked")) {
                 arr.push($(tmp).val());
             }
         })
         console.log(arr);
         $.ajax({
-            type:"get",
-            url:"DeleteSelectedByIdsServlet",
-            data:{"ids":arr},
-            traditional:true,//这个是方式数组被序列化
-            dataType:"text",
-            success:function(res){
-                console.log("res",res);
-            },error(){
+            type: "get",
+            url: "DeleteSelectedByIdsServlet",
+            data: {"ids": arr},
+            traditional: true,//这个是方式数组被序列化
+            dataType: "json",
+            success: function (res) {
+                console.log(res)
+                if (res == true) {
+                    alert("删除成功")
+                }
+            }, error() {
                 alert("请求失败");
             }
         })
