@@ -2,6 +2,7 @@ package com.icss.dao;
 
 import com.icss.pojo.Customer;
 
+import java.sql.Connection;
 import java.util.List;
 
 public interface ICustomerDao {
@@ -28,5 +29,13 @@ public interface ICustomerDao {
 
 //    更新访问次数
     boolean updateCount(int count);
+
+    boolean deleteCusBySelectedId(Connection connection,int cid);
+
+//    查询用户表总的记录数
+    int getCusCount();
+
+//    每页显示的数据
+    List<Customer> selectCusByPage(int start,int end);
 
 }

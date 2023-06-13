@@ -24,4 +24,13 @@ public interface ICustomerService {
     //    更新访问次数
     boolean updateCount(int count);
 
+    boolean deleteSelectedByIds(String[] ids);
+
+
+    //    查询用户表总的记录数
+    int getCusCount();
+
+    //    每页显示的数据
+    List<Customer> selectCusByPage(int start,int end);
+
 }

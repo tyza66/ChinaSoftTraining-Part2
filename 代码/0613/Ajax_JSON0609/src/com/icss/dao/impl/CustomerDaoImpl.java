@@ -187,5 +187,56 @@ public class CustomerDaoImpl extends  BaseDao implements ICustomerDao {
         return exeUpdate(DBUtil.getConnection(),"update visitcount set count = ?",count);
     }
 
+    @Override
+    public boolean deleteCusBySelectedId(Connection connection, int cid) {
+        return exeTransitionUpdate(connection,"delete from customer where cid = ?",cid);
+    }
+
+    @Override
+    public int getCusCount() {
+        ResultSet rst = exeQuery(DBUtil.getConnection(),"select count(*) from customer");
+        int count = 0;
+        try {
+            if (rst.next()) {
+               count =  rst.getInt(1);
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return count;
+    }
+
+    @Override
+    public List<Customer> selectCusByPage(int start, int end) {
+        Connection connection = DBUtil.getConnection();
+        String sql = "select * from (select rownum r, c.* from customer c) c1 where c1.r BETWEEN ? and ?";
+        List<Customer> list = new ArrayList<>();
+        ResultSet rst = null;
+        try {
+            rst = exeQuery(connection,sql,start,end);
+
+            while(rst.next()){
+                Customer c = new Customer();
+                c.setCid(rst.getInt("cid"));
+                c.setCname(rst.getString("cname"));
+                c.setCpwd(rst.getString("cpwd"));
+                c.setCage(rst.getInt("cage"));
+
+                list.add(c);
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        } finally {
+            try {
+                connection.close();
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+        }
+
+
+        return list;
+    }
+
 
 }
