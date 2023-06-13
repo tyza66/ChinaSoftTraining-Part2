@@ -11,7 +11,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CustomerDaoImpl extends  BaseDao implements ICustomerDao {
+public class CustomerDaoImpl extends BaseDao implements ICustomerDao {
 
     @Override
     public Customer selectCusByNameAndPwd(String cname, String cpwd) {
@@ -24,11 +24,11 @@ public class CustomerDaoImpl extends  BaseDao implements ICustomerDao {
         Customer c = null;
         System.out.println(1);
         try {
-             pst = connection.prepareStatement(sql);
+            pst = connection.prepareStatement(sql);
             System.out.println(2);
- //        3 设置参数
-            pst.setString(1,cname);
-            pst.setString(2,cpwd);
+            //        3 设置参数
+            pst.setString(1, cname);
+            pst.setString(2, cpwd);
 //        4 执行sql语句
             rst = pst.executeQuery();
             System.out.println(3);
@@ -45,7 +45,7 @@ public class CustomerDaoImpl extends  BaseDao implements ICustomerDao {
             throwables.printStackTrace();
         } finally {
             //        6 关闭数据库
-            DBUtil.close(rst,pst,connection);
+            DBUtil.close(rst, pst, connection);
         }
 
         return c;
@@ -64,7 +64,7 @@ public class CustomerDaoImpl extends  BaseDao implements ICustomerDao {
         try {
             pst = connection.prepareStatement(sql);
 //            4 设置参数
-            pst.setString(1,cname);
+            pst.setString(1, cname);
 
             rst = pst.executeQuery();
 
@@ -90,11 +90,11 @@ public class CustomerDaoImpl extends  BaseDao implements ICustomerDao {
         int i = 0;
         try {
             pst = connection.prepareStatement(sql);
-            pst.setString(1,cus.getCname());
-            pst.setString(2,cus.getCpwd());
-            pst.setInt(3,cus.getCage());
+            pst.setString(1, cus.getCname());
+            pst.setString(2, cus.getCpwd());
+            pst.setInt(3, cus.getCage());
 
-            i  = pst.executeUpdate();
+            i = pst.executeUpdate();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
@@ -109,17 +109,17 @@ public class CustomerDaoImpl extends  BaseDao implements ICustomerDao {
         ResultSet rst = null;
         List<Customer> list = new ArrayList<>();
         try {
-            rst = exeQuery(connection,sql);
+            rst = exeQuery(connection, sql);
 
-           while(rst.next()){
-               Customer c = new Customer();
-               c.setCid(rst.getInt(1));
-               c.setCname(rst.getString(2));
-               c.setCpwd(rst.getString(3));
-               c.setCage(rst.getInt(4));
+            while (rst.next()) {
+                Customer c = new Customer();
+                c.setCid(rst.getInt(1));
+                c.setCname(rst.getString(2));
+                c.setCpwd(rst.getString(3));
+                c.setCage(rst.getInt(4));
 
-               list.add(c);
-           }
+                list.add(c);
+            }
 
 
         } catch (SQLException throwables) {
@@ -138,18 +138,61 @@ public class CustomerDaoImpl extends  BaseDao implements ICustomerDao {
 
     @Override
     public boolean deleteCusById(int cid) {
-        return exeUpdate(DBUtil.getConnection(),"delete from \"customer\" where \"id\" = ?",cid);
+        return exeUpdate(DBUtil.getConnection(), "delete from \"customer\" where \"id\" = ?", cid);
     }
 
     @Override
-    public boolean deleteCusById(Connection connection,int cid) {
-        return exeUpdate(connection,"delete from \"customer\" where \"id\" = ?",cid);
+    public boolean deleteCusById(Connection connection, int cid) {
+        return exeUpdate(connection, "delete from \"customer\" where \"id\" = ?", cid);
+    }
+
+    @Override
+    public int getCueCount() {
+        ResultSet resultSet = exeQuery(DBUtil.getConnection(), "select count(*) from \"customer\"");
+        int count = 0;
+        try {
+            if (resultSet.next()) {
+                count = resultSet.getInt(1);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return count;
+    }
+
+    @Override
+    public List<Customer> selectCuesByPage(int start, int end) {
+        Connection connection = DBUtil.getConnection();
+        String sql = "select * from (select rownum r, c.* from \"customer\" c) c1 where c1.r BETWEEN ? and ?";
+        List<Customer> list = new ArrayList<>();
+        ResultSet rst = null;
+        try {
+            rst = exeQuery(connection,sql,start,end);
+
+            while(rst.next()){
+                Customer c = new Customer();
+                c.setCid(rst.getInt(1));
+                c.setCname(rst.getString(2));
+                c.setCpwd(rst.getString(3));
+                c.setCage(rst.getInt(4));
+                list.add(c);
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        } finally {
+            try {
+                connection.close();
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+        }
+        return list;
     }
 
     @Override
     public Customer selectCusById(int cid) {
-        Connection con =  DBUtil.getConnection();
-        ResultSet rst = exeQuery(con,"select * from \"customer\" where \"id\" = ?",cid);
+        Connection con = DBUtil.getConnection();
+        ResultSet rst = exeQuery(con, "select * from \"customer\" where \"id\" = ?", cid);
         Customer c = null;
         try {
             if (rst.next()) {
@@ -173,13 +216,13 @@ public class CustomerDaoImpl extends  BaseDao implements ICustomerDao {
 
     @Override
     public boolean updateCusById(Customer customer) {
-        return exeUpdate(DBUtil.getConnection(),"update \"customer\" set \"cname\" = ?,\"cpwd\" = ?,\"cage\" = ? where \"id\" = ?",
-                customer.getCname(),customer.getCpwd(),customer.getCage(),customer.getCid());
+        return exeUpdate(DBUtil.getConnection(), "update \"customer\" set \"cname\" = ?,\"cpwd\" = ?,\"cage\" = ? where \"id\" = ?",
+                customer.getCname(), customer.getCpwd(), customer.getCage(), customer.getCid());
     }
 
     @Override
     public int getCount() {
-        ResultSet rst = exeQuery(DBUtil.getConnection(),"select * from visitCount");
+        ResultSet rst = exeQuery(DBUtil.getConnection(), "select * from visitCount");
         int num = 0;
         try {
             if (rst.next()) {
@@ -193,7 +236,7 @@ public class CustomerDaoImpl extends  BaseDao implements ICustomerDao {
 
     @Override
     public boolean updateCount(int count) {
-        return exeTransitionUpdate(DBUtil.getConnection(),"update visitcount set count = ?",count);
+        return exeTransitionUpdate(DBUtil.getConnection(), "update visitcount set count = ?", count);
     }
 
 

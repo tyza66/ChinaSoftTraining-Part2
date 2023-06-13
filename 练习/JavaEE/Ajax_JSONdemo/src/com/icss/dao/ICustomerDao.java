@@ -32,4 +32,8 @@ public interface ICustomerDao {
 
     boolean deleteCusById(Connection connection, int cid);
 
+    int getCueCount();
+
+    List<Customer> selectCuesByPage(int start, int end);
+
 }

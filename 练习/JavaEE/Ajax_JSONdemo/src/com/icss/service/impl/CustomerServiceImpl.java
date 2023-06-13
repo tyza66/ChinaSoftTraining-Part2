@@ -85,4 +85,14 @@ public class CustomerServiceImpl implements ICustomerService {
         }
         return flag;
     }
+
+    @Override
+    public int getCustomerCount() {
+        return 0;
+    }
+
+    @Override
+    public List<Customer> getCustomerList(int start, int end) {
+        return null;
+    }
 }

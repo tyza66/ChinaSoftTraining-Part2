@@ -26,4 +26,10 @@ public interface ICustomerService {
 
     boolean DeleteCusByIds(String[] ids);
 
+    //查询用户表的总记录数
+    int getCustomerCount();
+
+    //查询显示的数据
+List<Customer> getCustomerList(int start, int end);
+
 }
