@@ -142,6 +142,11 @@ public class CustomerDaoImpl extends  BaseDao implements ICustomerDao {
     }
 
     @Override
+    public boolean deleteCusById(Connection connection,int cid) {
+        return exeUpdate(connection,"delete from \"customer\" where \"id\" = ?",cid);
+    }
+
+    @Override
     public Customer selectCusById(int cid) {
         Connection con =  DBUtil.getConnection();
         ResultSet rst = exeQuery(con,"select * from \"customer\" where \"id\" = ?",cid);
@@ -188,7 +193,7 @@ public class CustomerDaoImpl extends  BaseDao implements ICustomerDao {
 
     @Override
     public boolean updateCount(int count) {
-        return exeUpdate(DBUtil.getConnection(),"update visitcount set count = ?",count);
+        return exeTransitionUpdate(DBUtil.getConnection(),"update visitcount set count = ?",count);
     }
 
 

@@ -29,6 +29,25 @@ public class BaseDao {
         return num > 0 ? true : false;
     }
 
+
+    //    关于事务增删改
+    public boolean exeTransitionUpdate(Connection con,String sql,Object...args){
+        PreparedStatement pst = null;
+        int num = 0;
+        try {
+            pst = con.prepareStatement(sql);
+//            设置参数
+            for(int i = 0; i < args.length; i++ ){
+                pst.setObject(i + 1,args[i]);
+                System.out.println(args[i]);
+            }
+
+            num  = pst.executeUpdate();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return num > 0 ? true : false;
+    }
 //    查询
     public ResultSet exeQuery(Connection con,String sql,Object...args){
         PreparedStatement pst = null;

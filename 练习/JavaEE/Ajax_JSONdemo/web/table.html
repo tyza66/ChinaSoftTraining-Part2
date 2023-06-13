@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css"/>
 </head>
 <body>
+<button class="btn btn-primary" id="del-btn">删除选中的项目</button>
 <table class="table table-hover">
     <thead>
     <tr>
@@ -111,6 +112,28 @@
         )
     })
 
+    $("#del-btn").click(function (){
+        let arr = [];
+        $.each($(".one"),function (index,tmp){
+            if($(tmp).prop("checked")){
+                arr.push($(tmp).val());
+            }
+        })
+        console.log(arr);
+        $.ajax({
+            type:"get",
+            url:"DeleteSelectedByIdsServlet",
+            data:{"ids":arr},
+            traditional:true,//这个是方式数组被序列化
+            dataType:"text",
+            success:function(res){
+                console.log("res",res);
+            },error(){
+                alert("请求失败");
+            }
+        })
+    })
+
     $(function () {
         //    查看所有的用户
         selectAllCus();
@@ -125,7 +148,7 @@
             success: function (res) {
                 $.each(res, function (index, tmp) {
                     console.log(tmp);
-                    $("#content").append(`<tr><th><input type="checkbox" name="all" class="one"></th>
+                    $("#content").append(`<tr><th><input type="checkbox" name="one" class="one" value="${tmp.cid}"></th>
                                 <td>${tmp.cid}</td>
                                 <td>${tmp.cname}</td>
                                 <td>${tmp.cpwd}</td>

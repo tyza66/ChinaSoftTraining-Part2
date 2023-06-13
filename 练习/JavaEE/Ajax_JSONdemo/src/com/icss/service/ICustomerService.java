@@ -24,4 +24,6 @@ public interface ICustomerService {
     //    更新访问次数
     boolean updateCount(int count);
 
+    boolean DeleteCusByIds(String[] ids);
+
 }

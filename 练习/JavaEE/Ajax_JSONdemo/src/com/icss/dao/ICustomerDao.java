@@ -2,6 +2,7 @@ package com.icss.dao;
 
 import com.icss.pojo.Customer;
 
+import java.sql.Connection;
 import java.util.List;
 
 public interface ICustomerDao {
@@ -28,5 +29,7 @@ public interface ICustomerDao {
 
 //    更新访问次数
     boolean updateCount(int count);
+
+    boolean deleteCusById(Connection connection, int cid);
 
 }

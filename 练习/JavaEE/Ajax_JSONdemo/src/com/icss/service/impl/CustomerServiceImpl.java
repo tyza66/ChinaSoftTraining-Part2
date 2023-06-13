@@ -3,7 +3,10 @@ package com.icss.service.impl;
 import com.icss.dao.impl.CustomerDaoImpl;
 import com.icss.pojo.Customer;
 import com.icss.service.ICustomerService;
+import com.icss.util.DBUtil;
 
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.List;
 
 public class CustomerServiceImpl implements ICustomerService {
@@ -12,7 +15,7 @@ public class CustomerServiceImpl implements ICustomerService {
 
     @Override
     public Customer selectCusByNameAndPwd(String cname, String cpwd) {
-        return customerDao.selectCusByNameAndPwd(cname,cpwd);
+        return customerDao.selectCusByNameAndPwd(cname, cpwd);
     }
 
     @Override
@@ -55,4 +58,31 @@ public class CustomerServiceImpl implements ICustomerService {
         return customerDao.updateCount(count);
     }
 
+    @Override
+    public boolean DeleteCusByIds(String[] ids) {
+        Connection connection = DBUtil.getConnection();
+        //设计事物处理
+        boolean flag = true;
+        try {
+            connection.setAutoCommit(false);
+            for (String id : ids) {
+                flag = customerDao.deleteCusById(Integer.parseInt(id));
+                if (!flag) {
+                    connection.rollback();
+                }
+            }
+            if (flag) {
+                connection.commit();
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } finally {
+            try {
+                connection.close();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        return flag;
+    }
 }
