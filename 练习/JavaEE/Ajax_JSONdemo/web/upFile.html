@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+          charset="utf-8"/>
+    <script src="static/js/jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+    <script src="static/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css"/>
+</head>
+<body>
+<!--规定文件以二进制流的方式来传递-->
+<form enctype="multipart/form-data" id="f">
+    上传者：<input type="text" name="userName">
+    上传文件：<input type="file" name="file">
+    <input type="button" value="提交" id="upBtn">
+</form>
+<script>
+    $(() => {
+        $("#upBtn").click(
+            function () {
+                let formData = new FormData($("#f")[0]);
+                $.ajax({
+                    url: "UploadFileServlet",
+                    type: "post",
+                    data: formData,
+                    contentType: false,
+                    processData: false,
+                    cache:false,
+                    dataType:"text",
+                    success: function (res) {
+                        console.log(res);
+                    },error:function () {
+                        alert("上传失败");
+                    }
+                })
+            }
+        )
+    })
+</script>
+</body>
+</html>
