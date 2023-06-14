@@ -19,6 +19,7 @@
     $(() => {
         $("#upBtn").click(
             function () {
+                //封装的是整个表单 传递的参数是一个js对象
                 let formData = new FormData($("#f")[0]);
                 $.ajax({
                     url: "UploadFileServlet",
