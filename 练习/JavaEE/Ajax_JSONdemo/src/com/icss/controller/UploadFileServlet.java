@@ -37,6 +37,7 @@ public class UploadFileServlet extends HttpServlet {
         if (!f.exists()) {
             f.mkdirs();
         }
+        //可以用时间戳或者uuid进行区分同名文件
         if(fn.toLowerCase().endsWith(".jpg") || fn.toLowerCase().endsWith(".png") || fn.toLowerCase().endsWith(".gif")) {
             file.write(path + File.separator + fn);
         }

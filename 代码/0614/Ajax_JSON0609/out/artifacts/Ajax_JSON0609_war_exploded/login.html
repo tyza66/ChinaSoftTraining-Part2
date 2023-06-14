@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+          charset="utf-8"/>
+    <title></title>
+    <script src="static/js/jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+    <script src="static/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css"/>
+</head>
+<body>
+<div class="container">
+    <div class="row" style="margin-top: 60px">
+        <div class="col-md-5 col-md-offset-3">
+            <h1>登录页面</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10">
+            <form class="form-horizontal" >
+                <div class="form-group">
+                    <label for="inputCname" class="col-sm-2 control-label">用户名</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="inputCname" placeholder="请输入用户名" >
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword" class="col-sm-2 control-label">密码</label>
+                    <div class="col-sm-8">
+                        <input type="password" class="form-control" id="inputPassword" placeholder="请输入密码">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Remember me
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="button" class="btn btn-primary" id="loginBtn">登录</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    $(function(){
+        $("#loginBtn").click(function(){
+        //    通过ajax发送请求
+            $.ajax({
+                type:"post",
+                url:"LoginServlet",
+                data:{"cname":$("#inputCname").val(),"cpwd":$("#inputPassword").val()},
+                dataType:"json",
+                success:function(res){
+                //    根据响应数据判断
+                    if (res != null) {//登录成功
+                        //登录成功后 登录者名字显示在主页面中
+                        sessionStorage.setItem("cname",res.cname);
+                        location.href = "main.html";
+                    }
+                },
+                error:function(){
+                    alert("请求失败");
+                }
+            })
+
+        })
+    })
+</script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+          charset="utf-8"/>
+    <script src="static/js/jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<!--要求提交方式必须是post enctype="multipart/form-data" 规定文件以二进制流的方式进行传递 -->
+<form enctype="multipart/form-data" id="f" >
+    上传者： <input type="text" name="username" > <br>
+    文件: <input type="file" name="file" > <br>
+    <input type="button" value="上传文件" id="upBtn">
+</form>
+<!--<img src="/upload/1.png">-->
+<img src="" id="m1">
+<script>
+    $(function(){
+
+        $("#upBtn").click(function(){
+            //FormData 传递整个表单 封装表单控件name属性 值value
+            let formData = new FormData($("#f")[0]);//$("#f")[0] js表单对象
+
+            $.ajax({
+                type:"post",
+                url:"UploadFileServlet",
+                data:formData,
+                contentType:false,
+                processData: false,
+                cache:false,
+                dataType:"text",
+                success(res){
+                    // console.log("res",res);
+                    $("#m1").prop("src","/upload/"+res);
+                },error(){
+                    alert("请求失败");
+                }
+            })
+        })
+    })
+</script>
+
+
+</body>
+</html>
