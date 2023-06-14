@@ -6,7 +6,8 @@ import java.util.List;
 
 public interface ICustomerService {
     Customer selectCusByNameAndPwd(String cname, String cpwd);
-//    注册
+
+    //    注册
     boolean registerCustomer(Customer customer);
 
     List<Customer> selectAllCustomer();
@@ -30,6 +31,12 @@ public interface ICustomerService {
     int getCustomerCount();
 
     //查询显示的数据
-List<Customer> getCustomerListByPage(int start, int end);
+    List<Customer> getCustomerListByPage(int start, int end);
+
+    //    多条件查找并且分页处理
+    List<Customer> selectCusByNameAndAge(String cname, String cage, int start, int end);
+
+    //   按照条件返回记录记录数
+    int getCusByNameAndAgeCount(String cname, String cage);
 
 }

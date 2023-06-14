@@ -95,4 +95,14 @@ public class CustomerServiceImpl implements ICustomerService {
     public List<Customer> getCustomerListByPage(int start, int end) {
         return customerDao.selectCuesByPage(start, end);
     }
+
+    @Override
+    public List<Customer> selectCusByNameAndAge(String cname, String cage, int start, int end) {
+        return customerDao.selectCusByNameAndAge(cname,cage,start,end);
+    }
+
+    @Override
+    public int getCusByNameAndAgeCount(String cname, String cage) {
+        return customerDao.getCusByNameAndAgeCount(cname,cage);
+    }
 }

@@ -195,14 +195,41 @@
     }
 
     //    根据用户输入 多条件的查找
+
+    //    根据用户输入 多条件的查找
     function selectCusByNameAndAge(currpage){
+        var cname = $("#searchName").val()
+        var cage = $("#searchAge").val()
+        console.log(cname,cage)
+        //清空的操作
+        $("#content").html("");
+
         $.ajax({
             type:"get",
             url:"SelectCusByNameAndAgeServlet",
-            data:{"cname":$("#searchName").val(),"cage":$("#searchAge").val(),"currpage":currpage},
+            data:{"cname":cname,"cage":cage,"currpage":currpage},
             dataType:"json",
             success(res){
+                $.each(res.list,function(index,tmp){
+                    $("table").append(`<tr>
+                        <td><input type="checkbox" name="ids" value="${tmp.cid}"></td>
+                        <td>${tmp.cid}</td>
+                        <td>${tmp.cname}</td>
+                         <td>${tmp.cpwd}</td>
+                         <td>${tmp.cage}</td>
+                         <td><a href="javascript:deleteCusById(${tmp.cid})">删除</td>
+                         <td><a href="javascript:showCus(${tmp.cid},'${tmp.cname}',${tmp.cpwd},${tmp.cage})" >修改</a></td>
+                       </tr>`);
+                })
 
+                //    添加页码
+                let y = `<nav> <ul class="pagination"><li><a href="javascript:selectCusByNameAndAge(${currpage - 1 <=                                                                0 ? 1 : currpage - 1})" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a> </li>`;
+                for (let i = 1; i <= res.pager.pageNum; i++) {
+                    y += ` <li><a href="javascript:selectCusByNameAndAge(${i})">${i}</a></li>`;
+                }
+                y += `<li>  <a href="javascript:selectCusByNameAndAge(${currpage + 1 >= res.pager.pageNum ? res.pager.pageNum : currpage + 1 })" aria-label="Next"><span aria-hidden="true">&raquo;</span></a> </li></ul></nav>`;
+
+                $("#page").append(y);
             },error(){
                 alert("按条件查找请求失败");
             }

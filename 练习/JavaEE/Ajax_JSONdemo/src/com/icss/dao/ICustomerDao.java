@@ -36,4 +36,11 @@ public interface ICustomerDao {
 
     List<Customer> selectCuesByPage(int start, int end);
 
+    //    多条件查找并且分页处理
+    List<Customer> selectCusByNameAndAge(String cname,String cage,int start,int end);
+
+    //   按照条件返回记录记录数
+    int getCusByNameAndAgeCount(String cname,String cage);
+
+
 }

@@ -239,5 +239,83 @@ public class CustomerDaoImpl extends BaseDao implements ICustomerDao {
         return exeTransitionUpdate(DBUtil.getConnection(), "update visitcount set count = ?", count);
     }
 
+    @Override
+    public List<Customer> selectCusByNameAndAge(String cname, String cage, int start, int end) {
+        Connection connection = DBUtil.getConnection();
 
+//        StringBuffer stringBuffer = new StringBuffer("select c1.* from (select rownum r, c.* from customer c) c1  where 1 = 1 ");
+
+        ResultSet rst = null;
+        List<Customer> list = new ArrayList<>();
+        String sql = "";
+
+        if (cname != null && cname != "" && cage != null && cage != "") {
+            sql = "select c1.* from (select rownum r, c.* from \"customer\" c where \"cname\" like ? and \"cage\" = ?) c1 where c1.r BETWEEN ? and ? ";
+            rst = exeQuery(connection,sql,cname,cage,start,end);
+
+        }else if (cname != null && cname != "") {
+            sql = "select c1.* from (select rownum r, c.* from \"customer\" c where \"cname\" like ?) c1 where c1.r BETWEEN ? and ? ";
+            rst = exeQuery(connection,sql,cname,start,end);
+
+        } else if (cage != null && cage != "") {
+
+            sql = "select c1.* from (select rownum r, c.* from \"customer\" c where \"cage\" = ?) c1 where c1.r BETWEEN ? and ? ";
+            rst = exeQuery(connection,sql,cage,start,end);
+        } else {
+            sql = "select c1.* from (select rownum r, c.* from \"customer\" c ) c1 where c1.r BETWEEN ? and ? ";
+            rst = exeQuery(connection,sql,start,end);
+        }
+
+        try {
+            while(rst.next()){
+                Customer c = new Customer();
+                c.setCid(rst.getInt(2));
+                c.setCname(rst.getString(3));
+                c.setCpwd(rst.getString(4));
+                c.setCage(rst.getString(5));
+                list.add(c);
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        } finally {
+            try {
+                connection.close();
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+        }
+
+        return list;
+    }
+
+    @Override
+    public int getCusByNameAndAgeCount(String cname, String cage) {
+        Connection connection = DBUtil.getConnection();
+        StringBuffer stringBuffer = new StringBuffer("select count(*) from \"customer\" where 1 = 1 ");
+
+        ResultSet rst = null;
+        int num = 0;
+
+        if (cname != null && cname != "" && cage != null && cage != "") {
+            stringBuffer.append("and \"cname\" like ? and \"cage\" = ?");
+            rst = exeQuery(connection,stringBuffer.toString(),cname,cage);
+        } else if (cname != null && cname != "" ) {
+            stringBuffer.append("and \"cname\" like ?");
+            rst = exeQuery(connection,stringBuffer.toString(),cname);
+        } else if (cage != null && cage != "") {
+            stringBuffer.append("and \"cage\" = ?");
+            rst = exeQuery(connection,stringBuffer.toString(),cage);
+        } else {
+            rst = exeQuery(connection,stringBuffer.toString());
+        }
+
+        try {
+            if (rst.next()) {
+                num = rst.getInt(1);
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return num;
+    }
 }
