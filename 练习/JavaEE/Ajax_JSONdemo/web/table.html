@@ -8,6 +8,17 @@
     <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css"/>
 </head>
 <body id="page">
+<form class="form-inline">
+    <div class="form-group">
+        <label for="searchName">姓名: </label>
+        <input type="text" class="form-control" id="searchName" placeholder="请输入姓名">
+    </div>
+    <div class="form-group">
+        <label for="searchAge">年龄: </label>
+        <input type="text" class="form-control" id="searchAge" placeholder="请输入年龄">
+    </div>
+    <button type="button" class="btn btn-default" onclick="selectCusByNameAndAge(1)">搜索</button>
+</form>
 <button class="btn btn-primary" id="del-btn">删除选中的项目</button>
 <table class="table table-hover">
     <thead>
@@ -144,16 +155,16 @@
     })
 
 
-    function selectAllCus(currpage){
+    function selectAllCus(currpage) {
         //清空的操作
         $("#content").html("");
         $.ajax({
-            type:"get",
-            url:"SelectAllCusServlet",
-            data:{"currpage":currpage},
-            dataType:"json",
-            success:function(res){
-                $.each(res.list,function(index,tmp){
+            type: "get",
+            url: "SelectAllCusServlet",
+            data: {"currpage": currpage},
+            dataType: "json",
+            success: function (res) {
+                $.each(res.list, function (index, tmp) {
                     $("#content").append(`<tr>
                         <td><input type="checkbox" name="ids" value="${tmp.cid}"></td>
                         <td>${tmp.cid}</td>
@@ -170,12 +181,12 @@
                 for (let i = 1; i <= res.pager.pageNum; i++) {
                     y += ` <li><a href="javascript:selectAllCus(${i})">${i}</a></li>`;
                 }
-                y += `<li>  <a href="javascript:selectAllCus(${currpage + 1 >= res.pager.pageNum ? res.pager.pageNum : currpage + 1 })" aria-label="Next"><span aria-hidden="true">&raquo;</span></a> </li></ul></nav>`;
+                y += `<li>  <a href="javascript:selectAllCus(${currpage + 1 >= res.pager.pageNum ? res.pager.pageNum : currpage + 1})" aria-label="Next"><span aria-hidden="true">&raquo;</span></a> </li></ul></nav>`;
 
                 $("#page").append(y);
 
 
-            },error:function(){
+            }, error: function () {
                 alert("请求失败");
             }
         })
@@ -183,6 +194,20 @@
 
     }
 
+    //    根据用户输入 多条件的查找
+    function selectCusByNameAndAge(currpage){
+        $.ajax({
+            type:"get",
+            url:"SelectCusByNameAndAgeServlet",
+            data:{"cname":$("#searchName").val(),"cage":$("#searchAge").val(),"currpage":currpage},
+            dataType:"json",
+            success(res){
+
+            },error(){
+                alert("按条件查找请求失败");
+            }
+        })
+    }
 
 </script>
 <!--修改模态框-->
