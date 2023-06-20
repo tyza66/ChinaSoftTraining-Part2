@@ -1,5 +1,6 @@
 import com.sdm.pojo.Dog;
 import com.sdm.pojo.Product;
+import com.sdm.pojo.Student;
 import javafx.application.Application;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.AbstractXmlApplicationContext;
@@ -23,5 +24,17 @@ public class Main {
         //静态工厂模式
         Product pro2 = (Product) applicationContext.getBean("pro2");
         pro2.desc();
+
+        //注入后之后的对象
+        Dog d2 = (Dog) applicationContext.getBean("d2");
+        System.out.println(d2);
+
+        //注入后之后的对象
+        Dog d3 = (Dog) applicationContext.getBean("d3");
+        System.out.println(d3);
+
+        //学生
+        Student stu = (Student) applicationContext.getBean("stu");
+        System.out.println(stu);
     }
 }
