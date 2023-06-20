@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class AccountServiceImpl implements AccountService {
 
-    @Autowired
+    @Autowired //默认按类型注入 如果类型找不到或者找到多个 就用属性名作为id去找
     private AccountDao accountDao;
 
     public AccountServiceImpl() {
