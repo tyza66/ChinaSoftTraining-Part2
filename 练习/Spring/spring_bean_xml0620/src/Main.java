@@ -14,7 +14,7 @@ public class Main {
         //IOC控制反转 把对象创建的权利以及管理对象之间的关系交给Spring容器来完成 本质是工厂模式+spring.xml
 
         //初始化Spring容器 并加载xml
-        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring.xml");
+        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring.xml");
         Dog d1 = (Dog) applicationContext.getBean("d1");
         System.out.println(d1);
 
@@ -40,5 +40,11 @@ public class Main {
 
         MoreType mo = (MoreType) applicationContext.getBean("mo");
         System.out.println(mo);
+
+        Student stu1 = (Student) applicationContext.getBean("stu1");
+        System.out.println(stu1);
+
+        //关闭容器
+        applicationContext.close();
     }
 }

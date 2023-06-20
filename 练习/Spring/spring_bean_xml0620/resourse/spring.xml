@@ -40,7 +40,8 @@
     </bean>
 
     <!--学生对象配置 里面有个成员需要指定ref 自动注入 autowire="byName"-->
-    <bean id="stu1" class="com.sdm.pojo.Student" autowire="byName">
+    <bean id="stu1" class="com.sdm.pojo.Student" autowire="byName" scope="singleton" lazy-init="true" init-method="init" destroy-method="destroy"><!--singleton 单例模式 只创建一个对象 prototype 原型模式 每次使用都会创建新的对象来使用-->
+                                                                                                        <!--lazy-init懒加载 只有需要获取时候才执行构造 默认是我们初始化spring容器的时候就被创建了-->
         <property name="stuName" value="李四"/>
         <property name="score" value="18"/>
     </bean>

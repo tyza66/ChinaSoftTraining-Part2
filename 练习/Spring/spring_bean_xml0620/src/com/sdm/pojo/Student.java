@@ -52,4 +52,12 @@ public class Student {
                 ", dog=" + dog +
                 '}';
     }
+
+    public void init(){
+        System.out.println("这是Student的初始化方法");
+    }
+
+    public void destroy(){
+        System.out.println("这是Student的销毁方法");
+    }
 }
