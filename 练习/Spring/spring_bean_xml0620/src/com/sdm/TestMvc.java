@@ -1,5 +1,6 @@
 package com.sdm;
 
+import com.sdm.controller.AccountController;
 import com.sdm.service.AccountService;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -12,8 +13,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class TestMvc {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring-mvc.xml");
-        AccountService accountService = (AccountService)context.getBean("accountService");
-        accountService.selectAccount();
+        AccountController accountController = (AccountController)context.getBean("accountController");
+        accountController.play();
         context.close();
     }
 }
