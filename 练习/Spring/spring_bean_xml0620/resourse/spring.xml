@@ -33,9 +33,55 @@
         <property name="dog" ref="d2"/>
     </bean>
 
+
+    <bean id="dog" class="com.sdm.pojo.Dog">
+        <constructor-arg index="0" value="旺财"/>
+        <constructor-arg index="1" value="2"/>
+    </bean>
+
     <!--学生对象配置 里面有个成员需要指定ref 自动注入 autowire="byName"-->
-    <bean id="stu1" class="com.sdm.pojo.Student" >
+    <bean id="stu1" class="com.sdm.pojo.Student" autowire="byName">
         <property name="stuName" value="李四"/>
         <property name="score" value="18"/>
+    </bean>
+
+    <!--其他类型注入-->
+    <bean id="mo" class="com.sdm.pojo.MoreType">
+        <property name="arr">
+            <list>
+                <value>1</value>
+                <value>2</value>
+                <value>3</value>
+            </list>
+        </property>
+        <property name="list">
+            <list>
+                <value>a</value>
+                <value>b</value>
+                <value>c</value>
+            </list>
+        </property>
+        <property name="set">
+            <set>
+                <value>aa</value>
+                <value>bb</value>
+                <value>cc</value>
+            </set>
+        </property>
+        <property name="map">
+            <map>
+                <entry key="1" value="a"/>
+                <entry key="2" value="b"/>
+                <entry key="3" value="c"/>
+            </map>
+        </property>
+        <property name="dogList">
+            <list>
+                <ref bean="d1"/>
+                <ref bean="d2"/>
+                <ref bean="d3"/>
+                <ref bean="dog"/>
+            </list>
+        </property>
     </bean>
 </beans>

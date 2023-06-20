@@ -1,4 +1,5 @@
 import com.sdm.pojo.Dog;
+import com.sdm.pojo.MoreType;
 import com.sdm.pojo.Product;
 import com.sdm.pojo.Student;
 import javafx.application.Application;
@@ -36,5 +37,8 @@ public class Main {
         //学生
         Student stu = (Student) applicationContext.getBean("stu");
         System.out.println(stu);
+
+        MoreType mo = (MoreType) applicationContext.getBean("mo");
+        System.out.println(mo);
     }
 }
