@@ -1,4 +1,5 @@
 import com.sdm.pojo.Dog;
+import com.sdm.pojo.Product;
 import javafx.application.Application;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.AbstractXmlApplicationContext;
@@ -14,5 +15,13 @@ public class Main {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring.xml");
         Dog d1 = (Dog) applicationContext.getBean("d1");
         System.out.println(d1);
+
+        //普通工厂模式
+        Product pro1 = (Product) applicationContext.getBean("pro");
+        pro1.desc();
+
+        //静态工厂模式
+        Product pro2 = (Product) applicationContext.getBean("pro2");
+        pro2.desc();
     }
 }

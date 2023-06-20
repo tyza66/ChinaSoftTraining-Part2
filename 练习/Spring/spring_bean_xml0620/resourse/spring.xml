@@ -2,7 +2,15 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    
+
     <bean id="d1" class="com.sdm.pojo.Dog"/>
+
+    <!--创建bean对象的第二种模式 普通工厂模式 将工厂bean交给spring容器-->
+    <bean id="cusFactory" class="com.sdm.pojo.CustomerFactory"/>
+
+    <bean id="pro" factory-bean="cusFactory" factory-method="getPro"/>
+
+    <!--创建bean第三种方式 使用静态工厂直接调用工厂方法-->
+    <bean id="pro2" class="com.sdm.pojo.StaticFactory" factory-method="getPro"/>
 
 </beans>
