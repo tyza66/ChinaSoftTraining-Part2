@@ -1,6 +1,8 @@
 package com.sdm.controller;
 
 import com.sdm.service.AccountService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 
 /**
  * Author: tyza66
@@ -8,7 +10,9 @@ import com.sdm.service.AccountService;
  * Github: https://github.com/tyza66
  **/
 
+@Controller
 public class AccountController {
+    @Autowired
     private AccountService accountService;
     public void selectAccount(){
         System.out.println("保存了账户");

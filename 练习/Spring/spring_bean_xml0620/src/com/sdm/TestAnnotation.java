@@ -1,5 +1,6 @@
 package com.sdm;
 
+import com.sdm.controller.AccountController;
 import com.sdm.dao.AccountDao;
 import com.sdm.pojo.Dog;
 import com.sdm.service.AccountService;
@@ -22,5 +23,10 @@ public class TestAnnotation {
 
         AccountService accountService = (AccountService)applicationContext.getBean("accountServiceImpl");
         accountService.selectAccount();
+
+        AccountController accountController = (AccountController)applicationContext.getBean("accountController");
+
+        accountController.play();
+        applicationContext.close();
     }
 }

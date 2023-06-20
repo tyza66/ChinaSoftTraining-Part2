@@ -20,6 +20,8 @@ public class AccountServiceImpl implements AccountService {
     @Qualifier("accountDao2")
     private AccountDao accountDao;
 
+    //除了这个还有个Resource注解 也可以注入 但是Resource是首先按照名字注入的
+
     public AccountServiceImpl() {
     }
 
