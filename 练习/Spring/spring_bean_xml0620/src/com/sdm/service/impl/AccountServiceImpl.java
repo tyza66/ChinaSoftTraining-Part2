@@ -3,6 +3,8 @@ package com.sdm.service.impl;
 import com.sdm.dao.AccountDao;
 import com.sdm.dao.impl.AccountDaoImpl;
 import com.sdm.service.AccountService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  * Author: tyza66
@@ -10,7 +12,10 @@ import com.sdm.service.AccountService;
  * Github: https://github.com/tyza66
  **/
 
+@Service
 public class AccountServiceImpl implements AccountService {
+
+    @Autowired
     private AccountDao accountDao;
 
     public AccountServiceImpl() {

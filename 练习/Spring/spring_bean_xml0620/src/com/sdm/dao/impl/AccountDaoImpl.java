@@ -2,6 +2,7 @@ package com.sdm.dao.impl;
 
 import com.sdm.dao.AccountDao;
 import com.sdm.pojo.Dog;
+import org.springframework.stereotype.Repository;
 
 /**
  * Author: tyza66
@@ -9,6 +10,7 @@ import com.sdm.pojo.Dog;
  * Github: https://github.com/tyza66
  **/
 
+@Repository("accountDao")
 public class AccountDaoImpl implements AccountDao {
     @Override
     public Dog getDog() {
