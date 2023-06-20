@@ -44,7 +44,10 @@ public class Main {
         Student stu1 = (Student) applicationContext.getBean("stu1");
         System.out.println(stu1);
 
-        //关闭容器
+        Dog d4 = (Dog) applicationContext.getBean("d4");
+        System.out.println(d4);
+
+        //关闭容器-销毁方法
         applicationContext.close();
     }
 }

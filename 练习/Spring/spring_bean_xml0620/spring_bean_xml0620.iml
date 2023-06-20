@@ -5,6 +5,7 @@
       <configuration>
         <fileset id="fileset" name="Spring" removed="false">
           <file>file://$MODULE_DIR$/resourse/spring.xml</file>
+          <file>file://$MODULE_DIR$/resourse/spring-mvc.xml</file>
         </fileset>
       </configuration>
     </facet>
