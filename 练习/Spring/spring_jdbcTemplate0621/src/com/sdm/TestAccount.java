@@ -28,4 +28,18 @@ public class TestAccount {
         AccountDaoImpl accountDao = context.getBean("accountDao", AccountDaoImpl.class);
         System.out.println("插入返回值"+accountDao.insertAccount(new Account(1001,"tom","2000")));
     }
+
+    @Test
+    public void test3(){
+        ClassPathXmlApplicationContext context =  new ClassPathXmlApplicationContext("spring.xml");
+        AccountDaoImpl accountDao = context.getBean("accountDao", AccountDaoImpl.class);
+        System.out.println("修改返回值"+accountDao.updateAccount(new Account(1001,"tom","96")));
+    }
+
+    @Test
+    public void test4(){
+        ClassPathXmlApplicationContext context =  new ClassPathXmlApplicationContext("spring.xml");
+        AccountDaoImpl accountDao = context.getBean("accountDao", AccountDaoImpl.class);
+        System.out.println("查找返回值"+accountDao.selectAllAccount());
+    }
 }

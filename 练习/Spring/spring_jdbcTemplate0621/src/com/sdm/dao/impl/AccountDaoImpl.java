@@ -4,9 +4,12 @@ import com.sdm.dao.AccountDao;
 import com.sdm.pojo.Account;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import javax.annotation.Resource;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
 
 /**
@@ -31,12 +34,12 @@ public class AccountDaoImpl implements AccountDao {
 
     @Override
     public boolean deleteAccountByID(int aid) {
-        return false;
+        return jdbcTemplate.update("delete from \"account_sdm\" where \"AID\" = ?", aid) > 0 ? true : false;
     }
 
     @Override
     public boolean updateAccount(Account account) {
-        return false;
+        return jdbcTemplate.update("update \"account_sdm\" set \"MONEY\" = ? where \"AID\" = ?",account.getMoney() ,account.getAid()) > 0 ? true : false;
     }
 
     @Override
@@ -46,6 +49,16 @@ public class AccountDaoImpl implements AccountDao {
 
     @Override
     public List<Account> selectAllAccount() {
-        return null;
+        List<Account> query = jdbcTemplate.query("select * from \"account_sdm\"", new RowMapper<Account>() {
+            @Override
+            public Account mapRow(ResultSet resultSet, int i) throws SQLException {
+                Account account = new Account();
+                account.setAid(resultSet.getInt("AID"));
+                account.setName(resultSet.getString("NAME"));
+                account.setMoney(resultSet.getString("MONEY"));
+                return account;
+            }
+        });
+        return query;
     }
 }
