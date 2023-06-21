@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--id 唯一标识  class 完整类路径  反射-->
+    <!--依赖注入 DI 手动注入 1 有参数的构造方法 2 set方法 自动注入-->
+    <bean id="d1" class="com.icss.pojo.Dog">
+        <!-- 有参数的构造方法 index 参数的索引下标 value 值 (ref 引用其他bean对象id) -->
+        <!--<constructor-arg index="0" value="旺财"></constructor-arg>
+        <constructor-arg index="1" value="2"></constructor-arg>-->
+
+        <!--<constructor-arg name="dogName" value="大黑"></constructor-arg>
+        <constructor-arg name="dogAge" value="3"></constructor-arg>
+        -->
+        <!--set方法 完成属性的赋值-->
+        <property name="dogName" value="小白"></property>
+        <property name="dogAge" value="2"></property>
+
+    </bean>
+
+    <bean id="d2" class="com.icss.pojo.Dog" p:dogName="旺福" p:dogAge="3"></bean>
+
+    <bean id="dog" class="com.icss.pojo.Dog">
+        <constructor-arg name="dogName" value="大黑"></constructor-arg>
+        <constructor-arg name="dogAge" value="3"></constructor-arg>
+    </bean>
+
+    <!--学生对象配置-->
+    <!--bean属性 自动注入
+       autowire="byType" 按照类型注入 （如果有两个相同类型bean 报错）
+       autowire="byName" 按照名称注入 (要求属性名称和bean中id名称一致)
+
+       作用域范围
+       scope="singleton" 单例模式(默认) 一个应用只会创建一个对象
+       scope="prototype" 原型模式 每次getBean() 生成新的对象
+
+      lazy-init="true" 懒加载 执行getBean()才创建对象
+      默认在初始化spring容器 对象就已经被创建了  lazy-init=“false”
+
+      初始化方法
+      init-method="initStu"
+      销毁方法（容器关闭）
+      destroy-method="desStu"
+
+      bean生命周期
+      从创建到销毁   bean定义 实例化 属性赋值 初始化方法 获取对象并使用 对象销毁
+     -->
+    <bean id="stu1" class="com.icss.pojo.Student" autowire="byName"
+          lazy-init="true" init-method="initStu" destroy-method="desStu">
+
+        <property name="stuName" value="于博"></property>
+        <property name="score" value="100"></property>
+<!--        <property name="dog" ref="d1"></property>-->
+    </bean>
+
+
+    <!--    创建bean对象第二种方式 普通工厂模式（工厂交给spring容器）-->
+    <bean id="cusFactory" class="com.icss.pojo.CustomerFactory"></bean>
+
+    <bean id="pro" factory-bean="cusFactory" factory-method="getPro"></bean>
+
+    <!--创建bean第三种方式 静态工厂 -->
+    <bean id="pro2" class="com.icss.pojo.StaticFactory" factory-method="getPro"></bean>
+
+
+    <!--其他类型注入-->
+    <bean id="mo" class="com.icss.pojo.MoreType">
+        <property name="arr">
+            <list>
+                <value>1</value>
+                <value>2</value>
+            </list>
+        </property>
+        <property name="list">
+            <list>
+                <value>aaa</value>
+                <value>bbb</value>
+            </list>
+        </property>
+        <property name="set">
+            <set>
+                <value>tom</value>
+                <value>jack</value>
+            </set>
+        </property>
+        <property name="map">
+            <map>
+                <entry key="1001" value="rose"></entry>
+                <entry key="1002" value="marry"></entry>
+               <!-- <entry key-ref="" value-ref=""></entry>-->
+            </map>
+        </property>
+        <property name="dogs">
+            <list>
+                <ref bean="d1"></ref>
+                <ref bean="dog"></ref>
+            </list>
+        </property>
+    </bean>
+
+</beans>
