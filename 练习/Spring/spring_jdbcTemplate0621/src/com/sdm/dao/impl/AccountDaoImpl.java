@@ -44,7 +44,20 @@ public class AccountDaoImpl implements AccountDao {
 
     @Override
     public Account selectAccountByID(int aid) {
-        return null;
+        List<Account> query = jdbcTemplate.query("select * from \"account_sdm\"", new RowMapper<Account>() {
+            @Override
+            public Account mapRow(ResultSet resultSet, int i) throws SQLException {
+                Account account = new Account();
+                account.setAid(resultSet.getInt("AID"));
+                account.setName(resultSet.getString("NAME"));
+                account.setMoney(resultSet.getString("MONEY"));
+                return account;
+            }
+        });
+        if(query.size() > 0)
+            return query.get(0);
+        else
+            return null;
     }
 
     @Override

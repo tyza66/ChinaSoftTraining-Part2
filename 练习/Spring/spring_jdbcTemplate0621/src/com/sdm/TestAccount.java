@@ -42,4 +42,11 @@ public class TestAccount {
         AccountDaoImpl accountDao = context.getBean("accountDao", AccountDaoImpl.class);
         System.out.println("查找返回值"+accountDao.selectAllAccount());
     }
+
+    @Test
+    public void test5(){
+        ClassPathXmlApplicationContext context =  new ClassPathXmlApplicationContext("spring.xml");
+        AccountDaoImpl accountDao = context.getBean("accountDao", AccountDaoImpl.class);
+        System.out.println("ID查找返回值"+accountDao.selectAccountByID(1001));
+    }
 }
