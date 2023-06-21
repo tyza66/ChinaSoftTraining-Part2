@@ -51,7 +51,7 @@ public class JDBCConfig {
     }
 
     @Bean("jdbcTemplate")
-    public JdbcTemplate getJdbcTemplate(@Autowired DataSource dataSource){
+    public JdbcTemplate getJdbcTemplate(@Autowired DataSource dataSource){//参数不屑Autowired也可以自动注入
         return new JdbcTemplate(dataSource);
     }
 }

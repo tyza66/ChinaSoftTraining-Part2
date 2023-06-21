@@ -28,4 +28,7 @@
     <bean id="accountDao" class="com.sdm.dao.impl.AccountDaoImpl">
         <property name="jdbcTemplate" ref="jdbcTemplate"/>
     </bean>
+
+    <!--导入其他的配置文件-->
+    <import resource="spring-annotation.xml"/>
 </beans>
