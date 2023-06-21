@@ -3,6 +3,7 @@ package com.sdm.dao.impl;
 import com.sdm.dao.AccountDao;
 import com.sdm.pojo.Account;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
@@ -18,8 +19,11 @@ import java.util.List;
  * Github: https://github.com/tyza66
  **/
 
+@Repository
 public class AccountDaoImpl implements AccountDao {
 
+    @Autowired//根据类型自动注入
+    @Qualifier("jdbcTemplate")
     private JdbcTemplate jdbcTemplate;
 
 

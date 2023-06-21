@@ -1,10 +1,13 @@
 package com.sdm.config;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
+import org.springframework.jdbc.core.JdbcTemplate;
 
 import javax.sql.DataSource;
 import java.beans.PropertyVetoException;
@@ -16,8 +19,8 @@ import java.beans.PropertyVetoException;
  **/
 
 @Configuration
-@PropertySource("classpath:jdbc.properties")
-public class jdbcConfig {
+@PropertySource("classpath:druid.properties")
+public class JDBCConfig {
     @Value("${driverClassName}")
     private String driver;
     @Value("${user}")
@@ -27,7 +30,13 @@ public class jdbcConfig {
     @Value("${url}")
     private String url;
 
-    @Bean(name = "dataSource")
+    @Bean //属性的赋值使用过@Value("${}")注入属性值 它就是一个占位的Bean
+    public static PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer(){
+        return new PropertySourcesPlaceholderConfigurer();
+    }
+
+    @Bean(name = "dataSource") //写在方法上用来创建对象 返回值就是要创建的对象
+    //如果不写 方法名就是beanId的名称
     public DataSource getDataSource() {
         ComboPooledDataSource comboPooledDataSource = new ComboPooledDataSource();
         try {
@@ -39,5 +48,10 @@ public class jdbcConfig {
             throw new RuntimeException(e);
         }
         return comboPooledDataSource;
+    }
+
+    @Bean("JdbcTemplate")
+    public JdbcTemplate getJdbcTemplate(@Autowired DataSource dataSource){
+        return new JdbcTemplate(dataSource);
     }
 }
