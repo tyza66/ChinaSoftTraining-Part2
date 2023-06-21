@@ -1,5 +1,6 @@
 package com.sdm;
 
+import com.sdm.dao.impl.AccountDaoImpl;
 import com.sdm.pojo.Account;
 import org.junit.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -19,5 +20,12 @@ public class TestAccount {
         Account account2 = context.getBean("account", Account.class);
         System.out.println(account2==account);
         context.close();
+    }
+
+    @Test
+    public void test2(){
+        ClassPathXmlApplicationContext context =  new ClassPathXmlApplicationContext("spring.xml");
+        AccountDaoImpl accountDao = context.getBean("accountDao", AccountDaoImpl.class);
+        System.out.println("插入返回值"+accountDao.insertAccount(new Account(1001,"tom","2000")));
     }
 }

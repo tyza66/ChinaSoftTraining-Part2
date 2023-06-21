@@ -2,8 +2,11 @@ package com.sdm.dao.impl;
 
 import com.sdm.dao.AccountDao;
 import com.sdm.pojo.Account;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -16,9 +19,14 @@ public class AccountDaoImpl implements AccountDao {
 
     private JdbcTemplate jdbcTemplate;
 
+
+    public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
+    }
+
     @Override
     public boolean insertAccount(Account account) {
-        return false;
+        return jdbcTemplate.update("insert into \"account_sdm\" values (?,?,?)", account.getAid(), account.getName(), account.getMoney()) > 0 ? true : false;
     }
 
     @Override
