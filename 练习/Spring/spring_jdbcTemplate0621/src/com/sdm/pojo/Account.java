@@ -5,6 +5,9 @@ import org.springframework.context.annotation.Lazy;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 /**
  * Author: tyza66
  * Date: 2023/6/21 9:43
@@ -24,6 +27,16 @@ public class Account {
 
     @Value("1000")
     private String money;
+
+    @PostConstruct //初始化方法
+    public void init(){
+        System.out.println("Account被初始化了");
+    }
+
+    @PreDestroy //销毁方法
+    public void destory(){
+        System.out.println("Account被销毁了");
+    }
 
     public Account() {
         System.out.println("Account被创建了");
