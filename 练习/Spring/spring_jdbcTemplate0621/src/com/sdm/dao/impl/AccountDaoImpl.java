@@ -23,7 +23,7 @@ import java.util.List;
 public class AccountDaoImpl implements AccountDao {
 
     @Autowired//根据类型自动注入
-    @Qualifier("jdbcTemplate")
+    @Qualifier("jdbcTemplate")//根据名称注入
     private JdbcTemplate jdbcTemplate;
 
 

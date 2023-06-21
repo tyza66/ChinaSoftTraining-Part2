@@ -50,7 +50,7 @@ public class JDBCConfig {
         return comboPooledDataSource;
     }
 
-    @Bean("JdbcTemplate")
+    @Bean("jdbcTemplate")
     public JdbcTemplate getJdbcTemplate(@Autowired DataSource dataSource){
         return new JdbcTemplate(dataSource);
     }

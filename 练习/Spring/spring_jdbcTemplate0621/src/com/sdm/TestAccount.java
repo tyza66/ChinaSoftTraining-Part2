@@ -1,8 +1,10 @@
 package com.sdm;
 
+import com.sdm.config.SpringConfiguration;
 import com.sdm.dao.impl.AccountDaoImpl;
 import com.sdm.pojo.Account;
 import org.junit.Test;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -48,5 +50,12 @@ public class TestAccount {
         ClassPathXmlApplicationContext context =  new ClassPathXmlApplicationContext("spring.xml");
         AccountDaoImpl accountDao = context.getBean("accountDao", AccountDaoImpl.class);
         System.out.println("ID查找返回值"+accountDao.selectAccountByID(1001));
+    }
+
+    @Test
+    public void test6(){
+        AnnotationConfigApplicationContext annotationConfigApplicationContext = new AnnotationConfigApplicationContext(SpringConfiguration.class);
+        AccountDaoImpl accountDao = annotationConfigApplicationContext.getBean("accountDaoImpl", AccountDaoImpl.class);
+        System.out.println(accountDao.selectAccountByID(1001));
     }
 }
