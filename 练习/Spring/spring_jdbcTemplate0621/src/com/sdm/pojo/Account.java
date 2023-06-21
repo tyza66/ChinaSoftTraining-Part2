@@ -1,5 +1,8 @@
 package com.sdm.pojo;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Lazy;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 /**
@@ -9,15 +12,21 @@ import org.springframework.stereotype.Component;
  **/
 
 @Component
+@Scope(value = "singleton")
+@Lazy //懒加载模式 只有getBean的时候才会被创建 （单例模式）
 public class Account {
 
+    @Value("1001")
     private int aid;
 
+    @Value("小明")
     private String name;
 
+    @Value("1000")
     private String money;
 
     public Account() {
+        System.out.println("Account被创建了");
     }
 
     public Account(int aid, String name, String money) {

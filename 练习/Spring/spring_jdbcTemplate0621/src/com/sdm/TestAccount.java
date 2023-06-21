@@ -16,5 +16,8 @@ public class TestAccount {
         ClassPathXmlApplicationContext context =  new ClassPathXmlApplicationContext("spring.xml");
         Account account = context.getBean("account", Account.class);
         System.out.println(account);
+        Account account2 = context.getBean("account", Account.class);
+        System.out.println(account2==account);
+        context.close();
     }
 }
