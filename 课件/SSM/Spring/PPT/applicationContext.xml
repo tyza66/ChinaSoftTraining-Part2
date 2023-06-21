@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans     
+                        http://www.springframework.org/schema/beans/spring-beans-4.0.xsd    
+                        http://www.springframework.org/schema/mvc    
+                        http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd  
+                        http://www.springframework.org/schema/aop    
+                        http://www.springframework.org/schema/aop/spring-aop-4.0.xsd     
+                        http://www.springframework.org/schema/context     
+                        http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+	<!-- <bean id="b" class="com.icss.ys.pojo.Boy" lazy-init="true" init-method="init" destroy-method="des"> <property name="name" value="小黑"></property> 
+		<property name="dog" ref="d"></property> <constructor-arg index="0" value="小白"></constructor-arg> <constructor-arg index="1" ref="d"></constructor-arg> 
+		</bean> <bean id="d" class="com.icss.ys.pojo.DogFactory" factory-method="getDog" > <property name="name" value="小斑点"></property> </bean> -->
+
+	<!-- 学生实体 -->
+	<bean id="s" class="com.icss.ys.pojo.Student">
+		<property name="name" value="小芬"></property>
+		<property name="age" value="25"></property>
+		<property name="date" ref="d"></property>
+		<property name="c" ref="cr"></property>
+		<property name="friends">
+			<list>
+				<value>老王</value>
+				<value>老董</value>
+				<value>老钠</value>
+			</list>
+		</property>
+		<property name="lists">
+			<list>
+				<ref bean="b1" />
+				<ref bean="b2" />
+			</list>
+		</property>
+
+		<property name="map">
+			<map>
+				<entry key="eyes"  value="5.0"></entry>
+				<entry key="height"  value="162"></entry>
+				<entry key="weight"  value="100"></entry>
+			</map>
+		</property>
+	</bean>
+
+	
+	<bean id="b2" class="com.icss.ys.pojo.Boy">
+		<property name="name" value="老二"></property>
+	</bean>
+
+	<bean id="d" class="java.util.Date"></bean>
+
+	<bean id="cr" class="com.icss.ys.pojo.Course">
+		<property name="name" value="java"></property>
+	</bean>
+	
+	<bean id="b1" class="com.icss.ys.pojo.Boy" autowire="byName">
+		<property name="name" value="老大"></property>
+		
+	</bean>
+	
+	<bean id="dog1" class="com.icss.ys.pojo.Dog">
+		<property name="name" value="老大的狗狗"></property>
+	</bean>
+	
+	<bean id="dog" class="com.icss.ys.pojo.Dog">
+		<property name="name" value="老二的狗狗"></property>
+	</bean>
+</beans>
