@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!--创建目标对象-->
+    <bean id="target" class="com.icss.aop.UserDao"></bean>
+
+    <!--切面对象-->
+    <bean id="aspect" class="com.icss.aop.MyAspect"></bean>
+
+    <!--aop配置-->
+    <aop:config>
+        <!-- 切入点:满足条件的目标方法 表达式找到满足条件的目标方法 execution(返回值类型 根包.子包1.子包2.类名.方法名(方法参数1类型,方法参数2类型))
+         任意返回值类型  任意类名 任意方法名 *  任意参数 ..  本包以及任意子包 com..   -->
+        <aop:pointcut id="pc" expression="execution(* com.icss.aop.UserDao.*(..))"/>
+        <aop:aspect ref="aspect">
+               <!--前置通知：在目标方法之前执行-->
+               <aop:before method="start" pointcut-ref="pc"></aop:before>
+        </aop:aspect>
+    </aop:config>
+</beans>
