@@ -8,7 +8,7 @@
 
     <!--  需要创建一个目标对象和一个切面对象  -->
     <!--  创建目标对象 主要业务逻辑要写在目标对象里面  -->
-    <bean id="target" class="com.sdm.aop.testaop.Target"></bean>
+    <bean id="target1" class="com.sdm.aop.testaop.Target"></bean>
 
     <!--  创建切面对象 切面每个阶段调用的方法要写在切面对象里面  -->
     <bean id="aspect" class="com.sdm.aop.testaop.Aspect"></bean>
