@@ -1,4 +1,4 @@
-package com.sdm.dao.service;
+package com.sdm.service;
 
 /**
  * Author: tyza66
@@ -8,4 +8,5 @@ package com.sdm.dao.service;
 
 public interface AccountService {
     //业务逻辑处理
+    boolean transfer(int fromId, int toId, double money);
 }

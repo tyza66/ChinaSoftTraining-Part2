@@ -9,8 +9,8 @@ package com.sdm.dao;
 public interface AccountDao {
     //实现转账功能
 
-    boolean reduceMoney(int id, double money);
+    boolean reduceMoney(String id, double money);
 
-    boolean addMoney(int id, double money);
+    boolean addMoney(String id, double money);
 
 }
