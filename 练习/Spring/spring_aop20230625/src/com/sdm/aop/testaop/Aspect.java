@@ -7,4 +7,24 @@ package com.sdm.aop.testaop;
  **/
 
 public class Aspect {
+
+    public void start(){
+        System.out.println("start...");
+    }
+
+    public void end(){
+        System.out.println("end...");
+    }
+
+    public void afterReturning(){
+        System.out.println("afterReturning...");
+    }
+
+    public void afterThrowing(){
+        System.out.println("afterThrowing...");
+    }
+
+    public void around(){
+        System.out.println("around...");
+    }
 }
