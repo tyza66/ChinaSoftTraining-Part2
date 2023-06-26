@@ -5,43 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8200d7f-36f1-4646-9060-1a2b4869b01a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/sdm/aop/jdkProxy/Aspect2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/sdm/aop/jdkProxy/JDKProxy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/sdm/aop/jdkProxy/Targrt2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/sdm/aop/jdkProxy/Targrt2Impl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/sdm/aop/test/tsetJDKProxy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/sdm/aop/testannotion/Aspect1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_tx0626/.idea/libraries/lib.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_tx0626/lib/aopalliance-1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_tx0626/lib/aspectjweaver-1.6.9.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_tx0626/lib/c3p0-0.9.1.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_tx0626/lib/commons-dbcp.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_tx0626/lib/commons-io-2.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_tx0626/lib/commons-lang-2.6.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_tx0626/lib/commons-logging-1.1.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_tx0626/lib/commons-pool.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_tx0626/lib/druid-1.1.10.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_tx0626/lib/hamcrest-core-1.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_tx0626/lib/junit-4.12.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_tx0626/lib/log4j-1.2.17.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_tx0626/lib/mysql-connector-java-8.0.29.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_tx0626/lib/ojdbc14.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_tx0626/lib/spring-aop-5.3.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_tx0626/lib/spring-beans-5.3.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_tx0626/lib/spring-context-5.3.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_tx0626/lib/spring-core-5.3.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_tx0626/lib/spring-expression-5.3.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_tx0626/lib/spring-jdbc-5.3.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_tx0626/lib/spring-tx-5.3.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_tx0626/resources/spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/sdm/aop/cglibProxy/CglibProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/sdm/aop/test/TestCglibProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring_tx0626/src/com/sdm/dao/AccountDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resourse/spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resourse/spring.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring_aop20230625.iml" beforeDir="false" afterPath="$PROJECT_DIR$/spring_aop20230625.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sdm/aop/test/testAnnotion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sdm/aop/test/testAnnotion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sdm/aop/testannotion/Aspect.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sdm/aop/testannotion/Target.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sdm/aop/testannotion/Target1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring_tx0626/spring_tx0626.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring_tx0626/spring_tx0626.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring_tx0626/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sdm/aop/cglibProxy/Aspect3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sdm/aop/cglibProxy/Aspect3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sdm/aop/jdkProxy/Aspect2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sdm/aop/jdkProxy/Aspect2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sdm/aop/test/test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sdm/aop/test/Test1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sdm/aop/test/testAnnotion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sdm/aop/test/TestAnnotion.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,8 +60,8 @@
       <recent name="D:\Project\ChinaSoftTraining-Part2\练习\Spring\spring_aop20230625\lib" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.tsetJDKProxy.test4">
-    <configuration name="test1.testAop1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.TestCglibProxy.test5">
+    <configuration name="Test1.testAop1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="spring_aop20230625" />
       <extension name="coverage">
         <pattern>
@@ -99,14 +70,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.sdm.aop.test" />
-      <option name="MAIN_CLASS_NAME" value="com.sdm.aop.test.test1" />
+      <option name="MAIN_CLASS_NAME" value="com.sdm.aop.test.Test1" />
       <option name="METHOD_NAME" value="testAop1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="testAnnotion.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestAnnotion.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="spring_aop20230625" />
       <extension name="coverage">
         <pattern>
@@ -115,14 +86,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.sdm.aop.test" />
-      <option name="MAIN_CLASS_NAME" value="com.sdm.aop.test.testAnnotion" />
+      <option name="MAIN_CLASS_NAME" value="com.sdm.aop.test.TestAnnotion" />
       <option name="METHOD_NAME" value="test2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="testAnnotion.test3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestAnnotion.test3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="spring_aop20230625" />
       <extension name="coverage">
         <pattern>
@@ -131,8 +102,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.sdm.aop.test" />
-      <option name="MAIN_CLASS_NAME" value="com.sdm.aop.test.testAnnotion" />
+      <option name="MAIN_CLASS_NAME" value="com.sdm.aop.test.TestAnnotion" />
       <option name="METHOD_NAME" value="test3" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestCglibProxy.test5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring_aop20230625" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sdm.aop.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sdm.aop.test" />
+      <option name="MAIN_CLASS_NAME" value="com.sdm.aop.test.TestCglibProxy" />
+      <option name="METHOD_NAME" value="test5" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -156,10 +143,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestCglibProxy.test5" />
         <item itemvalue="JUnit.tsetJDKProxy.test4" />
-        <item itemvalue="JUnit.testAnnotion.test2" />
-        <item itemvalue="JUnit.testAnnotion.test3" />
-        <item itemvalue="JUnit.test1.testAop1" />
+        <item itemvalue="JUnit.TestAnnotion.test2" />
+        <item itemvalue="JUnit.TestAnnotion.test3" />
+        <item itemvalue="JUnit.Test1.testAop1" />
       </list>
     </recent_temporary>
   </component>
@@ -172,7 +160,7 @@
       <option name="presentableId" value="Default" />
       <updated>1687737352912</updated>
       <workItem from="1687737354215" duration="5381000" />
-      <workItem from="1687742800100" duration="2084000" />
+      <workItem from="1687742800100" duration="3140000" />
     </task>
     <servers />
   </component>

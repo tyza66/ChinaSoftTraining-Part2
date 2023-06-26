@@ -8,7 +8,7 @@ package com.sdm.aop.jdkProxy;
 
 public class Aspect2 {
     public void start(){
-        System.out.println("Aspect2 statr");
+        System.out.println("Aspect2 start");
     }
 
     public void end(){

@@ -11,7 +11,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * Github: https://github.com/tyza66
  **/
 
-public class test1 {
+public class Test1 {
 
     @Test
     public void testAop1(){

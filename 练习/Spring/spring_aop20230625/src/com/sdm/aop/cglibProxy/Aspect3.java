@@ -8,7 +8,7 @@ package com.sdm.aop.cglibProxy;
 
 public class Aspect3 {
     public void start(){
-        System.out.println("Aspect3 statr");
+        System.out.println("Aspect3 start");
     }
 
     public void end(){

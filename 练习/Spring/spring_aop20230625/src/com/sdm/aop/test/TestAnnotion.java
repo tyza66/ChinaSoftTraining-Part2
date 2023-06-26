@@ -13,7 +13,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * Github: https://github.com/tyza66
  **/
 
-public class testAnnotion {
+public class TestAnnotion {
     @Test
     public void test2(){
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-annotion.xml");
