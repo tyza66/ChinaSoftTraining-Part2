@@ -10,7 +10,7 @@ public class Student {
     private int sid;
     private String sname;
     private String gender;
-    private int city;
+    private String city;
 
     public int getSid() {
         return sid;
@@ -36,11 +36,11 @@ public class Student {
         this.gender = gender;
     }
 
-    public int getCity() {
+    public String getCity() {
         return city;
     }
 
-    public void setCity(int city) {
+    public void setCity(String city) {
         this.city = city;
     }
 

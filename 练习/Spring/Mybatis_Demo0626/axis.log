@@ -1,0 +1,22 @@
+2023-06-26 15:27:14,022 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-26 15:27:14,043 21     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-26 15:27:14,043 21     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-26 15:27:14,043 21     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-26 15:27:14,043 21     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-26 15:27:14,114 92     [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-26 15:27:14,303 281    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 116237769.
+2023-06-26 15:27:14,304 282    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@6eda5c9]
+2023-06-26 15:27:14,308 286    [           main] DEBUG tudentMapper.selectStudentById  - ==>  Preparing: select * from STUDENT where sid = ?
+2023-06-26 15:27:14,336 314    [           main] DEBUG tudentMapper.selectStudentById  - ==> Parameters: 1(Integer)
+2023-06-26 15:27:14,359 337    [           main] DEBUG tudentMapper.selectStudentById  - <==      Total: 1
+2023-06-26 15:27:25,730 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-26 15:27:25,754 24     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-26 15:27:25,754 24     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-26 15:27:25,754 24     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-26 15:27:25,754 24     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-26 15:27:25,836 106    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-26 15:27:26,054 324    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 116237769.
+2023-06-26 15:27:26,055 325    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@6eda5c9]
+2023-06-26 15:27:26,060 330    [           main] DEBUG tudentMapper.selectStudentById  - ==>  Preparing: select * from STUDENT where sid = ?
+2023-06-26 15:27:26,093 363    [           main] DEBUG tudentMapper.selectStudentById  - ==> Parameters: 1(Integer)
+2023-06-26 15:27:26,116 386    [           main] DEBUG tudentMapper.selectStudentById  - <==      Total: 1

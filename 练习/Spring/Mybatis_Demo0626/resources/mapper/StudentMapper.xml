@@ -5,7 +5,7 @@
 <mapper namespace="com.sdm.mapper.StudentMapper"><!--这里的参数是mapper接口的完整路径-->
     <select id="selectStudentById" parameterType="int" resultType="com.sdm.pojo.Student"><!--第一个是方法名 第二个是参数的类型 参数的类型可省略-->
         select *
-        from student
+        from STUDENT
         where sid = #{sid}
     </select>
 </mapper>
