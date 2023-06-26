@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8200d7f-36f1-4646-9060-1a2b4869b01a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/sdm/aop/cglibProxy/CglibProxy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/sdm/aop/test/TestCglibProxy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring_tx0626/src/com/sdm/dao/AccountDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sdm/aop/cglibProxy/Aspect3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sdm/aop/cglibProxy/Aspect3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sdm/aop/jdkProxy/Aspect2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sdm/aop/jdkProxy/Aspect2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sdm/aop/test/test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sdm/aop/test/Test1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sdm/aop/test/testAnnotion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sdm/aop/test/TestAnnotion.java" afterDir="false" />
-    </list>
+    <list default="true" id="c8200d7f-36f1-4646-9060-1a2b4869b01a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -160,7 +151,7 @@
       <option name="presentableId" value="Default" />
       <updated>1687737352912</updated>
       <workItem from="1687737354215" duration="5381000" />
-      <workItem from="1687742800100" duration="3140000" />
+      <workItem from="1687742800100" duration="3155000" />
     </task>
     <servers />
   </component>
