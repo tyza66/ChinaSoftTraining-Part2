@@ -5,9 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8200d7f-36f1-4646-9060-1a2b4869b01a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../代码/0625/spring_AOP0625/resources/spring-annotaion.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../代码/0625/spring_AOP0625/src/com/icss/aop/SpringConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resourse/spring-annotion.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/sdm/aop/config/SpringConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/sdm/aop/test/testAnnotion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/sdm/aop/testannotion/Aspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/sdm/aop/testannotion/Target.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../代码/0625/spring_AOP0625/out/production/spring_AOP0625/com/icss/aop/MyAspect.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../代码/0625/spring_AOP0625/out/production/spring_AOP0625/com/icss/aop/MyAspect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../代码/0625/spring_AOP0625/out/production/spring_AOP0625/com/icss/aop/TestAop.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../代码/0625/spring_AOP0625/out/production/spring_AOP0625/com/icss/aop/TestAop.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../代码/0625/spring_AOP0625/out/production/spring_AOP0625/com/icss/aop/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../代码/0625/spring_AOP0625/out/production/spring_AOP0625/com/icss/aop/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../代码/0625/spring_AOP0625/out/production/spring_AOP0625/spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../代码/0625/spring_AOP0625/out/production/spring_AOP0625/spring.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../代码/0625/spring_AOP0625/resources/spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../代码/0625/spring_AOP0625/resources/spring.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../代码/0625/spring_AOP0625/src/com/icss/aop/MyAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../代码/0625/spring_AOP0625/src/com/icss/aop/MyAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../代码/0625/spring_AOP0625/src/com/icss/aop/TestAop.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../代码/0625/spring_AOP0625/src/com/icss/aop/TestAop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../代码/0625/spring_AOP0625/src/com/icss/aop/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../代码/0625/spring_AOP0625/src/com/icss/aop/UserDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring_aop20230625.iml" beforeDir="false" afterPath="$PROJECT_DIR$/spring_aop20230625.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sdm/aop/test/test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sdm/aop/test/test1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resourse/spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resourse/spring.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/sdm/aop/testaop/Aspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sdm/aop/testaop/Aspect.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +100,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1687737352912</updated>
-      <workItem from="1687737354215" duration="1961000" />
+      <workItem from="1687737354215" duration="3799000" />
     </task>
     <servers />
   </component>

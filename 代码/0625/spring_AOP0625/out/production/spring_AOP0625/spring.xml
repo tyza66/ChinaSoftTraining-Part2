@@ -18,7 +18,15 @@
         <aop:pointcut id="pc" expression="execution(* com.icss.aop.UserDao.*(..))"/>
         <aop:aspect ref="aspect">
                <!--前置通知：在目标方法之前执行-->
-               <aop:before method="start" pointcut-ref="pc"></aop:before>
+               <!--<aop:before method="start" pointcut-ref="pc"></aop:before>
+               &lt;!&ndash;后置通知:在目标方法之后执行&ndash;&gt;
+                <aop:after-returning method="end" pointcut-ref="pc" returning="ret"></aop:after-returning>
+                &lt;!&ndash;异常通知：在目标方法发生异常执行 (后置通知不会执行)&ndash;&gt;
+                <aop:after-throwing method="testExceptionAdvice" pointcut-ref="pc" throwing="e"></aop:after-throwing>
+                &lt;!&ndash;最终通知:不管是否发生异常 都会执行最终通知&ndash;&gt;
+                <aop:after method="testAfterAdvice" pointcut-ref="pc"></aop:after>-->
+                <!--环绕通知-->
+                <aop:around method="testAroundAdvice" pointcut-ref="pc"></aop:around>
         </aop:aspect>
     </aop:config>
 </beans>
