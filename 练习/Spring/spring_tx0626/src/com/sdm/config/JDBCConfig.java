@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
 import javax.sql.DataSource;
 import java.beans.PropertyVetoException;
@@ -54,4 +55,11 @@ public class JDBCConfig {
     public JdbcTemplate getJdbcTemplate(@Autowired DataSource dataSource){//参数不屑Autowired也可以自动注入
         return new JdbcTemplate(dataSource);
     }
+
+    /*
+    * <!--配置事务管理器-->
+    *<bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+    *    <property name="dataSource" ref="dataSource"/>
+    *</bean>
+    * */
 }

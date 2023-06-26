@@ -2,7 +2,32 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-                            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+        http://www.springframework.org/schema/context  http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/tx  http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/aop  http://www.springframework.org/schema/aop/spring-aop.xsd">
+
     <context:component-scan base-package="com.sdm"/>
+
+    <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+            <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+
+    <!--<tx:advice transaction-manager="txManager" id="txAdvice">
+        <tx:attributes>
+            <tx:method name="transfer*" isolation="DEFAULT" propagation="REQUIRED" read-only="false"/>
+            <tx:method name="select*" isolation="DEFAULT" propagation="REQUIRED" read-only="true"/>
+        </tx:attributes>
+    </tx:advice>
+
+    &lt;!&ndash;  声明事物Aop 通知完成事物 非侵入式  &ndash;&gt;
+    <aop:config>
+        <aop:pointcut id="pc" expression="execution(* com.sdm.service.impl.AccountServiceImpl.*(..))"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="pc"/>
+    </aop:config>-->
+
+    <tx:annotation-driven transaction-manager="txManager"/>
 </beans>

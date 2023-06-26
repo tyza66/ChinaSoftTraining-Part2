@@ -12,7 +12,6 @@ import org.springframework.context.annotation.Import;
 //@Configuration配置类
 @Configuration
 @ComponentScan("com.sdm")
-@Import(JDBCConfig.class)
 //这个是头 加载别的配置类
 public class SpringConfiguration {
 
