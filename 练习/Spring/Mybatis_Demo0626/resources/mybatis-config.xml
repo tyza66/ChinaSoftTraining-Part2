@@ -4,6 +4,13 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <properties resource="druid.properties"/>
+    <!--  定义别名  -->
+    <typeAliases>
+        <!--    方法1 说明指定的别名    -->
+        <!--<typeAlias type="com.tyza66.pojo.Student" alias="stu"/>-->
+        <!--    方法2 自动给指定包下面的类都器别名 默认是首字母小写    -->
+        <!--<package name="com.tyza66.pojo"/>-->
+    </typeAliases>
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC"/>

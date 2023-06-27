@@ -12,6 +12,13 @@ public class Student {
     private String gender;
     private String city;
 
+    public Student(int sid, String sname, String gender, String city) {
+        this.sid = sid;
+        this.sname = sname;
+        this.gender = gender;
+        this.city = city;
+    }
+
     public int getSid() {
         return sid;
     }

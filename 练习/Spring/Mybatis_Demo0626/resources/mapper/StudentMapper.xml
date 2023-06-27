@@ -3,9 +3,41 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.sdm.mapper.StudentMapper"><!--这里的参数是mapper接口的完整路径-->
-    <select id="selectStudentById" parameterType="int" resultType="com.sdm.pojo.Student"><!--第一个是方法名 第二个是参数的类型 参数的类型可省略-->
+    <select id="selectStudentById" parameterType="int"
+            resultType="com.sdm.pojo.Student"><!--第一个是方法名 第二个是参数的类型 参数的类型可省略-->
         select *
         from STUDENT
         where sid = #{sid}
     </select>
+
+    <select id="selectAllStudent" resultType="com.sdm.pojo.Student">
+        select *
+        from STUDENT
+    </select>
+
+    <insert id="insertStudent" parameterType="com.sdm.pojo.Student">
+        insert into STUDENT(sid, sname, gender, city)
+        values (#{sid}, #{sname}, #{gender}, #{city})
+    </insert>
+    
+    <delete id="deleteStudentById">
+        delete from STUDENT where sid = #{sid}
+    </delete>
+    
+    <update id="updateStudentById" parameterType="com.sdm.pojo.Student">
+        update STUDENT
+        set sname = #{sname},
+            gender  = #{gender},
+            city  = #{city}
+        where sid = #{sid}
+    </update>
+
+    <!--  多参数插叙不能直接用参数名 可以使用arg0和arg1代替  除了可以这样写 还可以使用param1、param2整 -->
+    <!--  还有个办法就是在参数前面加上@Param注解-->
+    <select id="selectStudentByNameAndCity" resultType="com.sdm.pojo.Student">
+        select *
+        from STUDENT
+        where sname = #{name} and city = #{city}
+    </select>
+
 </mapper>
