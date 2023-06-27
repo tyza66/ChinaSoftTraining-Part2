@@ -84,6 +84,12 @@ public class TestStudent {
 
         List<Student> students2 = mapper.selectAllStudentOrderByColumn("sid");
         System.out.println(students2);
+
+        boolean b = mapper.deleteStudentByIds("1,2");
+        System.out.println(b);
+
+        List<Student> students3 = mapper.selectStudentByPage(0, 2);
+        System.out.println(students3);
     }
 
 

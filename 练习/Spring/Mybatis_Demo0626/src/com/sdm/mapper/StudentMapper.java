@@ -31,4 +31,10 @@ public interface StudentMapper {
 
     //查询所有的学生信息 并启用指定的字段名称进行排序
     List<Student> selectAllStudentOrderByColumn(@Param("column") String column);
+
+    //指定多个学号批量删除
+    boolean deleteStudentByIds(@Param("sids") String sids);
+
+    //分页查询
+    List<Student> selectStudentByPage(@Param("start") int start,@Param("pageSize") int pageSize);
 }

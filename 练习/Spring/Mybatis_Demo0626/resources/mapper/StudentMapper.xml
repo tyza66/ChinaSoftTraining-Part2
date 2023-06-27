@@ -54,4 +54,17 @@
         from STUDENT
         order by ${column}
     </select>
+
+    <!--  批量删除 首先可以传进来一个直接拼接的字符串  -->
+    <delete id="deleteStudentByIds">
+        delete
+        from STUDENT
+        where sid in (${sids})
+    </delete>
+
+    <select id="selectStudentByPage" resultType="com.sdm.pojo.Student">
+        select *
+        from STUDENT
+        limit #{start}, #{pageSize}
+    </select>
 </mapper>
