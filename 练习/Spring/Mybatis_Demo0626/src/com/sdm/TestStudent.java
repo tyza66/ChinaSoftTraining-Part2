@@ -73,8 +73,9 @@ public class TestStudent {
         InputStream resourceAsStream = Resources.getResourceAsStream(resource);
         //使用SqlSessionFactoryBuilder加载配置文件创建SqlSessionFactory
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(resourceAsStream);
-        //创建SqlSession对象
+        //创建SqlSession对象 自动提交
         SqlSession sqlSession = sqlSessionFactory.openSession(true);
+        //获得mapper对象
         StudentMapper mapper = sqlSession.getMapper(StudentMapper.class);
         List<Student> students = mapper.selectStudentByNameAndCity("tom", "大连");
         System.out.println(students);
@@ -90,6 +91,9 @@ public class TestStudent {
 
         List<Student> students3 = mapper.selectStudentByPage(0, 2);
         System.out.println(students3);
+
+        int i = mapper.selectCount();
+        System.out.println(i);
     }
 
 

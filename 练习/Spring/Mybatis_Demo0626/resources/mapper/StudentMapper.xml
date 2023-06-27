@@ -67,4 +67,9 @@
         from STUDENT
         limit #{start}, #{pageSize}
     </select>
+
+    <select id="selectCount" resultType="int">
+        select count(*)
+        from STUDENT
+    </select>
 </mapper>

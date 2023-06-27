@@ -37,4 +37,7 @@ public interface StudentMapper {
 
     //分页查询
     List<Student> selectStudentByPage(@Param("start") int start,@Param("pageSize") int pageSize);
+
+    //查询表中所有的记录数
+    int selectCount();
 }

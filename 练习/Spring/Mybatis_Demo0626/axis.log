@@ -293,3 +293,28 @@
 2023-06-27 14:00:43,719 375    [           main] DEBUG dentMapper.selectStudentByPage  - ==>  Preparing: select * from STUDENT limit ?, ?
 2023-06-27 14:00:43,720 376    [           main] DEBUG dentMapper.selectStudentByPage  - ==> Parameters: 0(Integer), 2(Integer)
 2023-06-27 14:00:43,724 380    [           main] DEBUG dentMapper.selectStudentByPage  - <==      Total: 2
+2023-06-27 14:08:39,368 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 14:08:39,387 19     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 14:08:39,387 19     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 14:08:39,387 19     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 14:08:39,387 19     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 14:08:39,474 106    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 14:08:39,656 288    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 350068407.
+2023-06-27 14:08:39,659 291    [           main] DEBUG per.selectStudentByNameAndCity  - ==>  Preparing: select * from STUDENT where sname = ? and city = ?
+2023-06-27 14:08:39,689 321    [           main] DEBUG per.selectStudentByNameAndCity  - ==> Parameters: tom(String), 大连(String)
+2023-06-27 14:08:39,714 346    [           main] DEBUG per.selectStudentByNameAndCity  - <==      Total: 8
+2023-06-27 14:08:39,716 348    [           main] DEBUG Mapper.selectStudentByNameLike  - ==>  Preparing: select * from STUDENT where sname like "%"?"%"
+2023-06-27 14:08:39,716 348    [           main] DEBUG Mapper.selectStudentByNameLike  - ==> Parameters: o(String)
+2023-06-27 14:08:39,722 354    [           main] DEBUG Mapper.selectStudentByNameLike  - <==      Total: 9
+2023-06-27 14:08:39,744 376    [           main] DEBUG .selectAllStudentOrderByColumn  - ==>  Preparing: select * from STUDENT order by sid
+2023-06-27 14:08:39,745 377    [           main] DEBUG .selectAllStudentOrderByColumn  - ==> Parameters: 
+2023-06-27 14:08:39,748 380    [           main] DEBUG .selectAllStudentOrderByColumn  - <==      Total: 9
+2023-06-27 14:08:39,748 380    [           main] DEBUG udentMapper.deleteStudentByIds  - ==>  Preparing: delete from STUDENT where sid in (1,2)
+2023-06-27 14:08:39,748 380    [           main] DEBUG udentMapper.deleteStudentByIds  - ==> Parameters: 
+2023-06-27 14:08:39,751 383    [           main] DEBUG udentMapper.deleteStudentByIds  - <==    Updates: 0
+2023-06-27 14:08:39,752 384    [           main] DEBUG dentMapper.selectStudentByPage  - ==>  Preparing: select * from STUDENT limit ?, ?
+2023-06-27 14:08:39,752 384    [           main] DEBUG dentMapper.selectStudentByPage  - ==> Parameters: 0(Integer), 2(Integer)
+2023-06-27 14:08:39,756 388    [           main] DEBUG dentMapper.selectStudentByPage  - <==      Total: 2
+2023-06-27 14:08:39,757 389    [           main] DEBUG pper.StudentMapper.selectCount  - ==>  Preparing: select count(*) from STUDENT
+2023-06-27 14:08:39,757 389    [           main] DEBUG pper.StudentMapper.selectCount  - ==> Parameters: 
+2023-06-27 14:08:39,772 404    [           main] DEBUG pper.StudentMapper.selectCount  - <==      Total: 1
