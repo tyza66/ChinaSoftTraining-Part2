@@ -46,4 +46,6 @@ public interface StudentMapper {
 
     //用动态的sql语句完成
     List<Student> selectStudentByNameOrGen(@Param("name") String name,@Param("gender") String gender);
+
+    List<Student> selectChoseStudent(@Param("name") String name,@Param("city") String city);
 }

@@ -103,5 +103,8 @@ public class TestStudent {
 
         List<Student> students4 = mapper.selectStudentByNameOrGen("tom", "男");
         System.out.println(students4);
+
+        List<Student> students5 = mapper.selectChoseStudent("tom", "男");
+        System.out.println(students5);
     }
 }

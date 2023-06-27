@@ -89,4 +89,19 @@
             and gender = #{gender}
         </if>
     </select>
+
+    <select id="selectChoseStudent" resultType="com.sdm.pojo.Student">
+        select * from STUDENT
+        <where>
+            <choose>
+                <when test="name != null and name != ''">
+                    and sname like "%"#{name}"%"
+                </when>
+                <when test="city != null and city != ''">
+                    and city like "%"#{city}"%"
+                </when>
+            </choose>
+        </where>
+    </select>
+
 </mapper>
