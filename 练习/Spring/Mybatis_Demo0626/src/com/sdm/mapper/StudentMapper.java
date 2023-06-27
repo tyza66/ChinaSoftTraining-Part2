@@ -26,4 +26,9 @@ public interface StudentMapper {
     //根据名字和城市进行查询
     List<Student> selectStudentByNameAndCity(@Param("name") String name,@Param("city") String city);
 
+    //根据名字进行模糊查询
+    List<Student> selectStudentByNameLike(@Param("name") String name);
+
+    //查询所有的学生信息 并启用指定的字段名称进行排序
+    List<Student> selectAllStudentOrderByColumn(@Param("column") String column);
 }

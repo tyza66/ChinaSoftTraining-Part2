@@ -79,6 +79,11 @@ public class TestStudent {
         List<Student> students = mapper.selectStudentByNameAndCity("tom", "大连");
         System.out.println(students);
 
+        List<Student> students1 = mapper.selectStudentByNameLike("o");
+        System.out.println(students1);
+
+        List<Student> students2 = mapper.selectAllStudentOrderByColumn("sid");
+        System.out.println(students2);
     }
 
 

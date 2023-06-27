@@ -179,3 +179,45 @@
 2023-06-27 11:16:50,558 307    [           main] DEBUG per.selectStudentByNameAndCity  - ==>  Preparing: select * from STUDENT where sname = ? and city = ?
 2023-06-27 11:16:50,589 338    [           main] DEBUG per.selectStudentByNameAndCity  - ==> Parameters: tom(String), 大连(String)
 2023-06-27 11:16:50,615 364    [           main] DEBUG per.selectStudentByNameAndCity  - <==      Total: 10
+2023-06-27 12:46:56,452 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 12:46:56,476 24     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 12:46:56,476 24     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 12:46:56,476 24     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 12:46:56,476 24     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 12:46:56,572 120    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 12:46:56,784 332    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 496729294.
+2023-06-27 12:46:56,787 335    [           main] DEBUG per.selectStudentByNameAndCity  - ==>  Preparing: select * from STUDENT where sname = ? and city = ?
+2023-06-27 12:46:56,816 364    [           main] DEBUG per.selectStudentByNameAndCity  - ==> Parameters: tom(String), 大连(String)
+2023-06-27 12:46:56,841 389    [           main] DEBUG per.selectStudentByNameAndCity  - <==      Total: 10
+2023-06-27 12:46:56,844 392    [           main] DEBUG Mapper.selectStudentByNameLike  - ==>  Preparing: select * from STUDENT where sname like ?
+2023-06-27 12:46:56,844 392    [           main] DEBUG Mapper.selectStudentByNameLike  - ==> Parameters: o(String)
+2023-06-27 12:46:56,846 394    [           main] DEBUG Mapper.selectStudentByNameLike  - <==      Total: 0
+2023-06-27 12:47:27,153 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 12:47:27,181 28     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 12:47:27,182 29     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 12:47:27,182 29     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 12:47:27,182 29     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 12:47:27,277 124    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 12:47:27,476 323    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 496729294.
+2023-06-27 12:47:27,478 325    [           main] DEBUG per.selectStudentByNameAndCity  - ==>  Preparing: select * from STUDENT where sname = ? and city = ?
+2023-06-27 12:47:27,508 355    [           main] DEBUG per.selectStudentByNameAndCity  - ==> Parameters: tom(String), 大连(String)
+2023-06-27 12:47:27,534 381    [           main] DEBUG per.selectStudentByNameAndCity  - <==      Total: 10
+2023-06-27 12:47:27,536 383    [           main] DEBUG Mapper.selectStudentByNameLike  - ==>  Preparing: select * from STUDENT where sname like ?
+2023-06-27 12:47:27,536 383    [           main] DEBUG Mapper.selectStudentByNameLike  - ==> Parameters: %o%(String)
+2023-06-27 12:47:27,543 390    [           main] DEBUG Mapper.selectStudentByNameLike  - <==      Total: 11
+2023-06-27 13:14:55,042 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 13:14:55,061 19     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 13:14:55,061 19     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 13:14:55,061 19     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 13:14:55,061 19     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 13:14:55,153 111    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 13:14:55,348 306    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1122606666.
+2023-06-27 13:14:55,350 308    [           main] DEBUG per.selectStudentByNameAndCity  - ==>  Preparing: select * from STUDENT where sname = ? and city = ?
+2023-06-27 13:14:55,380 338    [           main] DEBUG per.selectStudentByNameAndCity  - ==> Parameters: tom(String), 大连(String)
+2023-06-27 13:14:55,406 364    [           main] DEBUG per.selectStudentByNameAndCity  - <==      Total: 10
+2023-06-27 13:14:55,409 367    [           main] DEBUG Mapper.selectStudentByNameLike  - ==>  Preparing: select * from STUDENT where sname like "%"?"%"
+2023-06-27 13:14:55,409 367    [           main] DEBUG Mapper.selectStudentByNameLike  - ==> Parameters: o(String)
+2023-06-27 13:14:55,417 375    [           main] DEBUG Mapper.selectStudentByNameLike  - <==      Total: 11
+2023-06-27 13:14:55,438 396    [           main] DEBUG .selectAllStudentOrderByColumn  - ==>  Preparing: select * from STUDENT order by sid
+2023-06-27 13:14:55,438 396    [           main] DEBUG .selectAllStudentOrderByColumn  - ==> Parameters: 
+2023-06-27 13:14:55,441 399    [           main] DEBUG .selectAllStudentOrderByColumn  - <==      Total: 11

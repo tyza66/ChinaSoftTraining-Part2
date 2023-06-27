@@ -39,5 +39,19 @@
         from STUDENT
         where sname = #{name} and city = #{city}
     </select>
+    <!--  模糊查询 使用这种like查询的时候得自己拼接前后的%  -->
+    <!--  还可以使用concat语句进行拼接的操作 就可以不传过来百分号了  -->
+    <!--  还可以直接拼接""原样输出  -->
+    <!--  还可以使用%{}直接替换  -->
+    <select id="selectStudentByNameLike" resultType="com.sdm.pojo.Student">
+        select *
+        from STUDENT
+        where sname like "%"#{name}"%"
+    </select>
 
+    <select id="selectAllStudentOrderByColumn" resultType="com.sdm.pojo.Student">
+        select *
+        from STUDENT
+        order by ${column}
+    </select>
 </mapper>
