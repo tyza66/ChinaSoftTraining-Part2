@@ -94,6 +94,12 @@ public class TestStudent {
 
         int i = mapper.selectCount();
         System.out.println(i);
+
+        //弄完之后这个sid会自动赋值给student对象
+        Student student = new Student("giao", "男", "大连");
+        int primaryKeySid = mapper.getPrimaryKeySid(student);
+        System.out.println(primaryKeySid);
+        System.out.println("插入的sid"+student.getSid());
     }
 
 

@@ -40,4 +40,7 @@ public interface StudentMapper {
 
     //查询表中所有的记录数
     int selectCount();
+
+    //获取增加学生后主键的值
+    int getPrimaryKeySid(Student student);
 }

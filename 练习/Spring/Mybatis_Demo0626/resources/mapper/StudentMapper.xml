@@ -72,4 +72,9 @@
         select count(*)
         from STUDENT
     </select>
+    <!--  useGeneratedKeys使用自增的字段 插入后生成值 自动映射到sid属性上（keyProperty="sid"）  -->
+    <insert id="getPrimaryKeySid" useGeneratedKeys="true" keyProperty="sid">
+        insert into STUDENT(sid, sname, gender, city)
+        values (#{sid}, #{sname}, #{gender}, #{city})
+    </insert>
 </mapper>
