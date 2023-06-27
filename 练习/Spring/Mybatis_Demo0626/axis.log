@@ -374,3 +374,189 @@
 2023-06-27 14:20:49,379 393    [           main] DEBUG StudentMapper.getPrimaryKeySid  - ==>  Preparing: insert into STUDENT(sid, sname, gender, city) values (?, ?, ?, ?)
 2023-06-27 14:20:49,379 393    [           main] DEBUG StudentMapper.getPrimaryKeySid  - ==> Parameters: 0(Integer), giao(String), 男(String), 大连(String)
 2023-06-27 14:20:49,387 401    [           main] DEBUG StudentMapper.getPrimaryKeySid  - <==    Updates: 1
+2023-06-27 14:55:49,846 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 14:55:49,872 26     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 14:55:49,872 26     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 14:55:49,872 26     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 14:55:49,872 26     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 14:55:49,998 152    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 14:55:50,247 401    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 534666530.
+2023-06-27 14:55:50,250 404    [           main] DEBUG per.selectStudentByNameAndCity  - ==>  Preparing: select * from STUDENT where sname = ? and city = ?
+2023-06-27 14:55:50,287 441    [           main] DEBUG per.selectStudentByNameAndCity  - ==> Parameters: tom(String), 大连(String)
+2023-06-27 14:55:50,320 474    [           main] DEBUG per.selectStudentByNameAndCity  - <==      Total: 8
+2023-06-27 14:55:50,324 478    [           main] DEBUG Mapper.selectStudentByNameLike  - ==>  Preparing: select * from STUDENT where sname like "%"?"%"
+2023-06-27 14:55:50,324 478    [           main] DEBUG Mapper.selectStudentByNameLike  - ==> Parameters: o(String)
+2023-06-27 14:55:50,332 486    [           main] DEBUG Mapper.selectStudentByNameLike  - <==      Total: 11
+2023-06-27 14:55:50,354 508    [           main] DEBUG .selectAllStudentOrderByColumn  - ==>  Preparing: select * from STUDENT order by sid
+2023-06-27 14:55:50,354 508    [           main] DEBUG .selectAllStudentOrderByColumn  - ==> Parameters: 
+2023-06-27 14:55:50,358 512    [           main] DEBUG .selectAllStudentOrderByColumn  - <==      Total: 11
+2023-06-27 14:55:50,359 513    [           main] DEBUG udentMapper.deleteStudentByIds  - ==>  Preparing: delete from STUDENT where sid in (1,2)
+2023-06-27 14:55:50,360 514    [           main] DEBUG udentMapper.deleteStudentByIds  - ==> Parameters: 
+2023-06-27 14:55:50,363 517    [           main] DEBUG udentMapper.deleteStudentByIds  - <==    Updates: 0
+2023-06-27 14:55:50,364 518    [           main] DEBUG dentMapper.selectStudentByPage  - ==>  Preparing: select * from STUDENT limit ?, ?
+2023-06-27 14:55:50,365 519    [           main] DEBUG dentMapper.selectStudentByPage  - ==> Parameters: 0(Integer), 2(Integer)
+2023-06-27 14:55:50,369 523    [           main] DEBUG dentMapper.selectStudentByPage  - <==      Total: 2
+2023-06-27 14:55:50,370 524    [           main] DEBUG pper.StudentMapper.selectCount  - ==>  Preparing: select count(*) from STUDENT
+2023-06-27 14:55:50,370 524    [           main] DEBUG pper.StudentMapper.selectCount  - ==> Parameters: 
+2023-06-27 14:55:50,376 530    [           main] DEBUG pper.StudentMapper.selectCount  - <==      Total: 1
+2023-06-27 14:55:50,378 532    [           main] DEBUG StudentMapper.getPrimaryKeySid  - ==>  Preparing: insert into STUDENT(sid, sname, gender, city) values (?, ?, ?, ?)
+2023-06-27 14:55:50,378 532    [           main] DEBUG StudentMapper.getPrimaryKeySid  - ==> Parameters: 0(Integer), giao(String), 男(String), 大连(String)
+2023-06-27 14:55:50,388 542    [           main] DEBUG StudentMapper.getPrimaryKeySid  - <==    Updates: 1
+2023-06-27 14:55:50,398 552    [           main] DEBUG apper.selectStudentByNameOrGen  - ==>  Preparing: select * from STUDENT where 1 = 1 and sname like "%"?"%" and gender = ?
+2023-06-27 14:55:50,399 553    [           main] DEBUG apper.selectStudentByNameOrGen  - ==> Parameters: tom(String), 男(String)
+2023-06-27 14:55:50,402 556    [           main] DEBUG apper.selectStudentByNameOrGen  - <==      Total: 8
+2023-06-27 14:55:50,699 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 14:55:50,722 23     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 14:55:50,722 23     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 14:55:50,722 23     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 14:55:50,722 23     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 14:55:50,826 127    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 14:55:51,043 344    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 369049246.
+2023-06-27 14:55:51,047 348    [           main] DEBUG per.selectStudentByNameAndCity  - ==>  Preparing: select * from STUDENT where sname = ? and city = ?
+2023-06-27 14:55:51,089 390    [           main] DEBUG per.selectStudentByNameAndCity  - ==> Parameters: tom(String), 大连(String)
+2023-06-27 14:55:51,129 430    [           main] DEBUG per.selectStudentByNameAndCity  - <==      Total: 8
+2023-06-27 14:55:51,132 433    [           main] DEBUG Mapper.selectStudentByNameLike  - ==>  Preparing: select * from STUDENT where sname like "%"?"%"
+2023-06-27 14:55:51,133 434    [           main] DEBUG Mapper.selectStudentByNameLike  - ==> Parameters: o(String)
+2023-06-27 14:55:51,140 441    [           main] DEBUG Mapper.selectStudentByNameLike  - <==      Total: 12
+2023-06-27 14:55:51,165 466    [           main] DEBUG .selectAllStudentOrderByColumn  - ==>  Preparing: select * from STUDENT order by sid
+2023-06-27 14:55:51,165 466    [           main] DEBUG .selectAllStudentOrderByColumn  - ==> Parameters: 
+2023-06-27 14:55:51,169 470    [           main] DEBUG .selectAllStudentOrderByColumn  - <==      Total: 12
+2023-06-27 14:55:51,170 471    [           main] DEBUG udentMapper.deleteStudentByIds  - ==>  Preparing: delete from STUDENT where sid in (1,2)
+2023-06-27 14:55:51,170 471    [           main] DEBUG udentMapper.deleteStudentByIds  - ==> Parameters: 
+2023-06-27 14:55:51,174 475    [           main] DEBUG udentMapper.deleteStudentByIds  - <==    Updates: 0
+2023-06-27 14:55:51,175 476    [           main] DEBUG dentMapper.selectStudentByPage  - ==>  Preparing: select * from STUDENT limit ?, ?
+2023-06-27 14:55:51,177 478    [           main] DEBUG dentMapper.selectStudentByPage  - ==> Parameters: 0(Integer), 2(Integer)
+2023-06-27 14:55:51,180 481    [           main] DEBUG dentMapper.selectStudentByPage  - <==      Total: 2
+2023-06-27 14:55:51,180 481    [           main] DEBUG pper.StudentMapper.selectCount  - ==>  Preparing: select count(*) from STUDENT
+2023-06-27 14:55:51,181 482    [           main] DEBUG pper.StudentMapper.selectCount  - ==> Parameters: 
+2023-06-27 14:55:51,184 485    [           main] DEBUG pper.StudentMapper.selectCount  - <==      Total: 1
+2023-06-27 14:55:51,185 486    [           main] DEBUG StudentMapper.getPrimaryKeySid  - ==>  Preparing: insert into STUDENT(sid, sname, gender, city) values (?, ?, ?, ?)
+2023-06-27 14:55:51,186 487    [           main] DEBUG StudentMapper.getPrimaryKeySid  - ==> Parameters: 0(Integer), giao(String), 男(String), 大连(String)
+2023-06-27 14:55:51,193 494    [           main] DEBUG StudentMapper.getPrimaryKeySid  - <==    Updates: 1
+2023-06-27 14:55:51,200 501    [           main] DEBUG apper.selectStudentByNameOrGen  - ==>  Preparing: select * from STUDENT where 1 = 1 and sname like "%"?"%" and gender = ?
+2023-06-27 14:55:51,201 502    [           main] DEBUG apper.selectStudentByNameOrGen  - ==> Parameters: tom(String), 男(String)
+2023-06-27 14:55:51,204 505    [           main] DEBUG apper.selectStudentByNameOrGen  - <==      Total: 8
+2023-06-27 14:56:40,281 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 14:56:40,301 20     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 14:56:40,302 21     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 14:56:40,302 21     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 14:56:40,302 21     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 14:56:40,400 119    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 14:56:40,606 325    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 369049246.
+2023-06-27 14:56:40,609 328    [           main] DEBUG per.selectStudentByNameAndCity  - ==>  Preparing: select * from STUDENT where sname = ? and city = ?
+2023-06-27 14:56:40,653 372    [           main] DEBUG per.selectStudentByNameAndCity  - ==> Parameters: tom(String), 大连(String)
+2023-06-27 14:56:40,690 409    [           main] DEBUG per.selectStudentByNameAndCity  - <==      Total: 8
+2023-06-27 14:56:40,692 411    [           main] DEBUG Mapper.selectStudentByNameLike  - ==>  Preparing: select * from STUDENT where sname like "%"?"%"
+2023-06-27 14:56:40,692 411    [           main] DEBUG Mapper.selectStudentByNameLike  - ==> Parameters: o(String)
+2023-06-27 14:56:40,701 420    [           main] DEBUG Mapper.selectStudentByNameLike  - <==      Total: 13
+2023-06-27 14:56:40,740 459    [           main] DEBUG .selectAllStudentOrderByColumn  - ==>  Preparing: select * from STUDENT order by sid
+2023-06-27 14:56:40,741 460    [           main] DEBUG .selectAllStudentOrderByColumn  - ==> Parameters: 
+2023-06-27 14:56:40,744 463    [           main] DEBUG .selectAllStudentOrderByColumn  - <==      Total: 13
+2023-06-27 14:56:40,746 465    [           main] DEBUG udentMapper.deleteStudentByIds  - ==>  Preparing: delete from STUDENT where sid in (1,2)
+2023-06-27 14:56:40,746 465    [           main] DEBUG udentMapper.deleteStudentByIds  - ==> Parameters: 
+2023-06-27 14:56:40,750 469    [           main] DEBUG udentMapper.deleteStudentByIds  - <==    Updates: 0
+2023-06-27 14:56:40,751 470    [           main] DEBUG dentMapper.selectStudentByPage  - ==>  Preparing: select * from STUDENT limit ?, ?
+2023-06-27 14:56:40,751 470    [           main] DEBUG dentMapper.selectStudentByPage  - ==> Parameters: 0(Integer), 2(Integer)
+2023-06-27 14:56:40,754 473    [           main] DEBUG dentMapper.selectStudentByPage  - <==      Total: 2
+2023-06-27 14:56:40,754 473    [           main] DEBUG pper.StudentMapper.selectCount  - ==>  Preparing: select count(*) from STUDENT
+2023-06-27 14:56:40,754 473    [           main] DEBUG pper.StudentMapper.selectCount  - ==> Parameters: 
+2023-06-27 14:56:40,758 477    [           main] DEBUG pper.StudentMapper.selectCount  - <==      Total: 1
+2023-06-27 14:56:40,759 478    [           main] DEBUG StudentMapper.getPrimaryKeySid  - ==>  Preparing: insert into STUDENT(sid, sname, gender, city) values (?, ?, ?, ?)
+2023-06-27 14:56:40,759 478    [           main] DEBUG StudentMapper.getPrimaryKeySid  - ==> Parameters: 0(Integer), giao(String), 男(String), 大连(String)
+2023-06-27 14:56:40,767 486    [           main] DEBUG StudentMapper.getPrimaryKeySid  - <==    Updates: 1
+2023-06-27 14:56:40,773 492    [           main] DEBUG apper.selectStudentByNameOrGen  - ==>  Preparing: select * from STUDENT where 1 = 1 and gender = ?
+2023-06-27 14:56:40,776 495    [           main] DEBUG apper.selectStudentByNameOrGen  - ==> Parameters: 男(String)
+2023-06-27 14:56:40,780 499    [           main] DEBUG apper.selectStudentByNameOrGen  - <==      Total: 13
+2023-06-27 14:57:09,236 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 14:57:09,256 20     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 14:57:09,256 20     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 14:57:09,256 20     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 14:57:09,257 21     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 14:57:09,355 119    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 14:57:09,550 314    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 369049246.
+2023-06-27 14:57:09,554 318    [           main] DEBUG per.selectStudentByNameAndCity  - ==>  Preparing: select * from STUDENT where sname = ? and city = ?
+2023-06-27 14:57:09,590 354    [           main] DEBUG per.selectStudentByNameAndCity  - ==> Parameters: tom(String), 大连(String)
+2023-06-27 14:57:09,631 395    [           main] DEBUG per.selectStudentByNameAndCity  - <==      Total: 8
+2023-06-27 14:57:09,633 397    [           main] DEBUG Mapper.selectStudentByNameLike  - ==>  Preparing: select * from STUDENT where sname like "%"?"%"
+2023-06-27 14:57:09,634 398    [           main] DEBUG Mapper.selectStudentByNameLike  - ==> Parameters: o(String)
+2023-06-27 14:57:09,641 405    [           main] DEBUG Mapper.selectStudentByNameLike  - <==      Total: 14
+2023-06-27 14:57:09,672 436    [           main] DEBUG .selectAllStudentOrderByColumn  - ==>  Preparing: select * from STUDENT order by sid
+2023-06-27 14:57:09,672 436    [           main] DEBUG .selectAllStudentOrderByColumn  - ==> Parameters: 
+2023-06-27 14:57:09,677 441    [           main] DEBUG .selectAllStudentOrderByColumn  - <==      Total: 14
+2023-06-27 14:57:09,678 442    [           main] DEBUG udentMapper.deleteStudentByIds  - ==>  Preparing: delete from STUDENT where sid in (1,2)
+2023-06-27 14:57:09,678 442    [           main] DEBUG udentMapper.deleteStudentByIds  - ==> Parameters: 
+2023-06-27 14:57:09,682 446    [           main] DEBUG udentMapper.deleteStudentByIds  - <==    Updates: 0
+2023-06-27 14:57:09,682 446    [           main] DEBUG dentMapper.selectStudentByPage  - ==>  Preparing: select * from STUDENT limit ?, ?
+2023-06-27 14:57:09,683 447    [           main] DEBUG dentMapper.selectStudentByPage  - ==> Parameters: 0(Integer), 2(Integer)
+2023-06-27 14:57:09,686 450    [           main] DEBUG dentMapper.selectStudentByPage  - <==      Total: 2
+2023-06-27 14:57:09,686 450    [           main] DEBUG pper.StudentMapper.selectCount  - ==>  Preparing: select count(*) from STUDENT
+2023-06-27 14:57:09,686 450    [           main] DEBUG pper.StudentMapper.selectCount  - ==> Parameters: 
+2023-06-27 14:57:09,690 454    [           main] DEBUG pper.StudentMapper.selectCount  - <==      Total: 1
+2023-06-27 14:57:09,692 456    [           main] DEBUG StudentMapper.getPrimaryKeySid  - ==>  Preparing: insert into STUDENT(sid, sname, gender, city) values (?, ?, ?, ?)
+2023-06-27 14:57:09,693 457    [           main] DEBUG StudentMapper.getPrimaryKeySid  - ==> Parameters: 0(Integer), giao(String), 男(String), 大连(String)
+2023-06-27 14:57:09,701 465    [           main] DEBUG StudentMapper.getPrimaryKeySid  - <==    Updates: 1
+2023-06-27 14:57:09,707 471    [           main] DEBUG apper.selectStudentByNameOrGen  - ==>  Preparing: select * from STUDENT where 1 = 1 and gender = ?
+2023-06-27 14:57:09,708 472    [           main] DEBUG apper.selectStudentByNameOrGen  - ==> Parameters: 男(String)
+2023-06-27 14:57:09,711 475    [           main] DEBUG apper.selectStudentByNameOrGen  - <==      Total: 14
+2023-06-27 14:57:26,080 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 14:57:26,102 22     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 14:57:26,102 22     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 14:57:26,102 22     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 14:57:26,102 22     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 14:57:26,201 121    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 14:57:26,409 329    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 369049246.
+2023-06-27 14:57:26,412 332    [           main] DEBUG per.selectStudentByNameAndCity  - ==>  Preparing: select * from STUDENT where sname = ? and city = ?
+2023-06-27 14:57:26,442 362    [           main] DEBUG per.selectStudentByNameAndCity  - ==> Parameters: tom(String), 大连(String)
+2023-06-27 14:57:26,470 390    [           main] DEBUG per.selectStudentByNameAndCity  - <==      Total: 8
+2023-06-27 14:57:26,472 392    [           main] DEBUG Mapper.selectStudentByNameLike  - ==>  Preparing: select * from STUDENT where sname like "%"?"%"
+2023-06-27 14:57:26,473 393    [           main] DEBUG Mapper.selectStudentByNameLike  - ==> Parameters: o(String)
+2023-06-27 14:57:26,479 399    [           main] DEBUG Mapper.selectStudentByNameLike  - <==      Total: 15
+2023-06-27 14:57:26,501 421    [           main] DEBUG .selectAllStudentOrderByColumn  - ==>  Preparing: select * from STUDENT order by sid
+2023-06-27 14:57:26,501 421    [           main] DEBUG .selectAllStudentOrderByColumn  - ==> Parameters: 
+2023-06-27 14:57:26,506 426    [           main] DEBUG .selectAllStudentOrderByColumn  - <==      Total: 15
+2023-06-27 14:57:26,507 427    [           main] DEBUG udentMapper.deleteStudentByIds  - ==>  Preparing: delete from STUDENT where sid in (1,2)
+2023-06-27 14:57:26,507 427    [           main] DEBUG udentMapper.deleteStudentByIds  - ==> Parameters: 
+2023-06-27 14:57:26,512 432    [           main] DEBUG udentMapper.deleteStudentByIds  - <==    Updates: 0
+2023-06-27 14:57:26,512 432    [           main] DEBUG dentMapper.selectStudentByPage  - ==>  Preparing: select * from STUDENT limit ?, ?
+2023-06-27 14:57:26,513 433    [           main] DEBUG dentMapper.selectStudentByPage  - ==> Parameters: 0(Integer), 2(Integer)
+2023-06-27 14:57:26,515 435    [           main] DEBUG dentMapper.selectStudentByPage  - <==      Total: 2
+2023-06-27 14:57:26,515 435    [           main] DEBUG pper.StudentMapper.selectCount  - ==>  Preparing: select count(*) from STUDENT
+2023-06-27 14:57:26,516 436    [           main] DEBUG pper.StudentMapper.selectCount  - ==> Parameters: 
+2023-06-27 14:57:26,519 439    [           main] DEBUG pper.StudentMapper.selectCount  - <==      Total: 1
+2023-06-27 14:57:26,520 440    [           main] DEBUG StudentMapper.getPrimaryKeySid  - ==>  Preparing: insert into STUDENT(sid, sname, gender, city) values (?, ?, ?, ?)
+2023-06-27 14:57:26,521 441    [           main] DEBUG StudentMapper.getPrimaryKeySid  - ==> Parameters: 0(Integer), giao(String), 男(String), 大连(String)
+2023-06-27 14:57:26,529 449    [           main] DEBUG StudentMapper.getPrimaryKeySid  - <==    Updates: 1
+2023-06-27 14:57:26,535 455    [           main] DEBUG apper.selectStudentByNameOrGen  - ==>  Preparing: select * from STUDENT where 1 = 1 and gender = ?
+2023-06-27 14:57:26,535 455    [           main] DEBUG apper.selectStudentByNameOrGen  - ==> Parameters: 男(String)
+2023-06-27 14:57:26,539 459    [           main] DEBUG apper.selectStudentByNameOrGen  - <==      Total: 15
+2023-06-27 14:57:37,258 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 14:57:37,276 18     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 14:57:37,276 18     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 14:57:37,276 18     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 14:57:37,276 18     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 14:57:37,366 108    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 14:57:37,577 319    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 369049246.
+2023-06-27 14:57:37,580 322    [           main] DEBUG per.selectStudentByNameAndCity  - ==>  Preparing: select * from STUDENT where sname = ? and city = ?
+2023-06-27 14:57:37,620 362    [           main] DEBUG per.selectStudentByNameAndCity  - ==> Parameters: tom(String), 大连(String)
+2023-06-27 14:57:37,653 395    [           main] DEBUG per.selectStudentByNameAndCity  - <==      Total: 8
+2023-06-27 14:57:37,656 398    [           main] DEBUG Mapper.selectStudentByNameLike  - ==>  Preparing: select * from STUDENT where sname like "%"?"%"
+2023-06-27 14:57:37,656 398    [           main] DEBUG Mapper.selectStudentByNameLike  - ==> Parameters: o(String)
+2023-06-27 14:57:37,684 426    [           main] DEBUG Mapper.selectStudentByNameLike  - <==      Total: 16
+2023-06-27 14:57:37,703 445    [           main] DEBUG .selectAllStudentOrderByColumn  - ==>  Preparing: select * from STUDENT order by sid
+2023-06-27 14:57:37,704 446    [           main] DEBUG .selectAllStudentOrderByColumn  - ==> Parameters: 
+2023-06-27 14:57:37,709 451    [           main] DEBUG .selectAllStudentOrderByColumn  - <==      Total: 16
+2023-06-27 14:57:37,710 452    [           main] DEBUG udentMapper.deleteStudentByIds  - ==>  Preparing: delete from STUDENT where sid in (1,2)
+2023-06-27 14:57:37,710 452    [           main] DEBUG udentMapper.deleteStudentByIds  - ==> Parameters: 
+2023-06-27 14:57:37,715 457    [           main] DEBUG udentMapper.deleteStudentByIds  - <==    Updates: 0
+2023-06-27 14:57:37,717 459    [           main] DEBUG dentMapper.selectStudentByPage  - ==>  Preparing: select * from STUDENT limit ?, ?
+2023-06-27 14:57:37,717 459    [           main] DEBUG dentMapper.selectStudentByPage  - ==> Parameters: 0(Integer), 2(Integer)
+2023-06-27 14:57:37,720 462    [           main] DEBUG dentMapper.selectStudentByPage  - <==      Total: 2
+2023-06-27 14:57:37,720 462    [           main] DEBUG pper.StudentMapper.selectCount  - ==>  Preparing: select count(*) from STUDENT
+2023-06-27 14:57:37,720 462    [           main] DEBUG pper.StudentMapper.selectCount  - ==> Parameters: 
+2023-06-27 14:57:37,724 466    [           main] DEBUG pper.StudentMapper.selectCount  - <==      Total: 1
+2023-06-27 14:57:37,725 467    [           main] DEBUG StudentMapper.getPrimaryKeySid  - ==>  Preparing: insert into STUDENT(sid, sname, gender, city) values (?, ?, ?, ?)
+2023-06-27 14:57:37,725 467    [           main] DEBUG StudentMapper.getPrimaryKeySid  - ==> Parameters: 0(Integer), giao(String), 男(String), 大连(String)
+2023-06-27 14:57:37,742 484    [           main] DEBUG StudentMapper.getPrimaryKeySid  - <==    Updates: 1
+2023-06-27 14:57:37,748 490    [           main] DEBUG apper.selectStudentByNameOrGen  - ==>  Preparing: select * from STUDENT where 1 = 1 and sname like "%"?"%" and gender = ?
+2023-06-27 14:57:37,748 490    [           main] DEBUG apper.selectStudentByNameOrGen  - ==> Parameters: tom(String), 男(String)
+2023-06-27 14:57:37,751 493    [           main] DEBUG apper.selectStudentByNameOrGen  - <==      Total: 8

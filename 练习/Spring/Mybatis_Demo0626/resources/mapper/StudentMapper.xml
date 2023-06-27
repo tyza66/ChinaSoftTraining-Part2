@@ -77,4 +77,16 @@
         insert into STUDENT(sid, sname, gender, city)
         values (#{sid}, #{sname}, #{gender}, #{city})
     </insert>
+
+    <select id="selectStudentByNameOrGen" resultType="com.sdm.pojo.Student">
+        select * from STUDENT where 1 = 1
+
+        <if test="name != null and name != ''">
+            and sname like "%"#{name}"%"
+        </if>
+
+        <if test="gender != null and gender != ''">
+            and gender = #{gender}
+        </if>
+    </select>
 </mapper>

@@ -43,4 +43,7 @@ public interface StudentMapper {
 
     //获取增加学生后主键的值
     int getPrimaryKeySid(Student student);
+
+    //用动态的sql语句完成
+    List<Student> selectStudentByNameOrGen(@Param("name") String name,@Param("gender") String gender);
 }

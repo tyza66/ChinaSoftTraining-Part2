@@ -100,7 +100,8 @@ public class TestStudent {
         int primaryKeySid = mapper.getPrimaryKeySid(student);
         System.out.println(primaryKeySid);
         System.out.println("插入的sid"+student.getSid());
+
+        List<Student> students4 = mapper.selectStudentByNameOrGen("tom", "男");
+        System.out.println(students4);
     }
-
-
 }
