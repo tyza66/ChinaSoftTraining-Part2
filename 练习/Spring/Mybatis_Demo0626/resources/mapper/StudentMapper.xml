@@ -33,7 +33,7 @@
     </update>
 
     <!--  多参数插叙不能直接用参数名 可以使用arg0和arg1代替  除了可以这样写 还可以使用param1、param2整 -->
-    <!--  还有个办法就是在参数前面加上@Param注解-->
+    <!--  还有个办法就是在参数前面加上@Param注解说明在这边对应的是哪个参数  -->
     <select id="selectStudentByNameAndCity" resultType="com.sdm.pojo.Student">
         select *
         from STUDENT
