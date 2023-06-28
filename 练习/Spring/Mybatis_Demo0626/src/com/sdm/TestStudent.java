@@ -10,6 +10,7 @@ import org.junit.Test;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -106,5 +107,20 @@ public class TestStudent {
 
         List<Student> students5 = mapper.selectChoseStudent("tom", "男");
         System.out.println(students5);
+    }
+
+    @Test
+    public void test3() throws IOException {
+        String resource = "mybatis-config.xml";
+        InputStream resourceAsStream = Resources.getResourceAsStream(resource);
+        //使用SqlSessionFactoryBuilder加载配置文件创建SqlSessionFactory
+        SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(resourceAsStream);
+        //创建SqlSession对象 自动提交
+        SqlSession sqlSession = sqlSessionFactory.openSession(true);
+        //获得mapper对象
+        StudentMapper mapper = sqlSession.getMapper(StudentMapper.class);
+        List<Integer> integers = new ArrayList<>();
+        integers.add(10);
+        System.out.println(mapper.deleteStuByForEach(integers));
     }
 }

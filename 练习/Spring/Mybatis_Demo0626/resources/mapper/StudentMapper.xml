@@ -104,4 +104,13 @@
         </where>
     </select>
 
+    <!--  使用foreach进行遍历  -->
+    <!--  Collection规定接受的类型 如果是一个list类型可以写一个list 如果是set和map对应的是collection 数组array  -->
+    <delete id="deleteStuByForEach">
+        delete from STUDENT where sid in
+        <foreach collection="list" item="sid" open="(" close=")" separator=",">
+            #{sid}
+        </foreach>
+    </delete>
+
 </mapper>

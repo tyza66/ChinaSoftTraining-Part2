@@ -594,3 +594,13 @@
 2023-06-27 15:22:40,536 460    [           main] DEBUG udentMapper.selectChoseStudent  - ==>  Preparing: select * from STUDENT where 1 = 1 and sname like "%"?"%"
 2023-06-27 15:22:40,537 461    [           main] DEBUG udentMapper.selectChoseStudent  - ==> Parameters: tom(String)
 2023-06-27 15:22:40,540 464    [           main] DEBUG udentMapper.selectChoseStudent  - <==      Total: 8
+2023-06-28 09:54:34,282 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-28 09:54:34,310 28     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-28 09:54:34,310 28     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-28 09:54:34,310 28     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-28 09:54:34,310 28     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-28 09:54:34,494 212    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-28 09:54:34,772 490    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 2114444063.
+2023-06-28 09:54:34,775 493    [           main] DEBUG udentMapper.deleteStuByForEach  - ==>  Preparing: delete from STUDENT where sid in ( ? )
+2023-06-28 09:54:34,828 546    [           main] DEBUG udentMapper.deleteStuByForEach  - ==> Parameters: 10(Integer)
+2023-06-28 09:54:34,849 567    [           main] DEBUG udentMapper.deleteStuByForEach  - <==    Updates: 1

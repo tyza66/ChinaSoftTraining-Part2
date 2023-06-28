@@ -48,4 +48,6 @@ public interface StudentMapper {
     List<Student> selectStudentByNameOrGen(@Param("name") String name,@Param("gender") String gender);
 
     List<Student> selectChoseStudent(@Param("name") String name,@Param("city") String city);
+
+    boolean deleteStuByForEach(List<Integer> list);
 }
