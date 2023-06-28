@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.sdm.mapper.DeptMapper">
     <select id="selectAllDepts" resultType="dept">
-        select did deptId,dname deptNome,dloc deptLoc from DEPT
+        select did deptId,dname deptName,dloc deptLoc from DEPT
     </select>
 </mapper>
 

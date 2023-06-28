@@ -1,5 +1,6 @@
 package com.sdm;
 
+import com.sdm.mapper.DeptMapper;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -25,6 +26,7 @@ public class TestDeptMapper {
         //创建SqlSession对象 自动提交
         SqlSession sqlSession = sqlSessionFactory.openSession(true);
         //获得mapper对象
-
+        DeptMapper mapper = sqlSession.getMapper(DeptMapper.class);
+        System.out.println(mapper.selectAllDepts());
     }
 }
