@@ -1,6 +1,7 @@
 package com.sdm;
 
 import com.sdm.mapper.DeptMapper;
+import com.sdm.mapper.EmpMapper;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -28,5 +29,18 @@ public class TestDeptMapper {
         //获得mapper对象
         DeptMapper mapper = sqlSession.getMapper(DeptMapper.class);
         System.out.println(mapper.selectAllDepts());
+    }
+
+    @Test
+    public void test2() throws IOException {
+        String resource = "mybatis-config.xml";
+        InputStream resourceAsStream = Resources.getResourceAsStream(resource);
+        //使用SqlSessionFactoryBuilder加载配置文件创建SqlSessionFactory
+        SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(resourceAsStream);
+        //创建SqlSession对象 自动提交
+        SqlSession sqlSession = sqlSessionFactory.openSession(true);
+        //获得mapper对象
+        EmpMapper mapper = sqlSession.getMapper(EmpMapper.class);
+        System.out.println(mapper.selectAllEmps());
     }
 }

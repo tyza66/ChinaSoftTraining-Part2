@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--因为成员中有一个引用类型 需要进行手动的结果集映射-->
+<mapper namespace="com.sdm.mapper.EmpMapper">
+    <resultMap id="empMap" type="emp">
+        <id property="eid" column="eid"/>
+        <result property="ename" column="ename"/>
+        <result property="esal" column="esal"/>
+        <!--<association property="dept" javaType="com.sdm.pojo.Dept">
+            <id property="deptId" column="did"/>
+            <result property="deptName" column="dname"/>
+            <result property="deptLoc" column="dloc"/>
+        </association>-->
+        <association property="dept" javaType="com.sdm.pojo.Dept" resultMap="com.sdm.mapper.DeptMapper.deptMap"/>
+    </resultMap>
+    <select id="selectAllEmps" resultMap="empMap">
+        select e.eid,e.ename,e.esal,d.did,d.dname,d.dloc from EMP e left join DEPT d on e.did=d.did
+    </select>
+</mapper>

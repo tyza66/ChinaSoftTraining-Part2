@@ -3,8 +3,23 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.sdm.mapper.DeptMapper">
+    <!--手动映射结果集-->
+    <resultMap id="deptMap" type="dept">
+        <id property="deptId" column="did"/>
+        <result property="deptName" column="dname"/>
+        <result property="deptLoc" column="dloc"/>
+        <collection property="emps" ofType="com.sdm.pojo.Emp">
+            <id property="eid" column="eid"/>
+            <result property="ename" column="ename"/>
+            <result property="esal" column="esal"/>
+        </collection>
+    </resultMap>
     <select id="selectAllDepts" resultType="dept">
         select did deptId,dname deptName,dloc deptLoc from DEPT
+    </select>
+
+    <select id="selectAllDeptsWithEmps">
+        select d.did,d.dname,d.dloc,e.eid,e.ename,e.esal from DEPT d left join EMP e on d.did=e.did
     </select>
 </mapper>
 
