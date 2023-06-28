@@ -1,0 +1,32 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.icss.mapper.DeptMapper">
+
+    <!--利用生成别名 别名和属性名称一致 自动映射-->
+    <!--<select id="selectAllDepts" resultType="dept">
+        select did deptid,dname deptname,dloc deptloc from dept
+    </select>-->
+
+    <!--手动映射结果集-->
+    <resultMap id="deptMap" type="dept">
+        <id property="deptid" column="did"></id>
+        <result property="deptname" column="dname"></result>
+        <result property="deptloc" column="dloc"></result>
+        <!--一个部门多个员工 List<Emp> empList 描述一对多的关系-->
+        <!--<collection property="empList" ofType="com.icss.pojo.Emp">
+            <id property="eid" column="eid"></id>
+            <result property="ename" column="ename"></result>
+            <result property="esal" column="esal"></result>
+        </collection>-->
+        <collection property="empList" ofType="com.icss.pojo.Emp" resultMap="com.icss.mapper.EmpMapper.empMap" ></collection>
+    </resultMap>
+
+    <select id="selectAllDepts" resultMap="deptMap">
+        select * from dept
+    </select>
+
+    <select id="selectDeptAndEmps" resultMap="deptMap">
+        select d.did,d.dname,d.dloc,e.ename,e.esal from dept d left join emp e on d.did = e.did
+    </select>
+</mapper>

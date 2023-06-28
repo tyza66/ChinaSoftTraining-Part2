@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--configuration mybatis核心配置 书写有顺序要求-->
+    <properties resource="druid.properties"></properties>
+
+    <!--定义别名-->
+    <typeAliases>
+        <!--别名设置1 ：单独设置  type 完整的类路径  alias 别名-->
+<!--        <typeAlias type="com.icss.pojo.Student" alias="stu"></typeAlias>-->
+        <!--别名设置2：指定对应的包 包所有的类都会自动生成别名  别名是类名首字母小写的类名-->
+        <package name="com.icss.pojo"/>
+    </typeAliases>
+
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"></transactionManager>
+            <dataSource type="POOLED">
+                <property name="driver" value="${driverClassName}"/>
+                <property name="url" value="${url}"/>
+                <property name="username" value="${user}"/>
+                <property name="password" value="${password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <!--加载StudentMapper.xml文件-->
+        <!--<mapper resource="mapper/StudentMapper.xml"></mapper>-->
+        <!--指定package扫描xml文件 要求:dao层接口文件和xml文件在同一个目录且名字相同-->
+        <package name="com.icss.mapper"/>
+    </mappers>
+
+</configuration>
