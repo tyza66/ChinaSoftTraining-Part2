@@ -1,0 +1,822 @@
+2023-06-27 09:47:17,928 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 09:47:17,959 31     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 09:47:17,959 31     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 09:47:17,959 31     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 09:47:17,959 31     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 09:47:18,097 169    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 09:47:18,571 643    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1357563986.
+2023-06-27 09:47:18,571 643    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@50eac852]
+2023-06-27 09:47:18,571 643    [           main] DEBUG udentMapper.selectStudentBySId  - ==>  Preparing: select * from student where sid = ?
+2023-06-27 09:47:18,631 703    [           main] DEBUG udentMapper.selectStudentBySId  - ==> Parameters: 1(Integer)
+2023-06-27 09:47:18,675 747    [           main] DEBUG udentMapper.selectStudentBySId  - <==      Total: 1
+2023-06-27 09:56:12,789 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 09:56:12,823 34     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 09:56:12,823 34     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 09:56:12,823 34     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 09:56:12,839 50     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 09:56:13,037 248    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 09:56:13,326 537    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1357563986.
+2023-06-27 09:56:13,326 537    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@50eac852]
+2023-06-27 09:56:13,331 542    [           main] DEBUG udentMapper.selectStudentBySId  - ==>  Preparing: select * from student where sid = ?
+2023-06-27 09:56:13,398 609    [           main] DEBUG udentMapper.selectStudentBySId  - ==> Parameters: 1(Integer)
+2023-06-27 09:56:13,434 645    [           main] DEBUG udentMapper.selectStudentBySId  - <==      Total: 1
+2023-06-27 10:00:44,028 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 10:00:44,044 16     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:00:44,044 16     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:00:44,044 16     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:00:44,044 16     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:00:44,205 177    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 10:00:44,447 419    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1357563986.
+2023-06-27 10:00:44,447 419    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@50eac852]
+2023-06-27 10:00:44,447 419    [           main] DEBUG udentMapper.selectStudentBySId  - ==>  Preparing: select * from student where sid = ?
+2023-06-27 10:00:44,526 498    [           main] DEBUG udentMapper.selectStudentBySId  - ==> Parameters: 1(Integer)
+2023-06-27 10:00:44,572 544    [           main] DEBUG udentMapper.selectStudentBySId  - <==      Total: 1
+2023-06-27 10:00:44,586 558    [           main] DEBUG tudentMapper.selectAllStudents  - ==>  Preparing: select * from student
+2023-06-27 10:00:44,586 558    [           main] DEBUG tudentMapper.selectAllStudents  - ==> Parameters: 
+2023-06-27 10:00:44,590 562    [           main] DEBUG tudentMapper.selectAllStudents  - <==      Total: 2
+2023-06-27 10:10:15,794 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 10:10:15,844 50     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:10:15,844 50     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:10:15,844 50     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:10:15,844 50     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:10:16,006 212    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 10:10:16,431 637    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1357563986.
+2023-06-27 10:10:16,431 637    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@50eac852]
+2023-06-27 10:10:16,431 637    [           main] DEBUG udentMapper.selectStudentBySId  - ==>  Preparing: select * from student where sid = ?
+2023-06-27 10:10:16,461 667    [           main] DEBUG udentMapper.selectStudentBySId  - ==> Parameters: 1(Integer)
+2023-06-27 10:10:16,514 720    [           main] DEBUG udentMapper.selectStudentBySId  - <==      Total: 1
+2023-06-27 10:10:16,522 728    [           main] DEBUG r.IStudentMapper.insertStudent  - ==>  Preparing: insert into student(sname,gender,city) values(?,?,?)
+2023-06-27 10:10:16,522 728    [           main] DEBUG r.IStudentMapper.insertStudent  - ==> Parameters: 小明(String), 男(String), 大连(String)
+2023-06-27 10:10:16,560 766    [           main] DEBUG r.IStudentMapper.insertStudent  - <==    Updates: 1
+2023-06-27 10:10:16,561 767    [           main] DEBUG tudentMapper.selectAllStudents  - ==>  Preparing: select * from student
+2023-06-27 10:10:16,561 767    [           main] DEBUG tudentMapper.selectAllStudents  - ==> Parameters: 
+2023-06-27 10:10:16,565 771    [           main] DEBUG tudentMapper.selectAllStudents  - <==      Total: 3
+2023-06-27 10:12:03,814 1      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 10:12:03,858 45     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:12:03,858 45     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:12:03,859 46     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:12:03,859 46     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:12:04,014 201    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 10:12:04,307 494    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1357563986.
+2023-06-27 10:12:04,308 495    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@50eac852]
+2023-06-27 10:12:04,311 498    [           main] DEBUG udentMapper.selectStudentBySId  - ==>  Preparing: select * from student where sid = ?
+2023-06-27 10:12:04,353 540    [           main] DEBUG udentMapper.selectStudentBySId  - ==> Parameters: 1(Integer)
+2023-06-27 10:12:04,432 619    [           main] DEBUG udentMapper.selectStudentBySId  - <==      Total: 1
+2023-06-27 10:12:04,451 638    [           main] DEBUG r.IStudentMapper.insertStudent  - ==>  Preparing: insert into student(sname,gender,city) values(?,?,?)
+2023-06-27 10:12:04,451 638    [           main] DEBUG r.IStudentMapper.insertStudent  - ==> Parameters: 小明(String), 男(String), 大连(String)
+2023-06-27 10:12:04,454 641    [           main] DEBUG r.IStudentMapper.insertStudent  - <==    Updates: 1
+2023-06-27 10:12:04,454 641    [           main] DEBUG tudentMapper.selectAllStudents  - ==>  Preparing: select * from student
+2023-06-27 10:12:04,454 641    [           main] DEBUG tudentMapper.selectAllStudents  - ==> Parameters: 
+2023-06-27 10:12:04,456 643    [           main] DEBUG tudentMapper.selectAllStudents  - <==      Total: 3
+2023-06-27 10:12:04,457 644    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Committing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@50eac852]
+2023-06-27 10:12:58,758 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 10:12:58,797 39     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:12:58,798 40     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:12:58,798 40     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:12:58,798 40     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:12:58,958 200    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 10:12:59,253 495    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1357563986.
+2023-06-27 10:12:59,257 499    [           main] DEBUG udentMapper.selectStudentBySId  - ==>  Preparing: select * from student where sid = ?
+2023-06-27 10:12:59,331 573    [           main] DEBUG udentMapper.selectStudentBySId  - ==> Parameters: 1(Integer)
+2023-06-27 10:12:59,359 601    [           main] DEBUG udentMapper.selectStudentBySId  - <==      Total: 1
+2023-06-27 10:12:59,374 616    [           main] DEBUG r.IStudentMapper.insertStudent  - ==>  Preparing: insert into student(sname,gender,city) values(?,?,?)
+2023-06-27 10:12:59,375 617    [           main] DEBUG r.IStudentMapper.insertStudent  - ==> Parameters: 小明(String), 男(String), 大连(String)
+2023-06-27 10:12:59,379 621    [           main] DEBUG r.IStudentMapper.insertStudent  - <==    Updates: 1
+2023-06-27 10:12:59,380 622    [           main] DEBUG tudentMapper.selectAllStudents  - ==>  Preparing: select * from student
+2023-06-27 10:12:59,380 622    [           main] DEBUG tudentMapper.selectAllStudents  - ==> Parameters: 
+2023-06-27 10:12:59,382 624    [           main] DEBUG tudentMapper.selectAllStudents  - <==      Total: 4
+2023-06-27 10:23:39,292 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 10:23:39,335 43     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:23:39,335 43     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:23:39,335 43     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:23:39,336 44     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:23:39,527 235    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 10:23:40,136 844    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1357563986.
+2023-06-27 10:23:40,141 849    [           main] DEBUG udentMapper.selectStudentBySId  - ==>  Preparing: select * from student where sid = ?
+2023-06-27 10:23:40,204 912    [           main] DEBUG udentMapper.selectStudentBySId  - ==> Parameters: 1(Integer)
+2023-06-27 10:23:40,327 1035   [           main] DEBUG udentMapper.selectStudentBySId  - <==      Total: 1
+2023-06-27 10:23:40,376 1084   [           main] DEBUG udentMapper.deleteStudentBySid  - ==>  Preparing: delete from student where sid = ?
+2023-06-27 10:23:40,377 1085   [           main] DEBUG udentMapper.deleteStudentBySid  - ==> Parameters: 4(Integer)
+2023-06-27 10:23:40,383 1091   [           main] DEBUG udentMapper.deleteStudentBySid  - <==    Updates: 1
+2023-06-27 10:23:40,384 1092   [           main] DEBUG tudentMapper.selectAllStudents  - ==>  Preparing: select * from student
+2023-06-27 10:23:40,384 1092   [           main] DEBUG tudentMapper.selectAllStudents  - ==> Parameters: 
+2023-06-27 10:23:40,385 1093   [           main] DEBUG tudentMapper.selectAllStudents  - <==      Total: 2
+2023-06-27 10:28:07,369 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 10:28:07,402 33     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:28:07,426 57     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:28:07,427 58     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:28:07,427 58     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:28:07,707 338    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 10:28:08,085 716    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1357563986.
+2023-06-27 10:28:08,089 720    [           main] DEBUG udentMapper.selectStudentBySId  - ==>  Preparing: select * from student where sid = ?
+2023-06-27 10:28:08,273 904    [           main] DEBUG udentMapper.selectStudentBySId  - ==> Parameters: 1(Integer)
+2023-06-27 10:28:08,304 935    [           main] DEBUG udentMapper.selectStudentBySId  - <==      Total: 1
+2023-06-27 10:28:08,311 942    [           main] DEBUG udentMapper.updateStudentBySid  - ==>  Preparing: update student set sname = ?,gender = ?,city = ? where sid = ?
+2023-06-27 10:28:08,312 943    [           main] DEBUG udentMapper.updateStudentBySid  - ==> Parameters: 小红(String), 女(String), 锦州(String), 1(Integer)
+2023-06-27 10:28:08,319 950    [           main] DEBUG udentMapper.updateStudentBySid  - <==    Updates: 1
+2023-06-27 10:28:08,319 950    [           main] DEBUG tudentMapper.selectAllStudents  - ==>  Preparing: select * from student
+2023-06-27 10:28:08,320 951    [           main] DEBUG tudentMapper.selectAllStudents  - ==> Parameters: 
+2023-06-27 10:28:08,321 952    [           main] DEBUG tudentMapper.selectAllStudents  - <==      Total: 2
+2023-06-27 10:28:31,683 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 10:28:31,720 37     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:28:31,721 38     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:28:31,721 38     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:28:31,721 38     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:28:31,859 176    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 10:28:32,160 477    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1357563986.
+2023-06-27 10:28:32,165 482    [           main] DEBUG udentMapper.selectStudentBySId  - ==>  Preparing: select * from student where sid = ?
+2023-06-27 10:28:32,215 532    [           main] DEBUG udentMapper.selectStudentBySId  - ==> Parameters: 1(Integer)
+2023-06-27 10:28:32,248 565    [           main] DEBUG udentMapper.selectStudentBySId  - <==      Total: 1
+2023-06-27 10:28:32,257 574    [           main] DEBUG udentMapper.updateStudentBySid  - ==>  Preparing: update student set sname = ?,gender = ?,city = ? where sid = ?
+2023-06-27 10:28:48,295 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 10:28:48,319 24     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:28:48,319 24     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:28:48,320 25     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:28:48,320 25     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:28:48,441 146    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 10:28:48,686 391    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 168366.
+2023-06-27 10:28:48,689 394    [           main] DEBUG udentMapper.selectStudentBySId  - ==>  Preparing: select * from student where sid = ?
+2023-06-27 10:28:48,723 428    [           main] DEBUG udentMapper.selectStudentBySId  - ==> Parameters: 1(Integer)
+2023-06-27 10:28:48,757 462    [           main] DEBUG udentMapper.selectStudentBySId  - <==      Total: 1
+2023-06-27 10:28:48,769 474    [           main] DEBUG udentMapper.updateStudentBySid  - ==>  Preparing: update student set sname = ?,gender = ?,city = ? where sid = ?
+2023-06-27 10:28:48,772 477    [           main] DEBUG udentMapper.updateStudentBySid  - ==> Parameters: 小红(String), 女(String), 锦州(String), 1(Integer)
+2023-06-27 10:28:48,775 480    [           main] DEBUG udentMapper.updateStudentBySid  - <==    Updates: 1
+2023-06-27 10:28:48,776 481    [           main] DEBUG tudentMapper.selectAllStudents  - ==>  Preparing: select * from student
+2023-06-27 10:28:48,776 481    [           main] DEBUG tudentMapper.selectAllStudents  - ==> Parameters: 
+2023-06-27 10:28:48,778 483    [           main] DEBUG tudentMapper.selectAllStudents  - <==      Total: 2
+2023-06-27 10:34:48,116 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 10:34:48,142 26     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:34:48,142 26     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:34:48,142 26     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:34:48,142 26     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:34:48,282 166    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 10:34:48,524 408    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1357563986.
+2023-06-27 10:34:48,527 411    [           main] DEBUG udentMapper.selectStudentBySId  - ==>  Preparing: select * from student where sid = ?
+2023-06-27 10:34:48,600 484    [           main] DEBUG udentMapper.selectStudentBySId  - ==> Parameters: 1(Integer)
+2023-06-27 10:34:48,626 510    [           main] DEBUG udentMapper.selectStudentBySId  - <==      Total: 1
+2023-06-27 10:34:48,636 520    [           main] DEBUG udentMapper.updateStudentBySid  - ==>  Preparing: update student set sname = ?,gender = ?,city = ? where sid = ?
+2023-06-27 10:35:26,071 1      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 10:35:26,099 29     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:35:26,099 29     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:35:26,099 29     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:35:26,099 29     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:35:26,206 136    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 10:35:26,448 378    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1357563986.
+2023-06-27 10:35:26,452 382    [           main] DEBUG udentMapper.selectStudentBySId  - ==>  Preparing: select * from student where sid = ?
+2023-06-27 10:35:26,482 412    [           main] DEBUG udentMapper.selectStudentBySId  - ==> Parameters: 1(Integer)
+2023-06-27 10:35:26,521 451    [           main] DEBUG udentMapper.selectStudentBySId  - <==      Total: 1
+2023-06-27 10:35:26,537 467    [           main] DEBUG udentMapper.updateStudentBySid  - ==>  Preparing: update student set sname = ?,gender = ?,city = ? where sid = ?
+2023-06-27 10:35:52,233 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 10:35:52,257 24     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:35:52,258 25     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:35:52,258 25     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:35:52,258 25     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:35:52,383 150    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 10:35:52,625 392    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1357563986.
+2023-06-27 10:35:52,628 395    [           main] DEBUG udentMapper.selectStudentBySId  - ==>  Preparing: select * from student where sid = ?
+2023-06-27 10:35:52,683 450    [           main] DEBUG udentMapper.selectStudentBySId  - ==> Parameters: 1(Integer)
+2023-06-27 10:35:52,709 476    [           main] DEBUG udentMapper.selectStudentBySId  - <==      Total: 1
+2023-06-27 10:35:52,717 484    [           main] DEBUG udentMapper.updateStudentBySid  - ==>  Preparing: update student set sname = ?,gender = ?,city = ? where sid = ?
+2023-06-27 10:36:23,313 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 10:36:23,345 32     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:36:23,345 32     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:36:23,346 33     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:36:23,347 34     [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:36:23,474 161    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 10:36:23,746 433    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1357563986.
+2023-06-27 10:36:23,749 436    [           main] DEBUG udentMapper.selectStudentBySId  - ==>  Preparing: select * from student where sid = ?
+2023-06-27 10:36:23,790 477    [           main] DEBUG udentMapper.selectStudentBySId  - ==> Parameters: 1(Integer)
+2023-06-27 10:36:23,822 509    [           main] DEBUG udentMapper.selectStudentBySId  - <==      Total: 1
+2023-06-27 10:36:23,835 522    [           main] DEBUG udentMapper.updateStudentBySid  - ==>  Preparing: update student set sname = ?,gender = ?,city = ? where sid = ?
+2023-06-27 10:36:23,837 524    [           main] DEBUG udentMapper.updateStudentBySid  - ==> Parameters: 小红(String), 女(String), 锦州(String), 1(Integer)
+2023-06-27 10:36:23,840 527    [           main] DEBUG udentMapper.updateStudentBySid  - <==    Updates: 1
+2023-06-27 10:36:23,840 527    [           main] DEBUG tudentMapper.selectAllStudents  - ==>  Preparing: select * from student
+2023-06-27 10:36:23,841 528    [           main] DEBUG tudentMapper.selectAllStudents  - ==> Parameters: 
+2023-06-27 10:36:23,842 529    [           main] DEBUG tudentMapper.selectAllStudents  - <==      Total: 2
+2023-06-27 10:57:16,351 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 10:57:16,355 4      [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2023-06-27 10:57:16,355 4      [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2023-06-27 10:57:16,355 4      [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2023-06-27 10:57:16,356 5      [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2023-06-27 10:57:16,356 5      [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2023-06-27 10:57:16,356 5      [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 10:57:16,357 6      [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 10:57:16,444 93     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: Student.class
+2023-06-27 10:57:16,444 93     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 10:57:16,445 94     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 10:57:16,445 94     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 10:57:16,446 95     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 D	  0	  1	  2	  3
+2023-06-27 10:57:16,446 95     [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class com.icss.pojo.Student matches criteria [is assignable to Object]
+2023-06-27 10:57:16,528 177    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:57:16,529 178    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:57:16,529 178    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:57:16,530 179    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:58:35,353 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 10:58:35,359 6      [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2023-06-27 10:58:35,359 6      [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2023-06-27 10:58:35,363 10     [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2023-06-27 10:58:35,363 10     [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2023-06-27 10:58:35,364 11     [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2023-06-27 10:58:35,365 12     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 10:58:35,367 14     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 10:58:35,410 57     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: Student.class
+2023-06-27 10:58:35,410 57     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 10:58:35,412 59     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 10:58:35,412 59     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 10:58:35,413 60     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 D	  0	  1	  2	  3
+2023-06-27 10:58:35,414 61     [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class com.icss.pojo.Student matches criteria [is assignable to Object]
+2023-06-27 10:58:35,472 119    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:58:35,473 120    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:58:35,473 120    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:58:35,473 120    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 10:58:35,687 334    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 10:58:35,979 626    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 440737101.
+2023-06-27 10:58:35,986 633    [           main] DEBUG tMapper.selectStuByNameAndCity  - ==>  Preparing: select * from student where sname = ? and city = ?
+2023-06-27 10:58:36,030 677    [           main] DEBUG tMapper.selectStuByNameAndCity  - ==> Parameters: 小红(String), 锦州(String)
+2023-06-27 10:58:36,074 721    [           main] DEBUG tMapper.selectStuByNameAndCity  - <==      Total: 1
+2023-06-27 11:00:04,381 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 11:00:04,387 6      [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2023-06-27 11:00:04,387 6      [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2023-06-27 11:00:04,387 6      [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2023-06-27 11:00:04,388 7      [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2023-06-27 11:00:04,389 8      [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2023-06-27 11:00:04,389 8      [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 11:00:04,389 8      [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 11:00:04,442 61     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: Student.class
+2023-06-27 11:00:04,443 62     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 11:00:04,443 62     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 11:00:04,444 63     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 11:00:04,449 68     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 D	  0	  1	  2	  3
+2023-06-27 11:00:04,456 75     [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class com.icss.pojo.Student matches criteria [is assignable to Object]
+2023-06-27 11:00:04,503 122    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 11:00:04,503 122    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 11:00:04,503 122    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 11:00:04,503 122    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 11:00:04,722 341    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 11:00:05,035 654    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 440737101.
+2023-06-27 11:00:05,038 657    [           main] DEBUG tMapper.selectStuByNameAndCity  - ==>  Preparing: select * from student where sname = ? and city = ?
+2023-06-27 11:00:05,087 706    [           main] DEBUG tMapper.selectStuByNameAndCity  - ==> Parameters: 小红(String), 锦州(String)
+2023-06-27 11:00:05,169 788    [           main] DEBUG tMapper.selectStuByNameAndCity  - <==      Total: 1
+2023-06-27 11:09:30,389 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 11:09:30,395 6      [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2023-06-27 11:09:30,395 6      [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2023-06-27 11:09:30,396 7      [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2023-06-27 11:09:30,396 7      [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2023-06-27 11:09:30,397 8      [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2023-06-27 11:09:30,397 8      [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 11:09:30,397 8      [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 11:09:30,446 57     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: Student.class
+2023-06-27 11:09:30,446 57     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 11:09:30,446 57     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 11:09:30,446 57     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 11:09:30,447 58     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 D	  0	  1	  2	  3
+2023-06-27 11:09:30,448 59     [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class com.icss.pojo.Student matches criteria [is assignable to Object]
+2023-06-27 11:09:30,509 120    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 11:09:30,509 120    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 11:09:30,509 120    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 11:09:30,509 120    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 11:09:30,716 327    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 11:09:30,999 610    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 440737101.
+2023-06-27 11:09:31,003 614    [           main] DEBUG tMapper.selectStuByNameAndCity  - ==>  Preparing: select * from student where sname = ? and city = ?
+2023-06-27 11:09:31,069 680    [           main] DEBUG tMapper.selectStuByNameAndCity  - ==> Parameters: 小红(String), 锦州(String)
+2023-06-27 11:09:31,126 737    [           main] DEBUG tMapper.selectStuByNameAndCity  - <==      Total: 1
+2023-06-27 11:18:00,693 1      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 11:18:00,697 5      [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2023-06-27 11:18:00,698 6      [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2023-06-27 11:18:00,698 6      [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2023-06-27 11:18:00,699 7      [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2023-06-27 11:18:00,700 8      [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2023-06-27 11:18:00,700 8      [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 11:18:00,701 9      [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 11:18:00,741 49     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: Student.class
+2023-06-27 11:18:00,741 49     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 11:18:00,742 50     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 11:18:00,742 50     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 11:18:00,743 51     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 D	  0	  1	  2	  3
+2023-06-27 11:18:00,744 52     [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class com.icss.pojo.Student matches criteria [is assignable to Object]
+2023-06-27 11:18:00,868 176    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 11:18:00,868 176    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 11:18:00,869 177    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 11:18:00,869 177    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 11:18:01,055 363    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 11:18:01,350 658    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1125736023.
+2023-06-27 11:18:01,355 663    [           main] DEBUG udentMapper.selectStudentBySId  - ==>  Preparing: select * from student where sid = ?
+2023-06-27 11:18:01,427 735    [           main] DEBUG udentMapper.selectStudentBySId  - ==> Parameters: 1(Integer)
+2023-06-27 11:18:01,484 792    [           main] DEBUG udentMapper.selectStudentBySId  - <==      Total: 1
+2023-06-27 11:18:01,494 802    [           main] DEBUG udentMapper.updateStudentBySid  - ==>  Preparing: update student set sname = ?,gender = ?,city = ? where sid = ?
+2023-06-27 11:18:01,495 803    [           main] DEBUG udentMapper.updateStudentBySid  - ==> Parameters: 小红(String), 女(String), 锦州(String), 1(Integer)
+2023-06-27 11:18:01,497 805    [           main] DEBUG udentMapper.updateStudentBySid  - <==    Updates: 1
+2023-06-27 11:18:01,497 805    [           main] DEBUG tudentMapper.selectAllStudents  - ==>  Preparing: select * from student
+2023-06-27 11:18:01,498 806    [           main] DEBUG tudentMapper.selectAllStudents  - ==> Parameters: 
+2023-06-27 11:18:01,499 807    [           main] DEBUG tudentMapper.selectAllStudents  - <==      Total: 2
+2023-06-27 12:48:25,522 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 12:48:25,526 4      [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2023-06-27 12:48:25,526 4      [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2023-06-27 12:48:25,527 5      [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2023-06-27 12:48:25,527 5      [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2023-06-27 12:48:25,528 6      [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2023-06-27 12:48:25,528 6      [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 12:48:25,528 6      [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 12:48:25,598 76     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: Student.class
+2023-06-27 12:48:25,599 77     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 12:48:25,599 77     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 12:48:25,600 78     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 12:48:25,600 78     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 D	  0	  1	  2	  3
+2023-06-27 12:48:25,601 79     [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class com.icss.pojo.Student matches criteria [is assignable to Object]
+2023-06-27 12:48:25,665 143    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 12:48:25,666 144    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 12:48:25,666 144    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 12:48:25,666 144    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 12:48:25,851 329    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 12:48:26,137 615    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 2141817446.
+2023-06-27 12:48:26,147 625    [           main] DEBUG dentMapper.selectStuByLikeName  - ==>  Preparing: select * from student where sname like ?
+2023-06-27 12:48:26,204 682    [           main] DEBUG dentMapper.selectStuByLikeName  - ==> Parameters: %r%(String)
+2023-06-27 12:48:26,260 738    [           main] DEBUG dentMapper.selectStuByLikeName  - <==      Total: 2
+2023-06-27 12:58:35,529 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 12:58:35,533 4      [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2023-06-27 12:58:35,533 4      [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2023-06-27 12:58:35,533 4      [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2023-06-27 12:58:35,534 5      [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2023-06-27 12:58:35,535 6      [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2023-06-27 12:58:35,535 6      [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 12:58:35,535 6      [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 12:58:35,602 73     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: Student.class
+2023-06-27 12:58:35,604 75     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 12:58:35,604 75     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 12:58:35,605 76     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 12:58:35,606 77     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 D	  0	  1	  2	  3
+2023-06-27 12:58:35,607 78     [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class com.icss.pojo.Student matches criteria [is assignable to Object]
+2023-06-27 12:58:35,680 151    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 12:58:35,680 151    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 12:58:35,680 151    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 12:58:35,680 151    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 12:58:35,913 384    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 12:58:36,279 750    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 2141817446.
+2023-06-27 12:58:36,284 755    [           main] DEBUG dentMapper.selectStuByLikeName  - ==>  Preparing: select * from student where sname like concat('%',?,'%')
+2023-06-27 12:58:36,390 861    [           main] DEBUG dentMapper.selectStuByLikeName  - ==> Parameters: r(String)
+2023-06-27 12:58:36,453 924    [           main] DEBUG dentMapper.selectStuByLikeName  - <==      Total: 2
+2023-06-27 12:59:33,763 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 12:59:33,774 11     [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2023-06-27 12:59:33,775 12     [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2023-06-27 12:59:33,775 12     [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2023-06-27 12:59:33,776 13     [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2023-06-27 12:59:33,776 13     [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2023-06-27 12:59:33,777 14     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 12:59:33,777 14     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 12:59:33,836 73     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: Student.class
+2023-06-27 12:59:33,836 73     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 12:59:33,836 73     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 12:59:33,837 74     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 12:59:33,837 74     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 D	  0	  1	  2	  3
+2023-06-27 12:59:33,838 75     [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class com.icss.pojo.Student matches criteria [is assignable to Object]
+2023-06-27 12:59:33,890 127    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 12:59:33,890 127    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 12:59:33,890 127    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 12:59:33,890 127    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 12:59:34,088 325    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 12:59:34,435 672    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 2141817446.
+2023-06-27 12:59:34,440 677    [           main] DEBUG dentMapper.selectStuByLikeName  - ==>  Preparing: select * from student where sname like concat('%',?,'%') select * from student where sname like ”%“?”%“
+2023-06-27 12:59:34,477 714    [           main] DEBUG dentMapper.selectStuByLikeName  - ==> Parameters: r(String), r(String)
+2023-06-27 12:59:52,028 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 12:59:52,032 4      [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2023-06-27 12:59:52,032 4      [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2023-06-27 12:59:52,032 4      [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2023-06-27 12:59:52,033 5      [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2023-06-27 12:59:52,033 5      [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2023-06-27 12:59:52,034 6      [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 12:59:52,034 6      [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 12:59:52,103 75     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: Student.class
+2023-06-27 12:59:52,106 78     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 12:59:52,107 79     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 12:59:52,107 79     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 12:59:52,109 81     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 D	  0	  1	  2	  3
+2023-06-27 12:59:52,109 81     [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class com.icss.pojo.Student matches criteria [is assignable to Object]
+2023-06-27 12:59:52,167 139    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 12:59:52,167 139    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 12:59:52,167 139    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 12:59:52,168 140    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 12:59:52,370 342    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 12:59:52,731 703    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 2141817446.
+2023-06-27 12:59:52,737 709    [           main] DEBUG dentMapper.selectStuByLikeName  - ==>  Preparing: select * from student where sname like ”%“?”%“
+2023-06-27 12:59:52,808 780    [           main] DEBUG dentMapper.selectStuByLikeName  - ==> Parameters: r(String)
+2023-06-27 13:00:43,121 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 13:00:43,125 4      [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2023-06-27 13:00:43,125 4      [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2023-06-27 13:00:43,126 5      [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2023-06-27 13:00:43,126 5      [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2023-06-27 13:00:43,127 6      [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2023-06-27 13:00:43,127 6      [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 13:00:43,127 6      [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 13:00:43,189 68     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: Student.class
+2023-06-27 13:00:43,190 69     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 13:00:43,190 69     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 13:00:43,190 69     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 13:00:43,191 70     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 D	  0	  1	  2	  3
+2023-06-27 13:00:43,193 72     [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class com.icss.pojo.Student matches criteria [is assignable to Object]
+2023-06-27 13:00:43,242 121    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 13:00:43,242 121    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 13:00:43,242 121    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 13:00:43,242 121    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 13:00:43,455 334    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 13:00:43,760 639    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 2141817446.
+2023-06-27 13:00:43,768 647    [           main] DEBUG dentMapper.selectStuByLikeName  - ==>  Preparing: select * from student where sname like "%"?"%"
+2023-06-27 13:00:43,837 716    [           main] DEBUG dentMapper.selectStuByLikeName  - ==> Parameters: r(String)
+2023-06-27 13:00:43,879 758    [           main] DEBUG dentMapper.selectStuByLikeName  - <==      Total: 2
+2023-06-27 13:04:38,817 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 13:04:38,822 5      [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2023-06-27 13:04:38,822 5      [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2023-06-27 13:04:38,823 6      [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2023-06-27 13:04:38,823 6      [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2023-06-27 13:04:38,827 10     [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2023-06-27 13:04:38,827 10     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 13:04:38,827 10     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 13:04:38,903 86     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: Student.class
+2023-06-27 13:04:38,904 87     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 13:04:38,904 87     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 13:04:38,904 87     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 13:04:38,905 88     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 D	  0	  1	  2	  3
+2023-06-27 13:04:38,906 89     [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class com.icss.pojo.Student matches criteria [is assignable to Object]
+2023-06-27 13:04:38,975 158    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 13:04:38,975 158    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 13:04:38,975 158    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 13:04:38,975 158    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 13:04:39,232 415    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 13:04:39,526 709    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 762476028.
+2023-06-27 13:04:39,531 714    [           main] DEBUG dentMapper.selectStuByLikeName  - ==>  Preparing: select * from student where sname like '%r%'
+2023-06-27 13:04:39,604 787    [           main] DEBUG dentMapper.selectStuByLikeName  - ==> Parameters: 
+2023-06-27 13:04:39,683 866    [           main] DEBUG dentMapper.selectStuByLikeName  - <==      Total: 2
+2023-06-27 13:15:25,017 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 13:15:25,024 7      [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2023-06-27 13:15:25,024 7      [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2023-06-27 13:15:25,024 7      [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2023-06-27 13:15:25,025 8      [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2023-06-27 13:15:25,025 8      [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2023-06-27 13:15:25,025 8      [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 13:15:25,025 8      [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 13:15:25,089 72     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: Student.class
+2023-06-27 13:15:25,089 72     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 13:15:25,089 72     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 13:15:25,089 72     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 13:15:25,090 73     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 D	  0	  1	  2	  3
+2023-06-27 13:15:25,091 74     [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class com.icss.pojo.Student matches criteria [is assignable to Object]
+2023-06-27 13:15:25,180 163    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 13:15:25,180 163    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 13:15:25,180 163    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 13:15:25,180 163    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 13:15:25,495 478    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 13:15:25,813 796    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 762476028.
+2023-06-27 13:15:25,819 802    [           main] DEBUG entMapper.selectAllStuOrderCol  - ==>  Preparing: select * from student order by sid
+2023-06-27 13:15:25,922 905    [           main] DEBUG entMapper.selectAllStuOrderCol  - ==> Parameters: 
+2023-06-27 13:15:25,963 946    [           main] DEBUG entMapper.selectAllStuOrderCol  - <==      Total: 3
+2023-06-27 13:15:48,520 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 13:15:48,525 5      [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2023-06-27 13:15:48,525 5      [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2023-06-27 13:15:48,526 6      [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2023-06-27 13:15:48,527 7      [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2023-06-27 13:15:48,528 8      [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2023-06-27 13:15:48,528 8      [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 13:15:48,529 9      [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 13:15:48,585 65     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: Student.class
+2023-06-27 13:15:48,586 66     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 13:15:48,586 66     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 13:15:48,586 66     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 13:15:48,590 70     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 D	  0	  1	  2	  3
+2023-06-27 13:15:48,591 71     [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class com.icss.pojo.Student matches criteria [is assignable to Object]
+2023-06-27 13:15:48,639 119    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 13:15:48,639 119    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 13:15:48,639 119    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 13:15:48,639 119    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 13:15:48,811 291    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 13:15:49,092 572    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1608297024.
+2023-06-27 13:15:49,101 581    [           main] DEBUG entMapper.selectAllStuOrderCol  - ==>  Preparing: select * from student order by ?
+2023-06-27 13:15:49,156 636    [           main] DEBUG entMapper.selectAllStuOrderCol  - ==> Parameters: sid(String)
+2023-06-27 13:15:49,217 697    [           main] DEBUG entMapper.selectAllStuOrderCol  - <==      Total: 3
+2023-06-27 13:29:15,428 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 13:29:15,438 10     [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2023-06-27 13:29:15,438 10     [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2023-06-27 13:29:15,439 11     [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2023-06-27 13:29:15,440 12     [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2023-06-27 13:29:15,440 12     [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2023-06-27 13:29:15,440 12     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 13:29:15,441 13     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 13:29:15,491 63     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: Student.class
+2023-06-27 13:29:15,492 64     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 13:29:15,492 64     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 13:29:15,492 64     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 13:29:15,493 65     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 D	  0	  1	  2	  3
+2023-06-27 13:29:15,494 66     [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class com.icss.pojo.Student matches criteria [is assignable to Object]
+2023-06-27 13:29:15,551 123    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 13:29:15,551 123    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 13:29:15,551 123    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 13:29:15,551 123    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 13:29:15,800 372    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 13:29:16,079 651    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1818544933.
+2023-06-27 13:29:16,091 663    [           main] DEBUG r.IStudentMapper.deleteMoreStu  - ==>  Preparing: delete from student where sid in (1,2)
+2023-06-27 13:29:16,138 710    [           main] DEBUG r.IStudentMapper.deleteMoreStu  - ==> Parameters: 
+2023-06-27 13:29:16,165 737    [           main] DEBUG r.IStudentMapper.deleteMoreStu  - <==    Updates: 2
+2023-06-27 13:29:16,169 741    [           main] DEBUG tudentMapper.selectAllStudents  - ==>  Preparing: select * from student
+2023-06-27 13:29:16,169 741    [           main] DEBUG tudentMapper.selectAllStudents  - ==> Parameters: 
+2023-06-27 13:29:16,203 775    [           main] DEBUG tudentMapper.selectAllStudents  - <==      Total: 1
+2023-06-27 13:59:36,219 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 13:59:36,223 4      [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2023-06-27 13:59:36,223 4      [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2023-06-27 13:59:36,224 5      [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2023-06-27 13:59:36,224 5      [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2023-06-27 13:59:36,225 6      [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2023-06-27 13:59:36,225 6      [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 13:59:36,225 6      [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 13:59:36,289 70     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: Student.class
+2023-06-27 13:59:36,289 70     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 13:59:36,290 71     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 13:59:36,290 71     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 13:59:36,291 72     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 D	  0	  1	  2	  3
+2023-06-27 13:59:36,293 74     [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class com.icss.pojo.Student matches criteria [is assignable to Object]
+2023-06-27 13:59:36,342 123    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 13:59:36,343 124    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 13:59:36,343 124    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 13:59:36,343 124    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 13:59:36,568 349    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 13:59:36,847 628    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1818544933.
+2023-06-27 13:59:36,851 632    [           main] DEBUG r.IStudentMapper.deleteMoreStu  - ==>  Preparing: delete from student where sid in (1,2)
+2023-06-27 13:59:36,888 669    [           main] DEBUG r.IStudentMapper.deleteMoreStu  - ==> Parameters: 
+2023-06-27 13:59:36,890 671    [           main] DEBUG r.IStudentMapper.deleteMoreStu  - <==    Updates: 0
+2023-06-27 13:59:36,930 711    [           main] DEBUG IStudentMapper.selectStuByPage  - ==>  Preparing: select * from student limit ?,?
+2023-06-27 13:59:36,930 711    [           main] DEBUG IStudentMapper.selectStuByPage  - ==> Parameters: 0(Integer), 5(Integer)
+2023-06-27 13:59:36,962 743    [           main] DEBUG IStudentMapper.selectStuByPage  - <==      Total: 1
+2023-06-27 14:09:05,082 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 14:09:05,088 6      [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2023-06-27 14:09:05,088 6      [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2023-06-27 14:09:05,088 6      [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2023-06-27 14:09:05,090 8      [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2023-06-27 14:09:05,090 8      [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2023-06-27 14:09:05,091 9      [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 14:09:05,091 9      [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 14:09:05,140 58     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: Student.class
+2023-06-27 14:09:05,141 59     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 14:09:05,141 59     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 14:09:05,142 60     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 14:09:05,148 66     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 D	  0	  1	  2	  3
+2023-06-27 14:09:05,148 66     [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class com.icss.pojo.Student matches criteria [is assignable to Object]
+2023-06-27 14:09:05,210 128    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 14:09:05,210 128    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 14:09:05,210 128    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 14:09:05,210 128    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 14:09:05,432 350    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 14:09:05,710 628    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1818544933.
+2023-06-27 14:09:05,715 633    [           main] DEBUG r.IStudentMapper.deleteMoreStu  - ==>  Preparing: delete from student where sid in (1,2)
+2023-06-27 14:09:05,760 678    [           main] DEBUG r.IStudentMapper.deleteMoreStu  - ==> Parameters: 
+2023-06-27 14:09:05,762 680    [           main] DEBUG r.IStudentMapper.deleteMoreStu  - <==    Updates: 0
+2023-06-27 14:09:05,771 689    [           main] DEBUG IStudentMapper.selectStuByPage  - ==>  Preparing: select * from student limit ?,?
+2023-06-27 14:09:05,773 691    [           main] DEBUG IStudentMapper.selectStuByPage  - ==> Parameters: 0(Integer), 5(Integer)
+2023-06-27 14:09:05,835 753    [           main] DEBUG IStudentMapper.selectStuByPage  - <==      Total: 1
+2023-06-27 14:09:05,840 758    [           main] DEBUG per.IStudentMapper.getStuCount  - ==>  Preparing: select count(sid) from student
+2023-06-27 14:09:05,840 758    [           main] DEBUG per.IStudentMapper.getStuCount  - ==> Parameters: 
+2023-06-27 14:09:05,845 763    [           main] DEBUG per.IStudentMapper.getStuCount  - <==      Total: 1
+2023-06-27 14:19:25,237 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 14:19:25,243 6      [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2023-06-27 14:19:25,243 6      [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2023-06-27 14:19:25,244 7      [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2023-06-27 14:19:25,244 7      [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2023-06-27 14:19:25,245 8      [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2023-06-27 14:19:25,245 8      [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 14:19:25,246 9      [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 14:19:25,301 64     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: Student.class
+2023-06-27 14:19:25,302 65     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 14:19:25,302 65     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 14:19:25,304 67     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 14:19:25,305 68     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 D	  0	  1	  2	  3
+2023-06-27 14:19:25,306 69     [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class com.icss.pojo.Student matches criteria [is assignable to Object]
+2023-06-27 14:19:25,366 129    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 14:19:25,367 130    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 14:19:25,367 130    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 14:19:25,367 130    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 14:19:25,606 369    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 14:19:25,872 635    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 572868060.
+2023-06-27 14:19:25,879 642    [           main] DEBUG r.IStudentMapper.deleteMoreStu  - ==>  Preparing: delete from student where sid in (1,2)
+2023-06-27 14:19:25,965 728    [           main] DEBUG r.IStudentMapper.deleteMoreStu  - ==> Parameters: 
+2023-06-27 14:19:25,967 730    [           main] DEBUG r.IStudentMapper.deleteMoreStu  - <==    Updates: 0
+2023-06-27 14:19:25,978 741    [           main] DEBUG IStudentMapper.selectStuByPage  - ==>  Preparing: select * from student limit ?,?
+2023-06-27 14:19:25,979 742    [           main] DEBUG IStudentMapper.selectStuByPage  - ==> Parameters: 0(Integer), 5(Integer)
+2023-06-27 14:19:26,020 783    [           main] DEBUG IStudentMapper.selectStuByPage  - <==      Total: 1
+2023-06-27 14:19:26,023 786    [           main] DEBUG per.IStudentMapper.getStuCount  - ==>  Preparing: select count(sid) from student
+2023-06-27 14:19:26,023 786    [           main] DEBUG per.IStudentMapper.getStuCount  - ==> Parameters: 
+2023-06-27 14:19:26,026 789    [           main] DEBUG per.IStudentMapper.getStuCount  - <==      Total: 1
+2023-06-27 14:19:26,026 789    [           main] DEBUG StudentMapper.getPrimaryKeySid  - ==>  Preparing: insert into student(sname,gender,city) values(?,?,?)
+2023-06-27 14:19:26,027 790    [           main] DEBUG StudentMapper.getPrimaryKeySid  - ==> Parameters: 小强(String), 男(String), 大连(String)
+2023-06-27 14:19:26,031 794    [           main] DEBUG StudentMapper.getPrimaryKeySid  - <==    Updates: 1
+2023-06-27 14:21:20,196 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 14:21:20,200 4      [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2023-06-27 14:21:20,201 5      [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2023-06-27 14:21:20,201 5      [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2023-06-27 14:21:20,202 6      [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2023-06-27 14:21:20,203 7      [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2023-06-27 14:21:20,203 7      [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 14:21:20,203 7      [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 14:21:20,241 45     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: Student.class
+2023-06-27 14:21:20,242 46     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 14:21:20,242 46     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 14:21:20,243 47     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 14:21:20,245 49     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 D	  0	  1	  2	  3
+2023-06-27 14:21:20,245 49     [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class com.icss.pojo.Student matches criteria [is assignable to Object]
+2023-06-27 14:21:20,301 105    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 14:21:20,301 105    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 14:21:20,301 105    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 14:21:20,301 105    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 14:21:20,564 368    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 14:21:20,851 655    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 572868060.
+2023-06-27 14:21:20,855 659    [           main] DEBUG r.IStudentMapper.deleteMoreStu  - ==>  Preparing: delete from student where sid in (1,2)
+2023-06-27 14:21:20,928 732    [           main] DEBUG r.IStudentMapper.deleteMoreStu  - ==> Parameters: 
+2023-06-27 14:21:20,929 733    [           main] DEBUG r.IStudentMapper.deleteMoreStu  - <==    Updates: 0
+2023-06-27 14:21:20,937 741    [           main] DEBUG IStudentMapper.selectStuByPage  - ==>  Preparing: select * from student limit ?,?
+2023-06-27 14:21:20,939 743    [           main] DEBUG IStudentMapper.selectStuByPage  - ==> Parameters: 0(Integer), 5(Integer)
+2023-06-27 14:21:20,976 780    [           main] DEBUG IStudentMapper.selectStuByPage  - <==      Total: 2
+2023-06-27 14:21:20,979 783    [           main] DEBUG per.IStudentMapper.getStuCount  - ==>  Preparing: select count(sid) from student
+2023-06-27 14:21:20,979 783    [           main] DEBUG per.IStudentMapper.getStuCount  - ==> Parameters: 
+2023-06-27 14:21:20,981 785    [           main] DEBUG per.IStudentMapper.getStuCount  - <==      Total: 1
+2023-06-27 14:21:20,982 786    [           main] DEBUG StudentMapper.getPrimaryKeySid  - ==>  Preparing: insert into student(sname,gender,city) values(?,?,?)
+2023-06-27 14:21:20,982 786    [           main] DEBUG StudentMapper.getPrimaryKeySid  - ==> Parameters: 小强(String), 男(String), 大连(String)
+2023-06-27 14:21:20,988 792    [           main] DEBUG StudentMapper.getPrimaryKeySid  - <==    Updates: 1
+2023-06-27 14:58:49,416 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 14:58:49,423 7      [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2023-06-27 14:58:49,423 7      [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2023-06-27 14:58:49,424 8      [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2023-06-27 14:58:49,424 8      [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2023-06-27 14:58:49,425 9      [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2023-06-27 14:58:49,426 10     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 14:58:49,426 10     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 14:58:49,505 89     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: Student.class
+2023-06-27 14:58:49,506 90     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 14:58:49,506 90     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 14:58:49,506 90     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 14:58:49,509 93     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 D	  0	  1	  2	  3
+2023-06-27 14:58:49,511 95     [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class com.icss.pojo.Student matches criteria [is assignable to Object]
+2023-06-27 14:58:49,563 147    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 14:58:49,563 147    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 14:58:49,563 147    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 14:58:49,563 147    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 14:58:49,801 385    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 14:58:50,121 705    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 574434418.
+2023-06-27 14:58:50,128 712    [           main] DEBUG entMapper.selectStuByNameOrGen  - ==>  Preparing: select * from student where 1 = 1
+2023-06-27 14:58:50,177 761    [           main] DEBUG entMapper.selectStuByNameOrGen  - ==> Parameters: 
+2023-06-27 14:58:50,230 814    [           main] DEBUG entMapper.selectStuByNameOrGen  - <==      Total: 4
+2023-06-27 14:59:53,921 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 14:59:53,927 6      [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2023-06-27 14:59:53,927 6      [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2023-06-27 14:59:53,927 6      [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2023-06-27 14:59:53,928 7      [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2023-06-27 14:59:53,929 8      [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2023-06-27 14:59:53,929 8      [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 14:59:53,929 8      [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 14:59:53,980 59     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: Student.class
+2023-06-27 14:59:53,981 60     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 14:59:53,981 60     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 14:59:53,981 60     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 14:59:53,982 61     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 D	  0	  1	  2	  3
+2023-06-27 14:59:53,983 62     [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class com.icss.pojo.Student matches criteria [is assignable to Object]
+2023-06-27 14:59:54,046 125    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 14:59:54,046 125    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 14:59:54,047 126    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 14:59:54,048 127    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 14:59:54,275 354    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 14:59:54,555 634    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 574434418.
+2023-06-27 14:59:54,560 639    [           main] DEBUG entMapper.selectStuByNameOrGen  - ==>  Preparing: select * from student where 1 = 1 and sname like "%"?"%"
+2023-06-27 14:59:54,613 692    [           main] DEBUG entMapper.selectStuByNameOrGen  - ==> Parameters: 小(String)
+2023-06-27 14:59:54,662 741    [           main] DEBUG entMapper.selectStuByNameOrGen  - <==      Total: 2
+2023-06-27 15:00:44,518 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 15:00:44,523 5      [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2023-06-27 15:00:44,523 5      [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2023-06-27 15:00:44,524 6      [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2023-06-27 15:00:44,524 6      [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2023-06-27 15:00:44,525 7      [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2023-06-27 15:00:44,525 7      [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 15:00:44,526 8      [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 15:00:44,576 58     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: Student.class
+2023-06-27 15:00:44,577 59     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 15:00:44,578 60     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 15:00:44,578 60     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 15:00:44,579 61     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 D	  0	  1	  2	  3
+2023-06-27 15:00:44,580 62     [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class com.icss.pojo.Student matches criteria [is assignable to Object]
+2023-06-27 15:00:44,629 111    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 15:00:44,629 111    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 15:00:44,629 111    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 15:00:44,629 111    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 15:00:44,856 338    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 15:00:45,149 631    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 489349054.
+2023-06-27 15:00:45,153 635    [           main] DEBUG entMapper.selectStuByNameOrGen  - ==>  Preparing: select * from student where 1 = 1 and gender = ?
+2023-06-27 15:00:45,233 715    [           main] DEBUG entMapper.selectStuByNameOrGen  - ==> Parameters: 男(String)
+2023-06-27 15:00:45,289 771    [           main] DEBUG entMapper.selectStuByNameOrGen  - <==      Total: 3
+2023-06-27 15:01:16,634 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 15:01:16,638 4      [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2023-06-27 15:01:16,639 5      [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2023-06-27 15:01:16,642 8      [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2023-06-27 15:01:16,643 9      [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2023-06-27 15:01:16,643 9      [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2023-06-27 15:01:16,644 10     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 15:01:16,644 10     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 15:01:16,688 54     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: Student.class
+2023-06-27 15:01:16,689 55     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 15:01:16,689 55     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 15:01:16,689 55     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 15:01:16,696 62     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 D	  0	  1	  2	  3
+2023-06-27 15:01:16,697 63     [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class com.icss.pojo.Student matches criteria [is assignable to Object]
+2023-06-27 15:01:16,774 140    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 15:01:16,774 140    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 15:01:16,774 140    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 15:01:16,775 141    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 15:01:17,007 373    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 15:01:17,334 700    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 489349054.
+2023-06-27 15:01:17,338 704    [           main] DEBUG entMapper.selectStuByNameOrGen  - ==>  Preparing: select * from student where 1 = 1 and sname like "%"?"%" and gender = ?
+2023-06-27 15:01:17,378 744    [           main] DEBUG entMapper.selectStuByNameOrGen  - ==> Parameters: 小(String), 男(String)
+2023-06-27 15:01:17,435 801    [           main] DEBUG entMapper.selectStuByNameOrGen  - <==      Total: 2
+2023-06-27 15:23:25,590 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 15:23:25,598 8      [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2023-06-27 15:23:25,598 8      [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2023-06-27 15:23:25,601 11     [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2023-06-27 15:23:25,601 11     [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2023-06-27 15:23:25,602 12     [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2023-06-27 15:23:25,603 13     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 15:23:25,603 13     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 15:23:25,649 59     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: Student.class
+2023-06-27 15:23:25,650 60     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 15:23:25,651 61     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 15:23:25,651 61     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 15:23:25,652 62     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 D	  0	  1	  2	  3
+2023-06-27 15:23:25,653 63     [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class com.icss.pojo.Student matches criteria [is assignable to Object]
+2023-06-27 15:23:25,711 121    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 15:23:25,711 121    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 15:23:25,711 121    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 15:23:25,711 121    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 15:23:25,968 378    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 15:23:26,321 731    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 283318938.
+2023-06-27 15:23:26,325 735    [           main] DEBUG udentMapper.selectChoseStudent  - ==>  Preparing: select * from student where 1 = 1 and sname like '%小%'
+2023-06-27 15:23:26,400 810    [           main] DEBUG udentMapper.selectChoseStudent  - ==> Parameters: 
+2023-06-27 15:23:26,440 850    [           main] DEBUG udentMapper.selectChoseStudent  - <==      Total: 2
+2023-06-27 15:23:43,548 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 15:23:43,556 8      [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2023-06-27 15:23:43,556 8      [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2023-06-27 15:23:43,557 9      [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2023-06-27 15:23:43,558 10     [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2023-06-27 15:23:43,558 10     [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2023-06-27 15:23:43,559 11     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 15:23:43,559 11     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 15:23:43,603 55     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: Student.class
+2023-06-27 15:23:43,603 55     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 15:23:43,603 55     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 15:23:43,603 55     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 15:23:43,604 56     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 D	  0	  1	  2	  3
+2023-06-27 15:23:43,605 57     [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class com.icss.pojo.Student matches criteria [is assignable to Object]
+2023-06-27 15:23:43,654 106    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 15:23:43,655 107    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 15:23:43,655 107    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 15:23:43,655 107    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 15:23:43,921 373    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 15:23:44,178 630    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 283318938.
+2023-06-27 15:23:44,181 633    [           main] DEBUG udentMapper.selectChoseStudent  - ==>  Preparing: select * from student where 1 = 1 and sname like '%小%'
+2023-06-27 15:23:44,261 713    [           main] DEBUG udentMapper.selectChoseStudent  - ==> Parameters: 
+2023-06-27 15:23:44,298 750    [           main] DEBUG udentMapper.selectChoseStudent  - <==      Total: 2
+2023-06-27 15:24:48,173 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 15:24:48,177 4      [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2023-06-27 15:24:48,178 5      [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2023-06-27 15:24:48,178 5      [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2023-06-27 15:24:48,179 6      [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2023-06-27 15:24:48,180 7      [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2023-06-27 15:24:48,181 8      [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 15:24:48,182 9      [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 15:24:48,236 63     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: Student.class
+2023-06-27 15:24:48,236 63     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 15:24:48,237 64     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 15:24:48,237 64     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 15:24:48,242 69     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 D	  0	  1	  2	  3
+2023-06-27 15:24:48,248 75     [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class com.icss.pojo.Student matches criteria [is assignable to Object]
+2023-06-27 15:24:48,294 121    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 15:24:48,294 121    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 15:24:48,294 121    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 15:24:48,294 121    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 15:24:48,522 349    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 15:24:48,804 631    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 320304382.
+2023-06-27 15:24:48,808 635    [           main] DEBUG entMapper.selectStuByNameOrGen  - ==>  Preparing: select * from student WHERE sname like "%"?"%" and gender = ?
+2023-06-27 15:24:48,892 719    [           main] DEBUG entMapper.selectStuByNameOrGen  - ==> Parameters: 小(String), 男(String)
+2023-06-27 15:24:48,922 749    [           main] DEBUG entMapper.selectStuByNameOrGen  - <==      Total: 2
+2023-06-27 15:27:01,975 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2023-06-27 15:27:01,982 7      [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VFS
+2023-06-27 15:27:01,982 7      [           main] DEBUG org.apache.ibatis.io.JBoss6VFS  - JBoss 6 VFS API is not available in this environment.
+2023-06-27 15:27:01,983 8      [           main] DEBUG       org.apache.ibatis.io.VFS  - Class not found: org.jboss.vfs.VirtualFile
+2023-06-27 15:27:01,983 8      [           main] DEBUG       org.apache.ibatis.io.VFS  - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2023-06-27 15:27:01,984 9      [           main] DEBUG       org.apache.ibatis.io.VFS  - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2023-06-27 15:27:01,984 9      [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 15:27:01,985 10     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 15:27:02,047 72     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: Student.class
+2023-06-27 15:27:02,047 72     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Listing file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo
+2023-06-27 15:27:02,047 72     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Find JAR URL: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 15:27:02,047 72     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Not a JAR: file:/D:/%e4%b8%ad%e8%bd%af103/%e4%bb%a3%e7%a0%81/MyBatis_Demo0626/out/production/MyBatis_Demo0626/com/icss/pojo/Student.class
+2023-06-27 15:27:02,048 73     [           main] DEBUG rg.apache.ibatis.io.DefaultVFS  - Reader entry: ����   4 D	  0	  1	  2	  3
+2023-06-27 15:27:02,048 73     [           main] DEBUG .apache.ibatis.io.ResolverUtil  - Checking to see if class com.icss.pojo.Student matches criteria [is assignable to Object]
+2023-06-27 15:27:02,115 140    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 15:27:02,115 140    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 15:27:02,115 140    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 15:27:02,116 141    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2023-06-27 15:27:02,372 397    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2023-06-27 15:27:02,601 626    [           main] DEBUG source.pooled.PooledDataSource  - Created connection 728115831.
+2023-06-27 15:27:02,605 630    [           main] DEBUG udentMapper.selectChoseStudent  - ==>  Preparing: select * from student where 1 = 1 and sname like '%小%'
+2023-06-27 15:27:02,678 703    [           main] DEBUG udentMapper.selectChoseStudent  - ==> Parameters: 
+2023-06-27 15:27:02,704 729    [           main] DEBUG udentMapper.selectChoseStudent  - <==      Total: 2

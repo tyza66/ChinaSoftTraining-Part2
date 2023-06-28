@@ -1,0 +1,113 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace 规定 dao层接口完整类路径-->
+<mapper namespace="com.icss.mapper.IStudentMapper">
+<!--  执行查询 select标签 id代表dao层接口对应的方法名称
+    parameterType="int" 规定参数的类型  可以省略 自动类型转换
+    #{} 相当于占位符 ? sid 就是dao层接口方法参数的名称
+    resultType 规定返回结果类型 按照规定的类型做自动映射-->
+    <select id="selectStudentBySId" resultType="com.icss.pojo.Student">
+        select * from student where sid = #{sid}
+    </select>
+
+    <select id="selectAllStudents" resultType="com.icss.pojo.Student">
+        select * from student
+    </select>
+
+    <!--增加学生信息
+    insert 增加
+    parameterType="com.icss.pojo.Student" 传递对象 书写属性名称 就会得到属性值 getXXX()
+    resultType insert方法默认返回int类型 如果接口设计是boolean类型 自动转换 可以省略
+    -->
+    <insert id="insertStudent">
+        insert into student(sname,gender,city) values(#{sname},#{gender},#{city})
+    </insert>
+
+    <!-- 删除学生信息   -->
+    <delete id="deleteStudentBySid">
+        delete from student where sid = #{sid}
+    </delete>
+
+    <!--更新学生信息-->
+    <update id="updateStudentBySid">
+        update student set sname = #{stu.sname},gender = #{stu.gender},city = #{stu.city} where sid = #{stu.sid}
+    </update>
+
+    <!-- 根据学生名字和城市进行查询
+    多参数查询(不能直接写参数的名称)：
+    1 #{arg0} 代表第一个参数 #{arg1} 代表第二个参数
+    2 #{param1} 代表第一个参数  #{param2} 代表第二个参数
+    3 在方法参数添加注解@Param("参数名称")-->
+    <select id="selectStuByNameAndCity" resultType="student">
+        select * from student where sname = #{name} and city = #{scity}
+    </select>
+
+    <!--模糊查询-->
+    <select id="selectStuByLikeName" resultType="student">
+        <!--  select * from student where sname like #{name}-->
+        <!-- select * from student where sname like concat('%',#{name},'%')-->
+        <!-- select * from student where sname like "%"#{name}"%"-->
+        select * from student where sname like '%${name}%'
+      </select>
+    <!--
+    #{} 占位符 相当于预编译处理?  针对于字符串和日期类型 自动添加单引号 防止sql注入
+    ${} 传入什么就是什么 拼接
+    -->
+<!--    按照指定的字段名进行排序-->
+    <select id="selectAllStuOrderCol" resultType="student">
+        select * from student order by ${col}
+    </select>
+
+
+    <!--批量删除 多个学号-->
+    <delete id="deleteMoreStu">
+        delete from student where sid in (${sids})
+    </delete>
+    <!--分页查询-->
+    <select id="selectStuByPage" resultType="student">
+        select * from student limit #{start},#{pageNum}
+    </select>
+
+    <!--查询表中所有的记录数-->
+    <select id="getStuCount" resultType="int">
+        select count(sid) from student
+    </select>
+
+    <!--获取增加学生后主键的值
+    useGeneratedKeys 使用自增的字段  插入后生成的值 自动映射到sid属性上（keyProperty="sid"） -->
+    <insert id="getPrimaryKeySid" useGeneratedKeys="true" keyProperty="sid">
+        insert into student(sname,gender,city) values(#{sname},#{gender},#{city})
+    </insert>
+
+    <!--动态sql where 1 = 1 可以用where标签替换 -->
+    <select id="selectStuByNameOrGen" resultType="student">
+        select * from student
+        <where>
+            <if test="name != null and name != ''">
+                and sname like "%"#{name}"%"
+            </if>
+            <if test="gender != null and gender != ''">
+                and gender = #{gender}
+            </if>
+        </where>
+    </select>
+
+    <!--choose when otherwise 相当于switch case-->
+    <select id="selectChoseStudent" resultType="student">
+        select * from student where 1 = 1
+        <choose>
+            <when test="name != null and name != ''">
+                and sname like '%${name}%'
+            </when>
+            <when test="city != null and city !='' ">
+                and city like "%"#{city}"%"
+            </when>
+            <otherwise>
+                and gender = '男'
+            </otherwise>
+        </choose>
+    </select>
+
+
+  </mapper>
