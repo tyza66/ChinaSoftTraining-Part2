@@ -9,7 +9,7 @@
         <!--    方法1 说明指定的别名    -->
         <!--<typeAlias type="com.tyza66.pojo.Student" alias="stu"/>-->
         <!--    方法2 自动给指定包下面的类都器别名 默认是首字母小写    -->
-        <!--<package name="com.tyza66.pojo"/>-->
+        <package name="com.sdm.pojo"/>
     </typeAliases>
     <environments default="development">
         <environment id="development">
@@ -23,6 +23,8 @@
         </environment>
     </environments>
     <mappers>
-        <mapper resource="mapper/StudentMapper.xml"/>
+        <!--<mapper resource="mapper/StudentMapper.xml"/>-->
+        <!--    使用扫描指定的xml文件 要求dao层接口和xml位于同一个目录并且名字相同    -->
+        <package name="com.sdm.mapper"/>
     </mappers>
 </configuration>
