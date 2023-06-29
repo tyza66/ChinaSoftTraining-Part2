@@ -1,0 +1,21 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.icss.mapper.UsersMapper">
+
+    <resultMap id="usersMap" type="users">
+        <id property="uid" column="uid"></id>
+        <result property="uname" column="uname"></result>
+        <!--一对多 collection-->
+        <collection property="roleList" ofType="com.icss.pojo.Role">
+            <id property="roleid" column="roleid"></id>
+            <result property="rolename" column="rolename"></result>
+        </collection>
+    </resultMap>
+
+    <select id="selectUserAndRoles" resultMap="usersMap">
+        select u.uid,u.uname,r.roleid,r.rolename from users u left join user_role ur on u.uid = ur.uid
+        left join role r on ur.roleid = r.roleid
+        where u.uname = #{uname}
+    </select>
+</mapper>

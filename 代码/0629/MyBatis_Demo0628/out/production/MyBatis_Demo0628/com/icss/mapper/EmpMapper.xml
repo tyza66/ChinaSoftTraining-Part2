@@ -1,0 +1,40 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.icss.mapper.EmpMapper">
+
+    <!--手动结果集映射-->
+    <resultMap id="empMap" type="emp">
+        <id property="eid" column="eid"></id>
+        <result property="ename" column="ename"></result>
+        <result property="esal" column="esal"></result>
+        <!--部门信息映射 描述一对一关系 association property 属性名称 javaType 属性名称类型 resultMap 引用其他定义好的结果集映射-->
+        <association property="dept" javaType="com.icss.pojo.Dept">
+            <id property="deptid" column="did"></id>
+            <result property="deptname" column="dname"></result>
+            <result property="deptloc" column="dloc"></result>
+        </association>
+<!--        <association property="dept" javaType="com.icss.pojo.Dept" resultMap="com.icss.mapper.DeptMapper.deptMap"></association>-->
+
+    </resultMap>
+
+    <select id="selectAllEmps"  resultMap="empMap">
+        select e.eid,e.ENAME,e.ESAL,e.did,d.DNAME,d.dloc from emp e left join dept d on e.did = d.did
+    </select>
+
+    <resultMap id="empMapStep" type="emp">
+        <id property="eid" column="eid"></id>
+        <result property="ename" column="ename"></result>
+        <result property="esal" column="esal"></result>
+        <!--select 指定第二步查询方法 需要did参数  在第一步查询后把部门编号映射到column="did" 把did作为实参传入进去
+
+        fetchType="lazy" 指定某一个关联查询延迟加载状态 可以覆盖全局加载状态 lazy 延迟加载 eager 不延迟加载-->
+        <association property="dept" select="com.icss.mapper.DeptMapper.selectDeptByDid" column="did" fetchType="lazy"></association>
+    </resultMap>
+
+    <!--分步查询：第一步-->
+    <select id="selectEmpStepOne" resultMap="empMapStep">
+        select * from emp e where e.ENAME = #{name}
+    </select>
+
+</mapper>
