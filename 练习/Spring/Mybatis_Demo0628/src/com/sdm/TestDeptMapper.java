@@ -43,4 +43,19 @@ public class TestDeptMapper {
         EmpMapper mapper = sqlSession.getMapper(EmpMapper.class);
         System.out.println(mapper.selectAllEmps());
     }
+
+    @Test
+    public void test3() throws IOException {
+        String resource = "mybatis-config.xml";
+        InputStream resourceAsStream = Resources.getResourceAsStream(resource);
+        //使用SqlSessionFactoryBuilder加载配置文件创建SqlSessionFactory
+        SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(resourceAsStream);
+        //创建SqlSession对象 自动提交
+        SqlSession sqlSession = sqlSessionFactory.openSession(true);
+        //获得mapper对象
+        EmpMapper mapper = sqlSession.getMapper(EmpMapper.class);
+        //在延迟状态下 如果值要员工的信息 那么只会执行第一个查询语句
+        System.out.println(mapper.selectEmpStepOne("tom"));
+        //如果获取部门名称 才会执行关联查询语句
+    }
 }

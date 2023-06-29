@@ -19,4 +19,21 @@
     <select id="selectAllEmps" resultMap="empMap">
         select e.eid,e.ename,e.esal,d.did,d.dname,d.dloc from EMP e left join DEPT d on e.did=d.did
     </select>
+
+    <resultMap id="empMapStep" type="emp">
+        <id property="eid" column="eid"/>
+        <result property="ename" column="ename"/>
+        <result property="esal" column="esal"/>
+        <!--    这个地方进行分步查询 这里面要指定第二步查询的方法 需要的did参数在第一次查询的时候直接将第一次查询的did作为这个方法的实际参数    -->
+        <!--    fetchType="" 指定某哦一个关联查询的延迟加载状态可以覆盖掉全局的配置    -->
+        <association property="dept" select="com.sdm.mapper.DeptMapper.selectDeptByDid" column="did" fetchType="lazy"/>
+    </resultMap>
+    <!--  分步查询的第一步  -->
+    <select id="selectEmpStepOne" resultMap="empMapStep">
+        select *
+        from EMP
+        where ename = #{ename}
+    </select>
+
+    
 </mapper>

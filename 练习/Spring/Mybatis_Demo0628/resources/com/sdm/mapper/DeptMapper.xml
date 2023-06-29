@@ -15,11 +15,20 @@
         </collection>
     </resultMap>
     <select id="selectAllDepts" resultType="dept">
-        select did deptId,dname deptName,dloc deptLoc from DEPT
+        select did deptId, dname deptName, dloc deptLoc
+        from DEPT
     </select>
 
-    <select id="selectAllDeptsWithEmps">
-        select d.did,d.dname,d.dloc,e.eid,e.ename,e.esal from DEPT d left join EMP e on d.did=e.did
+    <select id="selectAllDeptsWithEmps" resultType="dept">
+        select d.did, d.dname, d.dloc, e.eid, e.ename, e.esal
+        from DEPT d
+                 left join EMP e on d.did = e.did
+    </select>
+
+    <select id="selectDeptByDid" resultType="dept">
+        select did deptId, dname deptName, dloc deptLoc
+        from DEPT
+        where did = #{did}
     </select>
 </mapper>
 
