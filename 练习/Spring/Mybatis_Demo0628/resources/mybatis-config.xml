@@ -6,6 +6,8 @@
     <properties resource="druid.properties"/>
     <settings>
         <setting name="lazyLoadingEnabled" value="true"/>
+        <!--二级缓存 针对mapper为单位-->
+        <setting name="cacheEnable" value="true"/>
     </settings>
     <!--  定义别名  -->
     <typeAliases>

@@ -24,8 +24,8 @@
         from DEPT d
                  left join EMP e on d.did = e.did
     </select>
-
-    <select id="selectDeptByDid" resultType="dept">
+    <!--  增加这个注解使用缓存  -->
+    <select id="selectDeptByDid" resultType="dept" useCache="true">
         select did deptId, dname deptName, dloc deptLoc
         from DEPT
         where did = #{did}
