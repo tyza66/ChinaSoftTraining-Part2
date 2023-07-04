@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+                            http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <!--  配置映射  -->
+    <bean name="/login.action" class="com.sdm.controller.LoginController"/>
+
+    <!--  配置视图解析器  -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <!--        规定前缀-->
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <!--        规定后缀-->
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <!--  开启扫描包  -->
+    <context:component-scan base-package="com.sdm"/>
+
+    <!--开启mvc的注解-->
+    <mvc:annotation-driven/>
 
 </beans>
