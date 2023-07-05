@@ -21,4 +21,8 @@
     <servlet-name>DispatcherServlet</servlet-name>
     <url-pattern>/</url-pattern><!-- 规定哪些资源路径要经过这个处理 /代表所有的请求但是不包括.jsp结尾的 /*所有的请求 /*.action代表action结尾的请求 -->
   </servlet-mapping>
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
 </web-app>

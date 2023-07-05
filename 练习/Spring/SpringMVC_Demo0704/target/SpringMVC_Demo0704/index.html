@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./static/js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    用户名<input type="text" name="uname" id="uname"><br/>
+    密码 <input type="password" name="pwd" id="pwd"><br/>
+    <button id="btn">登录</button>
+
+    <a href="./deleteUserById/1">删除员工1</a>
+<script>
+$(
+    function(){
+        $("#btn").click(()=>{
+            $.ajax({
+                url:"testRequestParam",
+                type:"get",
+                data:{
+                    "uname":$("#uname").val(),
+                    "pwd":$("#pwd").val()
+                },
+                dataType:"text",
+                success:function (res){
+                    console.log(res)
+                },
+                error:function (err){
+                    console.log(err)
+                }
+            })
+        })
+    }
+)
+</script>
+</body>
+</html>

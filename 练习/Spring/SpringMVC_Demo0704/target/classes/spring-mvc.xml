@@ -24,4 +24,8 @@
     <!--开启mvc的注解-->
     <mvc:annotation-driven/>
 
+    <mvc:default-servlet-handler/>
+
+    <mvc:resources mapping="/static/**" location="/WEB-INF/static/"/>
+
 </beans>
