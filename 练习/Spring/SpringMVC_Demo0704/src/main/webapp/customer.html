@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./static/js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <button id="btn">发送</button>
+<script>
+$(
+    function(){
+        $("#btn").click(()=>{
+            let  a = {"id":96,"name":96}
+            $.ajax({
+                url:"customer",
+                type:"post",
+                data:JSON.stringify(a),
+                contentType:"application/json;charset=UTF-8",
+                dataType:"text",
+                success:function (res){
+                    console.log(res)
+                },
+                error:function (err){
+                    console.log(err)
+                }
+            })
+        })
+    }
+)
+</script>
+</body>
+</html>
