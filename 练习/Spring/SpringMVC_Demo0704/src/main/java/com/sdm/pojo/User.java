@@ -4,8 +4,10 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * Author: tyza66
@@ -24,4 +26,7 @@ public class User implements Serializable {
     private String name;
     private String pwd;
     private Integer age;
+
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date birthDate;
 }

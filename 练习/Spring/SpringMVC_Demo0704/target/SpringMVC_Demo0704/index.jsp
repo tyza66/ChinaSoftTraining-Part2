@@ -9,5 +9,10 @@
 </form>
 <a href="./testParams?uname=tom&age=10">giao</a>
 <a href="./testUser?name=tom&pwd=jerry&age=10">giao2</a>
+
+<form action="./testDate">
+    出生日期<input type="date" name="birthDate">
+    <button type="submit">提交日期</button>
+</form>
 </body>
 </html>

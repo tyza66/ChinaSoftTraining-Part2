@@ -6,7 +6,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.IOException;
 
 /**
  * Author: tyza66
@@ -41,5 +43,13 @@ public class UserController {
     public String testUser(User user){
         System.out.println(user);
         return "success";
+    }
+    //如果返回的是String类型的名称就是视图名称 就会经过视图解析器进行解析 完成响应
+    //void类型 可以借助HttpServletResponse响应对象 使用输出流把东西响应在网页上
+    //返回自定义ModelAndView
+    @RequestMapping("/testDate")
+    public void testDate(User user, HttpServletResponse response) throws IOException {
+        System.out.println(user);
+        response.getWriter().write("Hello,World!");
     }
 }
