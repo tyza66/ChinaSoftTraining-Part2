@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form id="f"  enctype="multipart/form-data">
+    上传文件 <input type="file" name="file">
+    <button type="button" id="btn">上传</button>
+</form>
+
+<img src="" id="m1">
+
+<script src="static/js/jquery-3.6.0.js"></script>
+
+<script>
+    $(function(){
+        $("#btn").click(()=>{
+            let formData = new FormData(document.getElementById("f"));
+            $.ajax({
+                url:"upfile",
+                type:"post",
+                data:formData,
+                contentType:false,
+                processData: false,
+                cache:false,
+                dataType:"text",
+                success(res){
+                    // console.log("res",res);
+                    $("#m1").prop("src","/upload/"+res);
+                },error(msg){
+                    console.log("msg",msg);
+                }
+
+            })
+        })
+    })
+
+
+</script>
+</body>
+</html>

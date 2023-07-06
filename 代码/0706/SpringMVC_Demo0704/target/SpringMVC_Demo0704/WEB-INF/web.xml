@@ -1,0 +1,30 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+
+  <servlet>
+    <servlet-name>DispatcherServlet</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <!--加载spring-mvc.xml文件 init-param 初始化参数 在创建DispatcherServlet对象就会加载初始化参数-->
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>classpath:spring-mvc.xml</param-value>
+    </init-param>
+    <!--在服务器初始化 创建DispatcherServlet 提高创建对象的优先级（默认是请求访问DispatcherServlet 被创建）-->
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DispatcherServlet</servlet-name>
+    <!--url-pattern 规定资源路径  规定哪些资源路径要经过DispatcherServlet处理
+    / 代表所有的请求(不会对.jsp结尾的文件进行处理) /* 代表所有的请求  *.action 以action结尾的请求路径才会经过DispatcherServlet处理-->
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+
+  <!--修改首页-->
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+</web-app>

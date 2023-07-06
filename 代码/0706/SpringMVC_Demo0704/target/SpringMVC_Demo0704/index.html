@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    用户名<input type="text" name="uname" id="uname"> <br>
+    密码 <input type="password" name="pwd" id="pwd"> <br>
+    <button type="button" id="btn">登录</button>
+</form>
+
+<a href="/deleteUserById/1">删除员工信息</a>
+<script src="static/js/jquery-3.6.0.js"></script>
+
+<!--点击button按钮 发送ajax请求  请求地址url /testRequestParam 传递参数 data -->
+<script>
+$(function () {
+    $("#btn").click(()=>{
+       $.ajax({
+           url:"testRequestParam",
+           type:"get",
+           data:{
+               "uname":$("#uname").val(),
+               "pwd":$("#pwd").val()
+           },
+           dataType:"text",
+           success(res){
+                console.log("res",res);
+           },error(msg){
+               console.log("msg",msg);
+           }
+       })
+    })
+})
+
+</script>
+
+</body>
+</html>
