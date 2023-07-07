@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="testExcetion1">测试异常1</a>
+<button id="btn">发送ajax请求</button>
+<a href="testExcetion3">测试异常3</a>
+<script src="static/js/jquery-3.6.0.js"></script>
+
+<script>
+    $(function(){
+        $("#btn").click(()=>{
+            $.ajax({
+                url:"testExcetion2",
+                type:"get",
+                dataType:"text",
+                success(res){
+                //    请求成功  响应的数据成功/失败
+                    console.log("res",res);
+                },error(msg){
+                    console.log("msg",msg);
+                }
+
+            })
+        })
+    })
+</script>
+</body>
+</html>

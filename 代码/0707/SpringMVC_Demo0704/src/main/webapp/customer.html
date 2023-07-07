@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>增加顾客信息</h3>
+<form>
+    顾客编号：<input type="text" id="cid"> <br>
+    顾客姓名: <input type="text" id="cname"> <br>
+    顾客密码： <input type="password" id="pwd"> <br>
+    <input type="button" value="增加信息" id="btn">
+</form>
+
+<script src="static/js/jquery-3.6.0.js"></script>
+<script>
+    $(function () {
+        $("#btn").click(()=>{
+            let customer = {"cid":$("#cid").val(),"cname":$("#cname").val(),"cpwd":$("#pwd").val()};
+            console.log("customer",customer);
+            $.ajax({
+                type:"post",
+                url:"customer",
+                data:JSON.stringify(customer),
+                contentType:"application/json",//规定发送请求数据格式 json数据格式传递
+                dataType:"json",
+                success(res) {
+                    console.log("res",res);
+                },error(msg){
+                    console.log("msg",msg);
+                }
+            })
+        })
+    })
+</script>
+</body>
+</html>
