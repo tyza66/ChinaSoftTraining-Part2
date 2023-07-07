@@ -5,6 +5,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Author: tyza66
@@ -17,9 +18,22 @@ public class MyIntercepter implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         System.out.println("处理我们规定资源的请求 返回true继续处理（找到下一个拦截器/响应数据）才去执行postHandle");
+        String url = request.getRequestURL().toString();
         //可以将验证登录的逻辑写这里
         //可以将判断url啥的也写这里
         //登录状态和登录信息
+        String[] arr = {"login.html","register.html","/register"};
+        boolean flag = false;
+        for(String item:arr){
+            if(url.indexOf(item)!=-1){
+                flag = true;
+                break;
+            }
+        }
+        HttpSession session = request.getSession();
+        if(!flag||session.getAttribute("uname")==null){
+            response.sendRedirect("https://baidu.com");
+        }
         return true;
     }
 
