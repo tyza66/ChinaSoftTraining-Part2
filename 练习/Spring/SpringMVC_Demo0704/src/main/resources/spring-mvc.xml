@@ -32,4 +32,24 @@
         <property name="maxInMemorySize" value="1024000"/>
     </bean>
 
+    <!-- 统一的异常处理跳转到统一的页面处理 -->
+    <bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+        <!--    出现异常跳转到error页面    -->
+        <property name="defaultErrorView" value="error"/>
+        <!--    提交异常获取异常信息    -->
+        <property name="exceptionAttribute" value="ex"/>
+        <property name="exceptionMappings">
+            <props>
+                <prop key="java.long.Throwable">error.html</prop>
+                <!--                不同异常调换到不同页面-->
+            </props>
+        </property>
+    </bean>
+
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/*"/>
+            <bean class="com.sdm.interceptor.MyIntercepter"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
 </beans>
