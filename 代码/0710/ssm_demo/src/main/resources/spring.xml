@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+                           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+                           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+                           http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+    <!--数据库连接  mysql数据库  druid连接池-->
+    <!--1 加载连接数据库的properties文件 -->
+    <context:property-placeholder location="classpath:druid.properties"></context:property-placeholder>
+
+    <!--2 数据库连接 druid连接池 -->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="driverClassName" value="${driverClassName}"></property>
+        <property name="username" value="${user}"></property>
+        <property name="password" value="${password}"></property>
+        <property name="url" value="${url}"></property>
+        <property name="initialSize" value="${initialSize}"></property>
+        <property name="maxActive" value="${maxActive}"></property>
+    </bean>
+
+    <!--3 创建会话工厂并加载mybatis-config.xml文件-->
+    <bean class="org.mybatis.spring.SqlSessionFactoryBean" id="sqlSessionFactoryBean" >
+        <property name="dataSource" ref="dataSource"></property>
+        <property name="configLocation" value="classpath:mybatis-config.xml"></property>
+        <!--设置别名-->
+        <property name="typeAliasesPackage" value="com.icss.test.pojo"></property>
+        <!--加载mapper.xml文件  处理mapper接口文件和mapper.xml文件 名字不一致或者路径不一致 -->
+        <property name="mapperLocations" value="classpath:com/icss/test/*.xml"></property>
+    </bean>
+
+    <!-- 4 扫描所有的映射器  接口文件和mapper.xml文件同一个目录 并且同名 -->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <!--接口文件和mapper.xml文件同一个目录 并且同名-->
+        <property name="basePackage" value="com.icss.test.mapper"></property>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactoryBean"></property>
+    </bean>
+
+    <!--5 ioc注解-->
+    <context:component-scan base-package="com.icss.test"></context:component-scan>
+
+    <!--6 springmvc注解-->
+    <mvc:annotation-driven></mvc:annotation-driven>
+
+    <!--7 放行html页面-->
+    <mvc:default-servlet-handler></mvc:default-servlet-handler>
+
+    <!--8 放行静态资源-->
+    <mvc:resources mapping="/static/**" location="/static/"></mvc:resources>
+
+    <!--9 AOP配置 注解   开启自动代理模式-->
+    <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+
+    <!--10 事务管理 ① 配置事务管理器 ② AOP形式完成事务配置-->
+
+
+</beans>

@@ -1,0 +1,6 @@
+com\icss\test\common\R.class
+com\icss\test\service\impl\CustomerServiceImpl.class
+com\icss\test\controller\CustomerController.class
+com\icss\test\pojo\Customer.class
+com\icss\test\service\CustomerService.class
+com\icss\test\mapper\CustomerMapper.class

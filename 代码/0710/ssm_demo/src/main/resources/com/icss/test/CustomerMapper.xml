@@ -1,0 +1,20 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.icss.test.mapper.CustomerMapper">
+
+    <!--根据用户名和密码查询-->
+    <select id="selectCusByNameAndPwd" resultType="customer">
+        select cid,cname,cpwd,cphone from customer where cname = #{cname} and cpwd = #{cpwd}
+    </select>
+
+    <!-- 根据用户名查询-->
+    <select id="selectCusByName" resultType="customer">
+        select cid,cname,cpwd,cphone from customer where cname = #{cname}
+    </select>
+
+    <!--增加用户信息-->
+    <insert id="insertCus">
+        insert into customer(cname,cpwd,cphone)  values(#{cname},#{cpwd},#{cphone})
+    </insert>
+</mapper>
