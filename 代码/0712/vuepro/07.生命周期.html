@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <button @click="toDoDestroy">销毁</button>
+        <!--v-show 切换display 显示 / 隐藏 none  -->
+        <p v-show="isShow">p元素 vue生命周期</p>
+        <!-- v-if 创建与销毁DOM节点 -->
+        <p v-if="isIf">v-if显示元素</p>
+
+       
+    </div>
+
+    <script>
+        let vm = new Vue({
+            el:"#app",
+            data:{
+                isShow:false,
+                isIf:false,
+                timeId:null
+            },
+            beforeCreate() {
+                console.log("beforeCreate");
+            },
+            created() {
+                console.log("created 钩子函数 可以当作类似document.ready");
+            },
+            beforeMount() {
+                console.log("beforeMount");
+            },
+            mounted() {
+                let that = this;
+                // window.setInterval调用函数 函数内部this指向window对象 并不是当前vue对象
+                // 在函数外部 保留vue对象的this指向  let that = this;  that指向就是当前vue对象
+                timeId =  window.setInterval(function(){
+                    that.isShow = !that.isShow;
+                    // this window
+                },500);
+                console.log("mounted");
+            },
+            beforeUpdate() {
+                console.log("beforeUpdate");
+            },
+            updated() {
+                console.log("updated");
+            },
+            beforeDestroy() {
+                console.log("beforeDestroy");
+            },
+            methods: {
+                toDoDestroy(){
+                    window.clearInterval(this.timeId);
+                    // 调用销毁函数
+                    this.$destroy();
+                }
+            },
+
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>v-model双向绑定</h1>
+        <form>
+            用户名:<input type="text" v-model="uname">
+            <p>uname:{{uname}}</p>
+            密码:<input type="password" v-model="pwd">
+            <p>pwd:{{pwd}}</p>
+            <h1>复选框</h1>
+            爱好 <input type="checkbox" name="hobby" value="抽烟" v-model="hobbies">抽烟
+            <input type="checkbox" name="hobby" value="玩游戏" v-model="hobbies">玩游戏
+            <input type="checkbox" name="hobby" value="喝酒" v-model="hobbies">喝酒
+            <p>复选框选中的值 {{hobbies}}</p>
+            <h1>单选按钮选中的值</h1>
+            性别 <input type="radio" name="gender" value="男" v-model="gender">男
+            <input type="radio" name="gender" value="女" v-model="gender">女
+            <p>选中的性别:{{gender}}</p>
+            <h1>下拉框</h1>
+            <select v-model="selectedVal">
+                <option value="大连">大连</option>
+                <option value="沈阳">沈阳</option>
+                <option value="锦州">锦州</option>
+            </select>
+            <p>选中的城市 {{selectedVal}}</p>
+            <!-- 动态生成下拉框 -->
+            <h1>动态生成下拉框</h1>
+            <select>
+                <!-- v-bind:html标签属性 v-bind可以省略 -->
+                <option v-for="(item,index) in citys" :value="index">
+                    {{item.city}}
+                </option>
+            </select>
+        </form>
+    </div>
+
+    <script>
+        let vm = new Vue({
+            el:"#app",
+            data:{
+                uname:"tom",
+                pwd:"",
+                // 复选框 接收复选框选中的值 用数组  数组中如果没有任何值 则没有默认选中项 
+                // 如果有值 则按照给定的值进行默认选中 标签的value值
+                hobbies:["抽烟"],
+                gender:"女",
+                selectedVal:"",
+                citys:[
+                    {"city":"大连"},
+                    {"city":"沈阳"},
+                    {"city":"锦州"}
+                ]
+            }
+        })
+    </script>
+</body>
+</html>

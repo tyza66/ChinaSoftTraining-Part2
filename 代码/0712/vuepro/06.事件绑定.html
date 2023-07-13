@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/vue.js"></script>
+    <style>
+        .d1Class{
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+        }
+
+        .d2Class {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(236, 9, 9);
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!-- v-on:事件类型="调用函数名称()" 在函数无参数 可以省略() -->
+        <button v-on:click="test2">点我--无参数函数</button>
+        <button v-on:click="test3(1001,'tom')">有参数的函数</button>
+        <button @click="test2">省略写法</button>
+        <button @click="test4">弹出data中msg</button>
+
+        <!-- 练习1 -->
+        <!-- div元素 设置宽度和高度 背景颜色 按钮 通过点击按钮 改变宽度 高度和背景颜色-->
+        <button @click="changeStyle">改变div元素样式</button>
+        <div :style="{width:width,height:height,backgroundColor:bgColor}">{{msg}}</div>
+
+        <!-- 练习2  点击a链接 改变div文字内容  -->
+        <a href="02.条件与循环.html" @click="changeText($event)">通过链接改变文字内容</a>
+        <a href="02.条件与循环.html" @click.prevent="changeText">添加修饰符阻止默认行为</a>
+        
+        <!-- 事件冒泡 -->
+        <div id="d1" :class="d1Class" @click="d1Method">
+            {{d1}}
+            <!-- stop 阻止事件冒泡 -->
+            <div id="d2" :class="d2Class" @click.stop="d2Method()">  
+               {{d2}}
+            </div>
+        </div>
+
+        <!-- d1 d2绑定类样式  分别绑定点击事件 弹出d1 d2 -->
+
+    </div>
+
+    <script>
+        let vm = new Vue({
+            el:"#app",
+            // 数据
+            data:{
+                msg:"hello,vue",
+                width:"200px",
+                height:"200px",
+                bgColor:"red",
+                d1Class:"d1Class",
+                d2Class:"d2Class",
+                d1:"d1",
+                d2:"d2"
+
+            },
+            // 方法
+            methods: {
+                test1:function(){
+                    alert("test1");
+                },
+                test2(){
+                    alert("test2");
+                },
+                test3(uid,uname){
+                    alert("uid " + uid + " uname " + uname);
+                },
+                test4(){
+                    alert("msg " + vm.msg + "this " + this.msg);//this vm 指向当前vue对象
+                },
+                changeStyle(){
+                    this.width = "300px";
+                    this.height = "350px";
+                    this.bgColor = "green";
+                },
+                changeText(event){
+                    this.msg = "新的内容";
+                    event.preventDefault();
+                },
+                d1Method(){
+                    alert(this.d1);
+                },
+                d2Method(){
+                    alert(this.d2);
+                    // event.stopPropagation();
+                    
+                }
+            },
+        })
+    </script>
+</body>
+</html>

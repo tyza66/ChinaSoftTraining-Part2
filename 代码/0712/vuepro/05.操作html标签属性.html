@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/vue.js"></script>
+    <style>
+        .aClass {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(167, 38, 38);
+        }
+        .bClass{
+            border: 10px solid green;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+       <a v-bind:href="url" target="_blank">测试链接1</a>
+       <a :href="url" target="_blank">省略写法v-bind省略--测试链接2</a>
+       
+       <!-- 引入一张图片 src路径 宽度 高度 vue data数据绑定 -->
+       <img :src="imgUrl" :width="width" :height="height">
+
+       <!-- v-bind 操作样式  1 class类名指定样式  2  style属性指定样式 -->
+       <div :class="className">块级元素</div>
+       <div :style="{width:dwidth,height:dheight,border:border}">style指定样式</div>
+
+       <!-- <div class="aClass bClass">多个类样式</div> -->
+
+       <!-- 多个类样式  类名1:布尔值,类名2:布尔值  如果布尔值是true 则设置对应类样式  false 则不设置对应的类样式 -->
+       <div :class="{aClass:flag,bClass:false}">多个类样式</div>
+
+    </div>
+
+    <script>
+        let vm = new Vue({
+            el:"#app",
+            data:{
+                url:"01.认识vue.html",
+                imgUrl:"img/1.PNG",
+                width:"200px",
+                height:"300px",
+                className:"aClass",
+                className2:"bClass",
+                dwidth:"200px",
+                dheight:"300px",
+                border:"1px solid black",
+                flag:true
+            }
+        })
+    </script>
+</body>
+</html>

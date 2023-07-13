@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- 标签内部显示文本 1 {{}} 不会覆盖标签内部原来的值  v-text v-html 会覆盖标签内部原来的值
+        2 v-text 文本插入 3 v-html 解析html标签 -->
+         <h1>原来的值：{{msg}}</h1>   
+         <h1 v-text="msg">原来的值</h1>
+         <h1 v-html="msg">原来的值</h1>
+    </div>
+
+    <script>
+        let vm = new Vue({
+            el:"#app",
+            data:{
+                msg:"<i>Vue</i>"
+            }
+        })
+    </script>
+    
+</body>
+</html>

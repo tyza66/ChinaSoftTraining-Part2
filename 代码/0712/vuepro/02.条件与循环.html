@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+       <p v-if="seen">分支结果true 可以看见</p>
+       <p v-else>否则情况</p>
+       <h1>v-if v-else 条件</h1>
+       <p v-if="Math.random() > 0.5">大于0.5</p>
+       <p v-else>小于0.5</p>
+       <h1>多重分支结构</h1>
+       <p v-if="type === 'A'">A</p>
+       <p v-else-if="type === 'B'">B</p>
+       <p v-else>Not A/B</p>
+       <h1>v-for循环</h1>
+       <ol>
+        <!-- todo 代表数组中每一个元素  index 数组的下标 -->
+        <li v-for="(todo,index) in todos">
+            {{todo.text}} --- {{index}}
+        </li>
+       </ol>
+       <h1>v-for遍历对象</h1>
+       <ul>
+        <!-- key 属性名称  value 属性值  index 下标 -->
+        <li v-for="(value,key,index) in stu">
+            {{key}} -- {{value}} -- {{index}}
+        </li>
+       </ul>
+
+       <p>{{stu.stuname}}</p>
+    </div>
+
+    <script>
+        let vm = new Vue({
+            el:"#app",
+            data:{
+                seen:false,
+                type:"C",
+                todos:[
+                    {"text":"学习了List集合"},
+                    {"text":"学习了Set集合"},
+                    {"text":"学习了Map集合"}
+                ],
+                stu:{
+                    stuno:123,
+                    stuname:"tom",
+                    stuage:18
+                }
+            }
+        })
+    </script>
+</body>
+</html>
